@@ -7,7 +7,7 @@ angular.module('dynamicFormApp', [])
 
 
 
-.controller('mainColtroller',function($scope,$http) {
+.controller('mainController',function($scope,$http) {
     // array to hold the form data
 		$scope.formData=[];
 

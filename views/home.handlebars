@@ -1,5 +1,5 @@
 
-<div class="container" ng-app="dynamicFormApp" ng-controller="mainColtroller">
+<div class="container" ng-app="dynamicFormApp" ng-controller="mainController">
 
     <h2 class="liner">Add a Class</h2>
      
@@ -12,13 +12,13 @@
 
             <label>{[{ item.label }]}</label>
 
-<!-- IF TEXT -->
+<!--  TEXT -->
             <div ng-if="item.type === 'text'" class="form-group" ng-class="{ 'has-error' : userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine }">
                 <input type="text" class="form-control" name="{[{ item.name }]}" ng-model="item.value" placeholder="{[{item.placeholder}]}" required>
                 <p ng-show="userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine" class="help-block">You fullname is required</p>
             </div>
 
-<!-- IF SELECT -->
+<!--  SELECT -->
             <div ng-if="item.type === 'select'" class="form-group" ng-class="{ 'has-error' : userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine }">
                 <select ng-model="item.value">
                     <option value="">--- Please Select ---</option>
@@ -28,18 +28,18 @@
                
             </div>
 
-<!-- IF EMAIL -->
+<!--  EMAIL -->
             <div ng-if="item.type === 'email'" class="form-group" ng-class="{ 'has-error' : userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine }">
                 <input type="email" class="form-control" name="{[{ item.name }]}" ng-model="item.value" placeholder="{[{item.placeholder}]}" required>
                 <p ng-show="userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine" class="help-block">Please enter a valid email</p>
             </div>
 
-<!-- IF HIDDEN -->
+<!--  HIDDEN -->
             <div ng-if="item.type === 'hidden'">
                 <input type="hidden" class="form-control" name="{[{ item.name }]}" ng-model="item.value" value="{[{item.value}]}">
             </div>
 
-<!-- IF TEXTAREA -->
+<!--  TEXTAREA -->
             <div ng-if="item.type === 'textarea'" class="form-group" ng-class="{ 'has-error' : userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine }">
                 <textarea type="text" class="form-control" ng-model="item.value" ng-minlength="3" placeholder="{[{item.placeholder}]}" required>
                 </textarea>
@@ -60,8 +60,7 @@
     </form>
 
     
-<!--     <pre>
-    ///////////
+<!-- <pre>
         <code>{[{ formData | json}]}</code>
     </pre> -->
       

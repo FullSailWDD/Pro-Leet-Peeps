@@ -23,6 +23,11 @@ module.exports = function(grunt){
 		    	}
 		   } 	
 		},
+		nodemon: {
+		dev: {
+		    script: 'app.js'
+		  }
+		},
 		watch: {
 			js: {
 			    files: ['public/js/*.js'],
@@ -53,6 +58,8 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.registerTask('default',['concat','watch']);
+	grunt.loadNpmTasks('grunt-nodemon');
+	grunt.loadNpmTasks('grunt-run-node');
+	grunt.registerTask('default',['concat','watch','cssmin']);
 };
 /* start the node app */
