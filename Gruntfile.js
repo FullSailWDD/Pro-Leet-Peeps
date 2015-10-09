@@ -17,6 +17,7 @@ module.exports = function(grunt){
 		      	'public/css/normalize.css' : 'public/sass/normalize.scss',
 		     	'public/css/responsive.css' : 'public/sass/responsive.scss',
 		     	'public/css/navbar.css' : 'public/sass/navbar.scss',
+		     	'public/css/footer.css' : 'public/sass/footer.scss',
 		  		'public/css/responsive.css' : 'public/sass/responsive.scss',
 		     	'public/css/styles.css' : 'public/sass/styles.scss'
 		    	}
@@ -55,5 +56,3 @@ module.exports = function(grunt){
 	grunt.registerTask('default',['concat','watch']);
 };
 /* start the node app */
-var start = require('./app.js');
-  

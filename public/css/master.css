@@ -1,3 +1,5 @@
+/* color schematics */
+/* end of schema */
 html {
   position: relative;
   min-height: 100%; }
@@ -14,17 +16,6 @@ html {
 label {
   font-weight: bold;
   color: rgba(100, 50, 30, 0.4); }
-
-header {
-  background: rgba(100, 50, 30, 0.4);
-  text-align: center;
-  padding: 1%;
-  margin-bottom: 4%; }
-
-header h1 {
-  margin: 0px;
-  padding: 0px;
-  color: #f6f1f1; }
 
 form {
   margin-top: 4%;
@@ -51,16 +42,5 @@ span {
 
 textarea.form-control {
   height: 100px; }
-
-footer {
-  padding-top: 12px;
-  background: #222;
-  text-align: center;
-  position: relative;
-  left: 0;
-  bottom: 0;
-  height: 50px;
-  width: 100%;
-  color: #f6f1f2; }
 
 /*# sourceMappingURL=master.css.map */
