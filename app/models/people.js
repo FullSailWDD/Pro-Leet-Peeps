@@ -1,10 +1,11 @@
 var mongoose = require('mongoose');
 
-var PeopleSchema = mongoose.Schema({
+var CourseSchema = mongoose.Schema({
     _id: String,
-    name: String,
-    department: String,
-    message: String
+    major: String,
+    courseName: String,
+    startDate: String,
+    description: String
 });
 
-mongoose.model('People', PeopleSchema);
+mongoose.model('Course', CourseSchema);

@@ -10,22 +10,13 @@ angular.module('dynamicFormApp', [])
     $scope.formData = [];
 
     // variable contains json object
-    var users = [{
-      // department data (drop down selection)
-      label: 'Majors',
-      placeholder: 'DPT',
+    var users = [ { 
+      // label will render the label for the input form.
+      label: 'Major Name',
+      placeholder: ' Enter the Major ',
       value: '',
-      // options are for the select form
-      options: [
-      {value: 'Accounting'},
-      {value: 'Tech'},
-      {value: 'Marketing'},
-      {value: 'Web Design'},
-      {value: 'Graphic Design'},
-      {value: 'Recording Arts'}
-      ],
-      type: 'select',
-      name: 'dpt'
+      type: 'text',
+      name: 'major'
 
     },
     { 
@@ -56,8 +47,8 @@ angular.module('dynamicFormApp', [])
     },
     {
       // text area data
-      label: 'Comments',
-      placeholder: ' Enter a comment ',
+      label: 'Description',
+      placeholder: ' Enter the course description ',
       value: '',
       type: 'textarea',
       name: 'comments'
