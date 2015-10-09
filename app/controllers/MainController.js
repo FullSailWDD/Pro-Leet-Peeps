@@ -1,24 +1,36 @@
 angular.module('dynamicFormApp', [])
 .config(['$interpolateProvider', function($interpolateProvider){
   // $interpolateProvider used to differentiate uses for angular from express
-	$interpolateProvider.startSymbol('{[{'); 
-	$interpolateProvider.endSymbol('}]}'); 
+  $interpolateProvider.startSymbol('{[{'); 
+  $interpolateProvider.endSymbol('}]}'); 
 }])
-
-
 
 .controller('mainController',function($scope) {
     // array to hold the form data
-		$scope.formData=[];
-
-
+    $scope.formData = [];
 
     // variable contains json object
-    var users = [
+    var users = [{
+      // department data (drop down selection)
+      label: 'Majors',
+      placeholder: 'DPT',
+      value: '',
+      // options are for the select form
+      options: [
+      {value: 'Accounting'},
+      {value: 'Tech'},
+      {value: 'Marketing'},
+      {value: 'Web Design'},
+      {value: 'Graphic Design'},
+      {value: 'Recording Arts'}
+      ],
+      type: 'select',
+      name: 'dpt'
+
+    },
     { 
-      // keys refer to html markup
       // label will render the label for the input form.
-    	label: 'Name',
+      label: 'Course Name',
       placeholder: ' Enter Full Name ',
       value: '',
       type: 'text',
@@ -27,43 +39,28 @@ angular.module('dynamicFormApp', [])
     },
     {
       // this value is hidden from the user 
-    	placeholder: 'ID',
-    	value: "",
-    	type: 'hidden',
-    	name: 'empId'
+      placeholder: 'ID',
+      value: "",
+      type: 'hidden',
+      name: 'empId'
       
     },
     {
-      // department data (drop down selection)
-    	label: 'Department',
-    	placeholder: 'DPT',
-    	value: '',
-      // options are for the select form
-    	options: [
-    	{value: 'Accounting'},
-    	{value: 'Tech'},
-    	{value: 'Marketing'}
-    	],
-    	type: 'select',
-    	name: 'dpt'
-
-    },
-    {
       // email data
-    	label: 'Email',
-    	placeholder: ' Enter Email ',
-    	value: '',
-    	type: 'email',
-    	name: 'email'
+      label: 'Start Date',
+      placeholder: ' Enter start Date',
+      value: '',
+      type: 'date',
+      name: 'date'
 
     },
     {
       // text area data
-      label: 'Message',
-      placeholder: ' Enter message ',
+      label: 'Comments',
+      placeholder: ' Enter a comment ',
       value: '',
       type: 'textarea',
-      name: 'message'
+      name: 'comments'
 
     },
     {
