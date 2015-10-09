@@ -1,36 +1,70 @@
 
-<h1>Create your own dynamic form</h1>
-<div class="container" ng-app="dynamicFormApp" ng-controller="mainController as ctrl">
-    <form  ng-submit="ctrl.submit(surveyForm.$valid, data)"  name="surveyForm"  novalidate>
-{{! Create the titles of your forms }}
-        <section class="hideBox">
-        	<h1>Form Titles</h1>
-	        <div ng-repeat="input in aryInput">
-	            <label>//input.title//</label>
-	            <input type="//input.type//" class="form-control" name="//input.name//" placeholder="//input.placeholder//" required ng-model="input.value"/>
-	        </div>
-	    </section>
-<!-- create the values to your titles -->
-	    <section class="hideBox">
-	    	<h1>Form Values</h1>
-	        <div id="bottomBlock" ng-repeat="input in ine">
-	        	<label>//input.value//</label>
-	            <input type="//input.type//" class="form-control" name="//input.name//" placeholder="" required ng-model="input.color"></input>
-	        </div>
-	        	       	<input type="submit" value="Submit">
+<div class="container" ng-app="dynamicFormApp" ng-controller="mainColtroller">
 
-	    </section>
+    <h2 class="liner">Add a Class</h2>
+     
+    <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
+    
+        <div class="form-group">
+          
+        
+        <div ng-repeat="item in formData">
+
+            <label>{[{ item.label }]}</label>
+
+<!-- IF TEXT -->
+            <div ng-if="item.type === 'text'" class="form-group" ng-class="{ 'has-error' : userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine }">
+                <input type="text" class="form-control" name="{[{ item.name }]}" ng-model="item.value" placeholder="{[{item.placeholder}]}" required>
+                <p ng-show="userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine" class="help-block">You fullname is required</p>
+            </div>
+
+<!-- IF SELECT -->
+            <div ng-if="item.type === 'select'" class="form-group" ng-class="{ 'has-error' : userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine }">
+                <select ng-model="item.value">
+                    <option value="">--- Please Select ---</option>
+                    <option required ng-repeat="option in item.options" name="{[{ item.name }]}" value="{[{option.value}]}">{[{option.value}]}</option>
+                </select>
+                <p ng-show="userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine" class="help-block">Select a Department</p>
+               
+            </div>
+
+<!-- IF EMAIL -->
+            <div ng-if="item.type === 'email'" class="form-group" ng-class="{ 'has-error' : userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine }">
+                <input type="email" class="form-control" name="{[{ item.name }]}" ng-model="item.value" placeholder="{[{item.placeholder}]}" required>
+                <p ng-show="userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine" class="help-block">Please enter a valid email</p>
+            </div>
+
+<!-- IF HIDDEN -->
+            <div ng-if="item.type === 'hidden'">
+                <input type="hidden" class="form-control" name="{[{ item.name }]}" ng-model="item.value" value="{[{item.value}]}">
+            </div>
+
+<!-- IF TEXTAREA -->
+            <div ng-if="item.type === 'textarea'" class="form-group" ng-class="{ 'has-error' : userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine }">
+                <textarea type="text" class="form-control" ng-model="item.value" ng-minlength="3" placeholder="{[{item.placeholder}]}" required>
+                </textarea>
+                <p ng-show="userForm.{[{ item.name }]}.$error.minlength" class="help-block">Message is too short.</p>
+            </div>
+
+<!-- IF CHECKBOX -->          
+            <div ng-if="item.type === 'checkbox'" class="form-group" ng-class="{ 'has-error' : userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine }">
+                <input type="checkbox" name="{[{ item.name }]}" ng-model="item.value" value="{[{item.value}]}" required><span>I accept all the terms and conditions</span>
+                <p ng-show="userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine" class="help-block">Please agree to terms</p>     
+            </div>
+
+
+        </div>
+          
+        </div>
+       <button type="submit" class="btn btn-primary" ng-disabled="userForm.$invalid">Submit</button>   
     </form>
 
-{{! hidden Boxes }} 
-		<section class="one">
-	    	<h1>Your Form</h1>
-	        <div id="bottomBlock" ng-repeat="input in fin">
-	        	<label>//input.value//</label>
-	            <input type="//input.type//" class="form-control" name="//input.name//" placeholder="" required ng-model="input.color">
-	        </input>
-	        </div>
-	        		<button onClick="download()">Download</button>
-	    </section>
-     </pre>
+    
+<!--     <pre>
+    ///////////
+        <code>{[{ formData | json}]}</code>
+    </pre> -->
+      
 </div>
+
+   

@@ -1,13 +1,13 @@
 angular.module('dynamicFormApp', [])
 .config(['$interpolateProvider', function($interpolateProvider){
   // $interpolateProvider used to differentiate uses for angular from express
-	$interpolateProvider.startSymbol('//'); 
-	$interpolateProvider.endSymbol('//'); 
+	$interpolateProvider.startSymbol('{[{'); 
+	$interpolateProvider.endSymbol('}]}'); 
 }])
 
 
 
-.controller('mainColtroller',function($scope,$http) {
+.controller('mainColtroller',function($scope) {
     // array to hold the form data
 		$scope.formData=[];
 
@@ -77,11 +77,9 @@ angular.module('dynamicFormApp', [])
 
 
 
-
   // put json object into the form data array
   $scope.formData = users;
   var results = [];
-
   var name = results.slice(1, 1);
   var department = results.slice(3, 3);
   var email = results.slice(4, 4);
@@ -101,8 +99,7 @@ angular.module('dynamicFormApp', [])
       // show results in the console
       console.log(results);
 
-      console.log(department);
-      $http.post('/complaint', results);
+      return results;
     }      
   }
 
