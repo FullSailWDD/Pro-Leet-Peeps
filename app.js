@@ -17,8 +17,18 @@ app.use(express.static(__dirname + '/bower_components'));
 var port = process.env.PORT || 3000;
  
 app.get('/', function (req, res) {
+  res.render('landing');
+})
+
+
+app.get('/home', function (req, res) {
   res.render('home');
 })
- 
+app.get('/dashboard', function (req, res) {
+  res.render('dashboard');
+})
+
+
+
 app.listen(port);
 console.log("Server listening on port:", port);
