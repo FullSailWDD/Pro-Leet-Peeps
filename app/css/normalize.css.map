@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": ";;AAGA,CAAC;EACA,OAAO,EAAC,KAAK",
+"sources": ["../sass/normalize.scss"],
 "names": [],
 "file": "normalize.css"
 }

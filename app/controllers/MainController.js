@@ -29,14 +29,6 @@ angular.module('dynamicFormApp', [])
 
     },
     {
-      // this value is hidden from the user 
-      placeholder: 'ID',
-      value: "",
-      type: 'hidden',
-      name: 'empId'
-      
-    },
-    {
       // email data
       label: 'Start Date',
       placeholder: ' Enter start Date',
@@ -64,8 +56,6 @@ angular.module('dynamicFormApp', [])
   ];
 
     
-    
-    
     $scope.assignmentData = [];
 
     // variable contains json object
@@ -88,20 +78,12 @@ angular.module('dynamicFormApp', [])
 
     },
     {
-      // this value is hidden from the user 
-      placeholder: 'ID',
-      value: "",
-      type: 'hidden',
-      name: 'empId'
-      
-    },
-    {
       // email data
       label: 'Due Date',
-      placeholder: ' Enter Due Date',
+      placeholder: ' Enter start Date',
       value: '',
       type: 'date',
-      name: 'date'
+      name: 'endDate'
 
     },
     {
@@ -116,7 +98,6 @@ angular.module('dynamicFormApp', [])
   ];
 
 
-
   // put json object into the form data array
   $scope.formData = users;
   var results = [];
@@ -124,6 +105,7 @@ angular.module('dynamicFormApp', [])
   var department = results.slice(3, 3);
   var email = results.slice(4, 4);
   var message = results.slice(5, 5);
+
   // put json opject into assingment data array
     $scope.assignmentData = assignment;
     var results2 = [];    
@@ -155,10 +137,10 @@ angular.module('dynamicFormApp', [])
       for (var i = 0; i < assignment.length; i++) {
         var val = assignment[i]['value'];
         // put the data submited by the form into the var results
-        results.push(val);
+        results2.push(val);
       }
       // show results in the console
-      console.log(results);
+      console.log(results2);
 
       return results;
     }      

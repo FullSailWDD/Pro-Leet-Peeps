@@ -3,11 +3,17 @@ $mainColor : rgba(140,150,130,.4);
 /* end of schema */
 
 
-
+nav{
+	width:100%;
+	background: $mainColor;
+  text-align: center;
+  padding: 2%;
+  margin-bottom: 4%;
+}
 header {
   background: $mainColor;
   text-align: center;
-  padding: 1%;
+  padding: 2%;
   margin-bottom: 4%;
 }
 header h1 {

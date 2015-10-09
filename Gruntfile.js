@@ -2,24 +2,24 @@ module.exports = function(grunt){
 	grunt.initConfig({
 	  concat: {
 	    js: {
-	      src: ['public/js/master.js'],
+	      src: ['app/js/master.js'],
 	      dest: 'build/master.js',
 	    },
 		css: {
-		      src: ['public/css/master.css'],
+		      src: ['app/css/master.css'],
 		      dest: 'build/css/master.css'
 		    },
 		},
 		sass: {
 		      dist:{ 
 		     	files:{	
-		      	'public/css/master.css' : 'public/sass/master.scss',
-		      	'public/css/normalize.css' : 'public/sass/normalize.scss',
-		     	'public/css/responsive.css' : 'public/sass/responsive.scss',
-		     	'public/css/navbar.css' : 'public/sass/navbar.scss',
-		     	'public/css/footer.css' : 'public/sass/footer.scss',
-		  		'public/css/responsive.css' : 'public/sass/responsive.scss',
-		     	'public/css/styles.css' : 'public/sass/styles.scss'
+		      	'app/css/master.css' : 'app/sass/master.scss',
+		      	'app/css/normalize.css' : 'app/sass/normalize.scss',
+		     	'app/css/responsive.css' : 'app/sass/responsive.scss',
+		     	'app/css/navbar.css' : 'app/sass/navbar.scss',
+		     	'app/css/footer.css' : 'app/sass/footer.scss',
+		  		'app/css/responsive.css' : 'app/sass/responsive.scss',
+		     	'app/css/styles.css' : 'app/sass/styles.scss'
 		    	}
 		   } 	
 		},
@@ -30,15 +30,15 @@ module.exports = function(grunt){
 		},
 		watch: {
 			js: {
-			    files: ['public/js/*.js'],
+			    files: ['app/js/*.js'],
 			    tasks: ['concat'],	   
 			},
 			css: {
-		    	files: ['public/css/*.css'],
+		    	files: ['app/css/*.css'],
 		    	tasks: ['concat'],
 			},
 			sass: {
-		    	files: ['public/sass/*.scss'],
+		    	files: ['app/sass/*.scss'],
 		    	tasks: ['sass', 'cssmin'],
 			}
 		},
@@ -46,9 +46,9 @@ module.exports = function(grunt){
 			my_target: {
 				files: [{
 					expand: true,
-					cwd: "public/css",
+					cwd: "app/css",
 					src: ['*.css', '!*.min.css'],
-					dest: 'public/css',
+					dest: 'app/css',
 					ext: '.min.css'
 				}]
 			}
@@ -58,8 +58,6 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-nodemon');
-	grunt.loadNpmTasks('grunt-run-node');
-	grunt.registerTask('default',['concat','watch','cssmin']);
+	grunt.registerTask('default',['concat','watch']);
 };
 /* start the node app */

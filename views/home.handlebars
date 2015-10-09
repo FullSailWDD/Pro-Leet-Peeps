@@ -7,8 +7,7 @@
     <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
     
         <div class="form-group">
-          
-        
+           
         <div ng-repeat="item in formData">
 
             <label>{[{ item.label }]}</label>
@@ -25,16 +24,12 @@
                 <input type="text" class="form-control" name="{[{ item.name }]}" ng-model="item.value" placeholder="{[{item.placeholder}]}" required>
                 <p ng-show="userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine" class="help-block">Enter the full course name</p>
             </div>
-<!--  EMAIL -->
+<!--  DATE -->
             <div ng-if="item.type === 'date'" class="form-group" ng-class="{ 'has-error' : userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine }">
                 <input type="date" class="form-control" name="{[{ item.name }]}" ng-model="item.value" placeholder="{[{item.placeholder}]}" required>
                 <p ng-show="userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine" class="help-block">Enter a start date</p>
             </div>
 
-<!--  HIDDEN -->
-            <div ng-if="item.type === 'hidden'">
-                <input type="hidden" class="form-control" name="{[{ item.name }]}" ng-model="item.value" value="{[{item.value}]}">
-            </div>
 
 <!--  TEXTAREA -->
             <div ng-if="item.type === 'textarea'" class="form-group" ng-class="{ 'has-error' : userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine }">
@@ -81,16 +76,13 @@
                 <input type="text" class="form-control" name="{[{ item.name }]}" ng-model="item.value" placeholder="{[{item.placeholder}]}" required>
                 <p ng-show="userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine" class="help-block">Enter the full course name</p>
             </div>
-<!--  EMAIL -->
+<!--  DATE -->
             <div ng-if="item.type === 'date'" class="form-group" ng-class="{ 'has-error' : userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine }">
                 <input type="date" class="form-control" name="{[{ item.name }]}" ng-model="item.value" placeholder="{[{item.placeholder}]}" required>
                 <p ng-show="userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine" class="help-block">Enter a start date</p>
             </div>
 
-<!--  HIDDEN -->
-            <div ng-if="item.type === 'hidden'">
-                <input type="hidden" class="form-control" name="{[{ item.name }]}" ng-model="item.value" value="{[{item.value}]}">
-            </div>
+
 
 <!--  TEXTAREA -->
             <div ng-if="item.type === 'textarea'" class="form-group" ng-class="{ 'has-error' : userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine }">
