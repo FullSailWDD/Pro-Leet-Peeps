@@ -1,6 +1,6 @@
 
 <div class="container" ng-app="dynamicFormApp" ng-controller="mainController">
-
+<div ng-hide="showme">
     <h2 class="liner">Add a Class</h2>
      
     <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
@@ -52,10 +52,13 @@
         </div>
           
         </div>
-       <button type="submit" class="btn btn-primary" ng-disabled="userForm.$invalid">Submit</button>   
+       <button ng-click="showme=true" type="submit" class="btn btn-primary" ng-disabled="userForm.$invalid">Submit</button>   
     </form>
+</div>
 
-    
+<!-- SECOND FORM -->
+    <h2 ng-show="showme">This is mah content, yo!</h2>
+
 <!-- <pre>
         <code>{[{ formData | json}]}</code>
     </pre> -->
