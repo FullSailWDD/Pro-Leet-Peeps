@@ -45,14 +45,7 @@ angular.module('dynamicFormApp', [])
       type: 'textarea',
       name: 'comments'
 
-    },
-    {
-      // check box data
-      label: 'Terms & Conditions',
-      type: 'checkbox',
-      name: 'terms'
     }
-
   ];
 
     
@@ -94,6 +87,11 @@ angular.module('dynamicFormApp', [])
       type: 'textarea',
       name: 'comments'
 
+    },{
+      // check box data
+      label: 'Terms & Conditions',
+      type: 'checkbox',
+      name: 'terms'
     }
   ];
 
