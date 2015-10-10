@@ -37,14 +37,6 @@
                 </textarea>
                 <p ng-show="userForm.{[{ item.name }]}.$error.minlength" class="help-block">Message is too short.</p>
             </div>
-
-<!-- IF CHECKBOX -->          
-            <div ng-if="item.type === 'checkbox'" class="form-group" ng-class="{ 'has-error' : userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine }">
-                <input type="checkbox" name="{[{ item.name }]}" ng-model="item.value" value="{[{item.value}]}" required><span>I accept all the terms and conditions</span>
-                <p ng-show="userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine" class="help-block">Please agree to terms</p>     
-            </div>
-
-
         </div>
           
         </div>
