@@ -70,25 +70,25 @@ angular.module('dynamicFormApp', [])
     },
     { 
       // label will render the label for the input form.
-      label: 'Breif discription',
-      placeholder: ' Enter the Breif discription ',
+      label: 'Section Titles',
+      placeholder: ' Enter the Section Titles',
       value: '',
       type: 'text',
-      name: 'fullname'
+      name: 'sectionTitles'
 
     },
     {
       // email data
-      label: 'Due Date',
+      label: 'Grade Options',
       placeholder: ' Enter start Date',
       value: '',
-      type: 'date',
+      type: 'text',
       name: 'endDate'
 
     },
     {
       // text area data
-      label: 'Description',
+      label: 'Text area',
       placeholder: ' Enter the assignment description ',
       value: '',
       type: 'textarea',

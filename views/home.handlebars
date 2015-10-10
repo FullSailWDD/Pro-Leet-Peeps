@@ -2,7 +2,7 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Add Rubrics</h1>
+            <h1 class="page-header">Add Course</h1>
         </div>
         <!-- /.col-lg-12 -->
     </div>
@@ -10,8 +10,9 @@
 <div class="row" ng-app="dynamicFormApp" ng-controller="mainController">
     <div class="col-lg-12">
         <div class="panel panel-default">
+
             <div class="panel-heading" ng-hide="showme">
-                <h2 class="liner">Select Degree Program and Courses</h2>
+                Select Degree Program and Course
             </div>
             <div class="panel-body">
                 <div class="row">
@@ -78,7 +79,7 @@
     
 <!-- SECOND FORM -->
     <div ng-show="showme">
-        <h2>Rubric</h2>
+        <h2>Add Rubric</h2>
             <form name="assignmentForm" ng-submit="submitAssignment(userForm.$valid)" action="/dash" method="post" novalidate>
     
         <div class="form-group">
