@@ -7,17 +7,27 @@
 	<meta name="proleetpeps" content="http://jeffmendez.com/public/images/jeff.jpg" />
 	<meta name="keywords" content="web design, pro-leet-peeps, proleetpeeps,dynamic form">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"> 
+
+	<!-- <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"> 
 	<link href="css/master.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
 	<link href="css/responsive.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
 	<link href="css/normalize.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
 	<link href="css/navbar.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
 	<link href="css/footer.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
-	<link href="css/styles.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<link href="css/styles.min.css" media="screen, projection" rel="stylesheet" type="text/css" /> -->
+
+
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="css/metisMenu.min.css" rel="stylesheet" type="text/css">
+	<link href="css/timeline.css" rel="stylesheet">
+	<link href="css/sb-admin-2.css" rel="stylesheet">
+	<link href="css/morris.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
 	<script src="controllers/MainController.js"></script>
 </head>
 <body>
-	<nav>
+<!-- 	<nav>
 		<ul>
 			<li>
 				<a  href="/"><p> pro-leet-peeps</p></a>
@@ -35,11 +45,108 @@
 
 
 
-{{{ body }}}
+
 
 <footer id="footer">
 <p>pro-leet-peeps Team©</p>
 </footer>
+ -->
+
+ <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">ProRubrics</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a href="/my_courses"><i class="fa fa-table fa-fw"></i> My Courses</a>
+                        </li>
+                        <li>
+                            <a href="/home"><i class="fa fa-edit fa-fw"></i> Add Rubric</a>
+                        </li>
+                        <li>
+                            <a href="/dashboard"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        {{{ body }}}
+
+    </div>
+	<!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="js/metisMenu.min.js"></script>
+
+    <!-- DataTables JavaScript -->
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/dataTables.bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/sb-admin-2.js"></script>
+
+    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+                responsive: true
+        });
+    });
+    </script>
+
+
 
 </body>
 </html>

@@ -25,13 +25,26 @@ app.get('/', function (req, res) {
 app.get('/home', function (req, res) {
   res.render('home');
 })
+
+app.get('/activities', function (req, res) {
+  res.render('activities');
+})
+
+app.get('/my_courses', function (req, res) {
+  res.render('my_courses');
+})
+
+app.get('/edit_rubric', function (req, res) {
+  res.render('edit_rubric');
+})
+
 app.get('/dashboard', function (req, res) {
   res.render('dashboard');
 })
 
-app.post('/dash', function (req, res) {
-  res.render('dashboard');
-});
+// app.post('/dash', function (req, res) {
+//   res.render('dashboard');
+// });
 
 
 app.listen(port);
