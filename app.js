@@ -26,6 +26,10 @@ app.get('/home', function (req, res) {
   res.render('home');
 })
 
+app.get('/home_before', function (req, res) {
+  res.render('home_before');
+})
+
 app.get('/activities', function (req, res) {
   res.render('activities');
 })
