@@ -2,7 +2,7 @@
 /* end of schema */
 nav {
   width: 100%;
-  background: rgba(140, 150, 130, 0.4);
+  background: rgba(118, 140, 245, 0.6);
   text-align: center;
   padding: 2%;
   margin-bottom: 4%; }
@@ -14,8 +14,11 @@ nav ul li {
   float: left;
   width: 20%; }
 
+nav a {
+  color: white; }
+
 header {
-  background: rgba(140, 150, 130, 0.4);
+  background: rgba(118, 140, 245, 0.6);
   text-align: center;
   padding: 2%;
   margin-bottom: 4%; }

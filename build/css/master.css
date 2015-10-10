@@ -7,15 +7,15 @@ html {
 .form-group {
   padding: 20px;
   border-radius: 6px;
-  background-color: rgba(140, 150, 130, 0.4); }
+  background-color: rgba(118, 140, 245, 0.6); }
 
 .liner {
   text-align: center;
-  color: rgba(140, 150, 130, 0.4); }
+  color: rgba(118, 140, 245, 0.6); }
 
 label {
   font-weight: bold;
-  color: rgba(140, 150, 130, 0.4); }
+  color: #fff; }
 
 form {
   margin-top: 4%;

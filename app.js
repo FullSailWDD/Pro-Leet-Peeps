@@ -2,14 +2,15 @@
 //config vars
 var express = require('express'),
  app = express(),
- exphbs  = require('express-handlebars');
+ exphbs  = require('express-handlebars'),
+ bodyParser = require('body-parser');
 
 //view engine
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 
 app.set('view engine', 'handlebars');
 
-
+app.use(bodyParser.urlencoded({ extended: true })); 
 app.use(express.static(__dirname + '/app'));
 app.use(express.static(__dirname + '/bower_components'));
 
@@ -28,6 +29,9 @@ app.get('/dashboard', function (req, res) {
   res.render('dashboard');
 })
 
+app.post('/dash', function (req, res) {
+  res.render('dashboard');
+});
 
 
 app.listen(port);
