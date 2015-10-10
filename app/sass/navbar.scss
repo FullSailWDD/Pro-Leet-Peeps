@@ -10,6 +10,13 @@ nav{
   padding: 2%;
   margin-bottom: 4%;
 }
+nav ul{
+	list-style-type:none;
+}
+nav ul li{
+	float:left;
+	width:20%;
+}
 header {
   background: $mainColor;
   text-align: center;
