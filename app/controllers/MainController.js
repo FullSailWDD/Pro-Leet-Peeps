@@ -125,11 +125,13 @@ angular.module('dynamicFormApp', [])
     }
   ];
 
+  var results = [];
+  var results2 = [];    
+  var results3 = [];    
 
 
   // put json object into the form data array
   $scope.formData = users;
-  var results = [];
   var name = results.slice(1, 1);
   var department = results.slice(3, 3);
   var email = results.slice(4, 4);
@@ -137,7 +139,6 @@ angular.module('dynamicFormApp', [])
 
   // put json opject into assingment data array
     $scope.assignmentData = assignment;
-    var results2 = [];    
     var assignmentName = results2.slice(1,1);
     var assignmentDescription = results2.slice(3,3);
     var assignmentWeight = results2.slice(4,4);
@@ -145,7 +146,6 @@ angular.module('dynamicFormApp', [])
 
 
   $scope.studentData = student;
-  var results3 = [];    
 
   // WHEN FORM IS SUBMITED
   $scope.submitForm = function(isValid){
