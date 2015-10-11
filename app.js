@@ -39,6 +39,12 @@ app.get('/edit_rubric', function (req, res) {
   res.render('edit_rubric');
 })
 
+
+
+app.post('/edit_course', function (req, res) {
+  res.render('edit_rubric');
+})
+
 app.post('/rubricPost', function (req, res) {
   res.render('dashboard');
 })
