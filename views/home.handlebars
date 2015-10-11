@@ -134,7 +134,7 @@
     <div ng-show="showStudent">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Add Student</h1>
+                <h1 class="resize">Add Student</h1>
             </div>
         <!-- /.col-lg-12 -->
         </div>
@@ -169,10 +169,10 @@
             </div>
 
 <!-- IF CHECKBOX -->          
-            <!-- <div ng-if="item.type === 'checkbox'" class="form-group" ng-class="{ 'has-error' : userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine }">
+            <div ng-if="item.type === 'checkbox'" class="form-group" ng-class="{ 'has-error' : userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine }">
                 <input type="checkbox" name="{[{ item.name }]}" ng-model="item.value" value="{[{item.value}]}" required><span>I accept all the terms and conditions</span>
                 <p ng-show="userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine" class="help-block">Please agree to terms</p>     
-            </div> -->
+            </div>
 
         </div>
           
