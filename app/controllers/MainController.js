@@ -63,37 +63,68 @@ angular.module('dynamicFormApp', [])
     },
     { 
       // label will render the label for the input form.
-      label: 'Section Titles',
-      placeholder: ' Enter the Section Titles',
+      label: 'Brief discription',
+      placeholder: ' Enter the Breif discription ',
       value: '',
       type: 'text',
-      name: 'sectionTitles'
+      name: 'fullname'
 
     },
     {
       // email data
-      label: 'Grade Options',
+      label: 'Due Date',
       placeholder: ' Enter start Date',
       value: '',
-      type: 'text',
+      type: 'date',
       name: 'endDate'
 
     },
     {
       // text area data
-      label: 'Text area',
+      label: 'Description',
       placeholder: ' Enter the assignment description ',
       value: '',
       type: 'textarea',
       name: 'comments'
 
-    },{
+   } // },{
+    //   // check box data
+    //   label: 'Terms & Conditions',
+    //   type: 'checkbox',
+    //   name: 'terms'
+    // }
+  ];
+
+
+
+  $scope.studentData = [];
+
+  var student = [ { 
+      // label will render the label for the input form.
+      label: 'Student Name',
+      placeholder: ' Enter the Students Full Name ',
+      value: '',
+      type: 'text',
+      name: 'major'
+
+    },
+    {
+      // text area data
+      label: 'Notes about Student',
+      placeholder: ' How does this student partake in class? ',
+      value: '',
+      type: 'textarea',
+      name: 'comments'
+
+   } 
+   ,{
       // check box data
       label: 'Terms & Conditions',
       type: 'checkbox',
       name: 'terms'
     }
   ];
+
 
 
   // put json object into the form data array
@@ -111,6 +142,10 @@ angular.module('dynamicFormApp', [])
     var assignmentDescription = results2.slice(3,3);
     var assignmentWeight = results2.slice(4,4);
     var assignmentHelp = results2.slice(5,5);
+
+
+  $scope.studentData = student;
+  var results3 = [];    
 
   // WHEN FORM IS SUBMITED
   $scope.submitForm = function(isValid){
@@ -140,7 +175,22 @@ angular.module('dynamicFormApp', [])
       // show results in the console
       console.log(results2);
 
-      return results;
+      return results2;
+    }      
+  }
+
+
+  $scope.submitStudent = function(isValid){
+  // IF FORM IS VALID
+    if(isValid){
+      for (var i = 0; i < student.length; i++) {
+        var val = student[i]['value'];
+        // put the data submited by the form into the var results
+        results3.push(val);
+      }
+      // show results in the console
+      console.log(results3);
+      return results3;
     }      
   }
 

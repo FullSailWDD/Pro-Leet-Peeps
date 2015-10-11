@@ -26,10 +26,6 @@ app.get('/home', function (req, res) {
   res.render('home');
 })
 
-app.get('/home_before', function (req, res) {
-  res.render('home_before');
-})
-
 app.get('/activities', function (req, res) {
   res.render('activities');
 })
@@ -38,9 +34,17 @@ app.get('/my_courses', function (req, res) {
   res.render('my_courses');
 })
 
+
 app.get('/edit_rubric', function (req, res) {
   res.render('edit_rubric');
 })
+
+app.post('/rubricPost', function (req, res) {
+  res.render('dashboard');
+})
+
+  // res.send('You sent the name "' + req.body.name + '".');
+
 
 app.get('/dashboard', function (req, res) {
   res.render('dashboard');

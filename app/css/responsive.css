@@ -1,6 +1,10 @@
 /* color schematics */
 /* end of schema */
 /* tablets */
+@media (max-width: 699px) {
+  .page-header {
+    margin-top: 120px;
+    text-align: center; } }
 /* mobile phones */
 
 /*# sourceMappingURL=responsive.css.map */

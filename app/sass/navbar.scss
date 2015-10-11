@@ -3,31 +3,10 @@ $mainColor : rgba(118,140,245,.6);
 /* end of schema */
 
 
-nav{
-	width:100%;
-	background: $mainColor;
-  text-align: center;
-  padding: 2%;
-  margin-bottom: 4%;
-}
-nav ul{
-	list-style-type:none;
-}
-nav ul li{
-	float:left;
-	width:20%;
-}
-nav a{
-	color:white;
-}
-header {
-  background: $mainColor;
-  text-align: center;
-  padding: 2%;
-  margin-bottom: 4%;
-}
-header h1 {
-  margin: 0px;
-  padding: 0px;
-  color: #f6f1f1;
+.navbar {
+    position: fixed;
+    min-height: 50px;
+    margin-bottom: 20px;
+    width: 100%;
+    border: 1px solid transparent;
 }

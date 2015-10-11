@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": ";;AAGA,CAAC;EACA,OAAO,EAAC,KAAK",
+"mappings": ";;AAKA,YAAY;EACX,UAAU,EAAC,IAAI;;AAGhB,OAAO;EACN,cAAc,EAAE,GAAG;EAChB,MAAM,EAAE,cAAc;EACtB,aAAa,EAAE,cAAc",
 "sources": ["../sass/normalize.scss"],
 "names": [],
 "file": "normalize.css"
