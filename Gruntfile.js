@@ -19,7 +19,7 @@ module.exports = function(grunt){
 		     	'app/css/navbar.css' : 'app/sass/navbar.scss',
 		     	'app/css/footer.css' : 'app/sass/footer.scss',
 		  		'app/css/responsive.css' : 'app/sass/responsive.scss',
-		     	'app/css/styles.css' : 'app/sass/styles.scss',
+		     	'app/css/styles.css' : 'app/sass/styles.scss'
 		     	// // Bootstrap core CSS
 		     	// 'app/css/bootstrap.min.css' : 'app/css/bootstrap.min.scss',
 		     	// // MetisMenu CSS

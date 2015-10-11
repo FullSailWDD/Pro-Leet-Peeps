@@ -1,12 +1,25 @@
 /* color schematics */
-$mainColor : rgba(118,140,245,.6);
+$mainColor : rgba(255,190,0,.4);
+
+
 /* end of schema */
 
-
+html{
+}
+#wrapper {
+}
 .navbar {
     position: fixed;
     min-height: 50px;
     margin-bottom: 20px;
     width: 100%;
     border: 1px solid transparent;
+}
+
+.sidebar {
+    height:100%;
+    min-height:100%;
+}
+
+#page-wrapper {
 }
