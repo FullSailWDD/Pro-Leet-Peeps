@@ -3,7 +3,7 @@
 var express = require('express'),
  app = express(),
  exphbs  = require('express-handlebars'),
- bodyParser = require('body-parser');
+ bodyParser = require('body-parser'),util = require('util'),mongoose = require('mongoose');
 
 //view engine
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
@@ -16,6 +16,22 @@ app.use(express.static(__dirname + '/bower_components'));
 
 //config port
 var port = process.env.PORT || 3000;
+
+
+
+mongoose.connect('mongodb://127.0.0.1:27017/test');
+ 
+var db = mongoose.connection;
+ 
+db.on('error', function (err) {
+console.log('connection error', err);
+});
+db.once('open', function () {
+console.log('connected.');
+});
+
+
+
  
 app.get('/', function (req, res) {
   res.render('landing');
@@ -63,3 +79,30 @@ app.get('/dashboard', function (req, res) {
 
 app.listen(port);
 console.log("Server listening on port:", port);
+
+
+// db.createUser(
+//    {
+//      user: "jimin",
+//      pwd: "jimin123",
+//      roles: [ "readWrite", "dbAdmin" ]
+//    }
+// )
+
+// db.createUser(
+//    {
+//      user: "alex",
+//      pwd: "alex123",
+//      roles: [ "readWrite", "dbAdmin" ]
+//    }
+// )
+
+
+// db.createUser(
+//    {
+//      user: "chris",
+//      pwd: "chris123",
+//      roles: [ "readWrite", "dbAdmin" ]
+//    }
+// )
+
