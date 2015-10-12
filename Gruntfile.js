@@ -13,20 +13,20 @@ module.exports = function(grunt){
 		sass: {
 		      dist:{ 
 		     	files:{	
-		      	'app/css/master.css' : 'app/sass/master.scss',
-		      	'app/css/normalize.css' : 'app/sass/normalize.scss',
-		     	'app/css/responsive.css' : 'app/sass/responsive.scss',
-		     	'app/css/navbar.css' : 'app/sass/navbar.scss',
-		     	'app/css/footer.css' : 'app/sass/footer.scss',
-		  		'app/css/responsive.css' : 'app/sass/responsive.scss',
-		     	'app/css/styles.css' : 'app/sass/styles.scss',
+		    //   	'app/css/master.css' 		: 'app/sass/master.scss',
+		    //   	'app/css/normalize.css' 	: 'app/sass/normalize.scss',
+		    //  	'app/css/responsive.css' 	: 'app/sass/responsive.scss',
+		    //  	'app/css/navbar.css' 		: 'app/sass/navbar.scss',
+		    //  	'app/css/footer.css' 		: 'app/sass/footer.scss',
+		  	// 		'app/css/responsive.css' 	: 'app/sass/responsive.scss',
+		    //  	'app/css/styles.css' 		: 'app/sass/styles.scss',
+
 		     	// // Bootstrap core CSS
-		     	// 'app/css/bootstrap.min.css' : 'app/sass/bootstrap.scss',
-		     	// // MetisMenu CSS
+		     	'app/css/bootstrap.min.css' : 'app/sass/bootstrap.scss',
 		     	'app/css/metisMenu.min.css' : 'app/sass/metisMenu.scss',
 		     	'app/css/timeline.css' : 'app/sass/timeline.scss',
 		     	'app/css/sb-admin-2.css' : 'app/sass/sb-admin-2.scss'
-		     	// 'app/css/morris.css' : 'app/css/morris.scss'
+		     	'app/css/morris.css' : 'app/sass/morris.scss'
 		    	}
 		   } 	
 		},
