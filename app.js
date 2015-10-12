@@ -1,7 +1,14 @@
 var express = require('express'),
  app = express(),
  exphbs  = require('express-handlebars'),
- bodyParser = require('body-parser'),util = require('util'),mongoose = require('mongoose');
+ bodyParser = require('body-parser'),util = require('util'),mongoose = require('mongoose'), morgan = require('morgan');
+
+
+var jwt    = require('jsonwebtoken'); // used to create, sign, and verify tokens
+var config = require('./config/config'); // get our config file
+// var dbConnect = require('./config/database'); // get our db file
+var User   = require('./app/models/user'); // get our mongoose model
+    
 
 //view engine
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
@@ -9,7 +16,9 @@ app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 app.set('port',process.env.PORT || 3000);
 
-app.use(bodyParser.urlencoded({ extended: true })); 
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 app.use(express.static(__dirname + '/app'));
 app.use(express.static(__dirname + '/bower_components'));
 app.use(express.static(__dirname + '/config'));
@@ -18,18 +27,8 @@ app.use(express.static(__dirname + '/config'));
 var port = process.env.PORT || 3000;
 
 
-
-mongoose.connect('mongodb://localhost/test');
- 
-var db = mongoose.connection;
- 
-db.on('error', function (err) {
-console.log('connection error', err);
-});
-db.once('open', function () {
-console.log('connected to database.');
-});
-
+mongoose.connect(config.database); // connect to database
+app.set('superSecret', config.secret); // secret variable
 
 
 app.get('/', function (req, res) {
