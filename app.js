@@ -4,10 +4,10 @@ var express = require('express'),
  bodyParser = require('body-parser'),util = require('util'),mongoose = require('mongoose'), morgan = require('morgan');
 
 
-// var jwt    = require('jsonwebtoken'); // used to create, sign, and verify tokens
-// var config = require('./config/config'); // get our config file
-// // var dbConnect = require('./config/database'); // get our db file
-// var User   = require('./app/models/user'); // get our mongoose model
+var jwt    = require('jsonwebtoken'); // used to create, sign, and verify tokens
+var config = require('./config/config'); // get our config file
+var dbConnect = require('./config/database'); // get our db file
+var User   = require('./app/models/user'); // get our mongoose model
     
 
 //view engine
