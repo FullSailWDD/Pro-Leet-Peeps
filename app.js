@@ -79,6 +79,24 @@ app.get('/dashboard', function (req, res) {
 //   res.render('dashboard');
 // });
 
+// app.get('/setup', function(req, res) {
+
+//   // create a sample user
+//   var nick = new User({ 
+//     name: 'Nick Cerminara', 
+//     password: 'password',
+//     admin: true 
+//   });
+
+//   // save the sample user
+//   nick.save(function(err) {
+//     if (err) throw err;
+
+//     console.log('User saved successfully');
+//     res.json({ success: true });
+//   });
+// });
+
 
 app.listen(port);
 console.log("Server listening on port:", port);
