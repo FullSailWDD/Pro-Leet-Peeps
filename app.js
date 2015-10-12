@@ -1,5 +1,3 @@
-//Start
-//config vars
 var express = require('express'),
  app = express(),
  exphbs  = require('express-handlebars'),
@@ -9,17 +7,19 @@ var express = require('express'),
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 
 app.set('view engine', 'handlebars');
+app.set('port',process.env.PORT || 3000);
 
 app.use(bodyParser.urlencoded({ extended: true })); 
 app.use(express.static(__dirname + '/app'));
 app.use(express.static(__dirname + '/bower_components'));
+app.use(express.static(__dirname + '/config'));
 
 //config port
 var port = process.env.PORT || 3000;
 
 
 
-mongoose.connect('mongodb://127.0.0.1:27017/test');
+mongoose.connect('mongodb://localhost/test');
  
 var db = mongoose.connection;
  
@@ -27,12 +27,11 @@ db.on('error', function (err) {
 console.log('connection error', err);
 });
 db.once('open', function () {
-console.log('connected.');
+console.log('connected to database.');
 });
 
 
 
- 
 app.get('/', function (req, res) {
   res.render('landing');
 })
@@ -53,6 +52,11 @@ app.get('/my_courses', function (req, res) {
 
 app.get('/edit_rubric', function (req, res) {
   res.render('edit_rubric');
+})
+
+
+app.get('/signup', function (req, res) {
+  res.render('signup');
 })
 
 

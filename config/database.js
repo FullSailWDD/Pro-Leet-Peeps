@@ -1,26 +1,16 @@
-var config = require('config');
+var dbConnect = require('database'),mongoose = require('mongoose');
 
 module.exports = function (app, mongoose) {
 
-    var connect = function () {
-        var options = {
-            server: {
-                socketOptions: { keepAlive: 1 }
-            },
-            auto_reconnect:true
-        };
-        mongoose.connect(config.get('chesshub.db'), options);
-    };
-    connect();
-
-    // Error handler
-    mongoose.connection.on('error', function (err) {
-        console.error('MongoDB Connection Error. Please make sure MongoDB is running. -> ' + err);
+  mongoose.connect('mongodb://localhost/test');
+ 
+    var db = mongoose.connection;
+     
+    db.on('error', function (err) {
+    console.log('connection error', err);
     });
-
-    // Reconnect when closed
-    mongoose.connection.on('disconnected', function () {
-        connect();
+    db.once('open', function () {
+    console.log('connected to database.');
     });
-
+ 
 };
