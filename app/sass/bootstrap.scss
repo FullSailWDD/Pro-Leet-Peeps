@@ -1262,7 +1262,7 @@ a.bg-danger:hover {
 
 .page-header {
   padding-bottom: 9px;
-  margin: 40px 0 20px;
+  margin: 70px 0 20px;
   border-bottom: 1px solid #eee; }
 
 ol, ul {
@@ -3670,7 +3670,9 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
 
 .navbar-default {
   background-color: $mainNavy;
-  border-color: #e7e7e7; }
+  border-color: #e7e7e7;
+  position: fixed;
+ }
 
 .navbar-default .navbar-brand {
   color: #fff; }
