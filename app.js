@@ -8,7 +8,8 @@ var jwt    = require('jsonwebtoken'); // used to create, sign, and verify tokens
 var config = require('./config/config'); // get our config file
 var dbConnect = require('./config/database'); // get our db file
 var User   = require('./app/models/user'); // get our mongoose model
-    
+// var passport = require('./config/passport')();
+   
 
 //view engine
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
@@ -17,7 +18,6 @@ app.set('view engine', 'handlebars');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
 app.use(express.static(__dirname + '/app'));
 app.use(express.static(__dirname + '/bower_components'));
 app.use(express.static(__dirname + '/config'));
@@ -66,9 +66,6 @@ app.post('/edit_course', function (req, res) {
 app.post('/rubricPost', function (req, res) {
   res.render('dashboard');
 })
-
-  // res.send('You sent the name "' + req.body.name + '".');
-
 
 app.get('/dashboard', function (req, res) {
   res.render('dashboard');
