@@ -19,8 +19,8 @@ module.exports = function(grunt){
 		    //  	'app/css/navbar.css' 		: 'app/sass/navbar.scss',
 		    //  	'app/css/footer.css' 		: 'app/sass/footer.scss',
 		  	// 		'app/css/responsive.css' 	: 'app/sass/responsive.scss',
-		    //  	'app/css/styles.css' 		: 'app/sass/styles.scss',
-
+		     	
+		     	'app/css/styles.css' 		: 'app/sass/styles.scss',
 		     	// // Bootstrap core CSS
 		     	'app/css/bootstrap.min.css' : 'app/sass/bootstrap.scss',
 		     	'app/css/metisMenu.min.css' : 'app/sass/metisMenu.scss',
