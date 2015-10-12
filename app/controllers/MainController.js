@@ -171,9 +171,11 @@ angular.module('dynamicFormApp', [])
         var val = assignment[i]['value'];
         // put the data submited by the form into the var results
         results2.push(val);
+
+        var mainResult = results.concat(results2);
       }
       // show results in the console
-      console.log(results2);
+      console.log(mainResult);
 
       return results2;
     }      
@@ -187,10 +189,14 @@ angular.module('dynamicFormApp', [])
         var val = student[i]['value'];
         // put the data submited by the form into the var results
         results3.push(val);
+
+        mainResults = mainResult.concat(results3);
       }
       // show results in the console
       console.log(results3);
-      return results3;
+      console.log(mainResults);
+
+      return mainResults;
     }      
   }
 
