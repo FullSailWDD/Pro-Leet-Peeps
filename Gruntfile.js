@@ -14,12 +14,12 @@ module.exports = function(grunt){
 		      dist:{ 
 		     	files:{	
 		      	'app/css/master.css' 		: 'app/sass/master.scss',
-		    //   	'app/css/normalize.css' 	: 'app/sass/normalize.scss',
+		      	'app/css/normalize.css' 	: 'app/sass/normalize.scss',
 		     	'app/css/responsive.css' 	: 'app/sass/responsive.scss',
-		    //  	'app/css/navbar.css' 		: 'app/sass/navbar.scss',
-		    //  	'app/css/footer.css' 		: 'app/sass/footer.scss',
-		  	// 		'app/css/responsive.css' 	: 'app/sass/responsive.scss',
-		     	
+		     	'app/css/navbar.css' 		: 'app/sass/navbar.scss',
+		     	'app/css/footer.css' 		: 'app/sass/footer.scss',
+		  		'app/css/responsive.css' 	: 'app/sass/responsive.scss',
+		     	//JIMin DONT TOUCH files avove this comment
 		     	'app/css/styles.css' 		: 'app/sass/styles.scss',
 		     	// // Bootstrap core CSS
 		     	'app/css/bootstrap.min.css' : 'app/sass/bootstrap.scss',
