@@ -1,3 +1,7 @@
+/*main Color*/
+/*main Hover Color*/
+/*font Color*/
+/*Fonts*/
 /*!
  * Start Bootstrap - SB Admin 2 Bootstrap Admin Theme (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
@@ -72,7 +76,7 @@ body {
   padding: 15px; }
 
 .sidebar ul li {
-  border-bottom: 1px solid #e7e7e7; }
+  border-bottom: 0.5px solid rgab(9, 44, 69, 1); }
 
 .sidebar ul li a.active {
   background-color: #eee; }

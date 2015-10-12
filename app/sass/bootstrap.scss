@@ -1,9 +1,4 @@
-$mainNavy : rgba(6, 31, 48, 1);
-$mainLightNavy : rgba(62, 69, 112, 1);
-$mainGreen : rgba(56, 170, 131, 1);
-$mainLightCoolGrey : rgba(162, 185, 186, 1);
-$mainDarkOrange : rgba(162, 185, 186, 1);
-
+@import 'styles';
 /*!
  * Bootstrap v3.3.4 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -11,7 +6,7 @@ $mainDarkOrange : rgba(162, 185, 186, 1);
  */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
-  font-family: sans-serif;
+  font-family: $mainFont;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
 
@@ -1034,7 +1029,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: $mainFont;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
@@ -1046,11 +1041,11 @@ button, input, select, textarea {
   line-height: inherit; }
 
 a {
-  color: #337ab7;
+  color: $lightGreyTwo;
   text-decoration: none; }
 
 a:focus, a:hover {
-  color: #23527c;
+  color: $lightGrey;
   text-decoration: underline; }
 
 a:focus {
@@ -3244,7 +3239,7 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
 
 .nav > li > a:focus, .nav > li > a:hover {
   text-decoration: none;
-  background-color: #eee; }
+  background-color: $mainNavyHover; }
 
 .nav > li.disabled > a {
   color: #777; }
@@ -3674,14 +3669,14 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
     margin-right: 0; } }
 
 .navbar-default {
-  background-color: #f8f8f8;
+  background-color: $mainNavy;
   border-color: #e7e7e7; }
 
 .navbar-default .navbar-brand {
   color: #777; }
 
 .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
-  color: #5e5e5e;
+  color: $mainNavyHover;
   background-color: transparent; }
 
 .navbar-default .navbar-text {
