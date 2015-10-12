@@ -14,7 +14,6 @@ var User   = require('./app/models/user'); // get our mongoose model
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 
 app.set('view engine', 'handlebars');
-app.set('port',process.env.PORT || 3000);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -79,23 +78,23 @@ app.get('/dashboard', function (req, res) {
 //   res.render('dashboard');
 // });
 
-// app.get('/setup', function(req, res) {
+app.get('/setup', function(req, res) {
 
-//   // create a sample user
-//   var nick = new User({ 
-//     name: 'Nick Cerminara', 
-//     password: 'password',
-//     admin: true 
-//   });
+  // create a sample user
+  var nick = new User({ 
+    name: 'Nick Cerminara', 
+    password: 'password',
+    admin: true 
+  });
 
-//   // save the sample user
-//   nick.save(function(err) {
-//     if (err) throw err;
+  // save the sample user
+  nick.save(function(err) {
+    if (err) throw err;
 
-//     console.log('User saved successfully');
-//     res.json({ success: true });
-//   });
-// });
+    console.log('User saved successfully');
+    res.json({ success: true });
+  });
+});
 
 
 app.listen(port);
