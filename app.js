@@ -4,10 +4,10 @@ var express = require('express'),
  bodyParser = require('body-parser'),util = require('util'),mongoose = require('mongoose'), morgan = require('morgan');
 
 
-var jwt    = require('jsonwebtoken'); // used to create, sign, and verify tokens
-var config = require('./config/config'); // get our config file
-// var dbConnect = require('./config/database'); // get our db file
-var User   = require('./app/models/user'); // get our mongoose model
+// var jwt    = require('jsonwebtoken'); // used to create, sign, and verify tokens
+// var config = require('./config/config'); // get our config file
+// // var dbConnect = require('./config/database'); // get our db file
+// var User   = require('./app/models/user'); // get our mongoose model
     
 
 //view engine
@@ -26,8 +26,8 @@ app.use(express.static(__dirname + '/config'));
 var port = process.env.PORT || 3000;
 
 
-mongoose.connect(config.database); // connect to database
-app.set('superSecret', config.secret); // secret variable
+// mongoose.connect(config.database); // connect to database
+// app.set('superSecret', config.secret); // secret variable
 
 
 app.get('/', function (req, res) {
@@ -78,23 +78,23 @@ app.get('/dashboard', function (req, res) {
 //   res.render('dashboard');
 // });
 
-app.get('/setup', function(req, res) {
+// app.get('/setup', function(req, res) {
 
-  // create a sample user
-  var nick = new User({ 
-    name: 'Nick Cerminara', 
-    password: 'password',
-    admin: true 
-  });
+//   // create a sample user
+//   var nick = new User({ 
+//     name: 'Nick Cerminara', 
+//     password: 'password',
+//     admin: true 
+//   });
 
-  // save the sample user
-  nick.save(function(err) {
-    if (err) throw err;
+//   // save the sample user
+//   nick.save(function(err) {
+//     if (err) throw err;
 
-    console.log('User saved successfully');
-    res.json({ success: true });
-  });
-});
+//     console.log('User saved successfully');
+//     res.json({ success: true });
+//   });
+// });
 
 
 app.listen(port);
