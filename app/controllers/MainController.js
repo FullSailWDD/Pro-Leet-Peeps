@@ -176,7 +176,6 @@ angular.module('dynamicFormApp', [])
       }
       // show results in the console
       console.log(mainResult);
-
       return results2;
     }      
   }
@@ -190,13 +189,14 @@ angular.module('dynamicFormApp', [])
         // put the data submited by the form into the var results
         results3.push(val);
 
-        mainResults = mainResult.concat(results3);
+        var mainResults = results.concat(results2,results3);
       }
       // show results in the console
       console.log(results3);
       console.log(mainResults);
 
-      return mainResults;
+      return results3;
+
     }      
   }
 
