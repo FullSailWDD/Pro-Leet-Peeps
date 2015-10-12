@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": ";;AAKA,cAAe;EACX,gBAAgB,EAAE,UAAU",
+"mappings": ";;AAWA,cAAe;EACX,gBAAgB,EAAE,UAAU",
 "sources": ["../sass/master.scss"],
 "names": [],
 "file": "master.css"

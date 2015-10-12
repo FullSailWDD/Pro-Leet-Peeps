@@ -1,3 +1,9 @@
+$mainNavy : rgba(6, 31, 48, 1);
+$mainLightNavy : rgba(62, 69, 112, 1);
+$mainGreen : rgba(56, 170, 131, 1);
+$mainLightCoolGrey : rgba(162, 185, 186, 1);
+$mainDarkOrange : rgba(162, 185, 186, 1);
+
 /*!
  * Bootstrap v3.3.4 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -3666,6 +3672,7 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
 
   .navbar-right ~ .navbar-right {
     margin-right: 0; } }
+
 .navbar-default {
   background-color: #f8f8f8;
   border-color: #e7e7e7; }
@@ -5473,6 +5480,5 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
-/*# sourceMappingURL=bootstrap.min.css.map */
 
 /*# sourceMappingURL=bootstrap.min.css.map */
