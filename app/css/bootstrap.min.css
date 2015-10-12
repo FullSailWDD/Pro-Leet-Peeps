@@ -1,3 +1,7 @@
+/*main Color*/
+/*main Hover Color*/
+/*font Color*/
+/*Fonts*/
 /*!
  * Bootstrap v3.3.4 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -5,7 +9,7 @@
  */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
-  font-family: sans-serif;
+  font-family: "Open Sans", sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
 
@@ -1028,7 +1032,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
@@ -1040,11 +1044,11 @@ button, input, select, textarea {
   line-height: inherit; }
 
 a {
-  color: #337ab7;
+  color: #a0b6b4;
   text-decoration: none; }
 
 a:focus, a:hover {
-  color: #23527c;
+  color: #c1dcde;
   text-decoration: underline; }
 
 a:focus {
@@ -3238,7 +3242,7 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
 
 .nav > li > a:focus, .nav > li > a:hover {
   text-decoration: none;
-  background-color: #eee; }
+  background-color: #092c45; }
 
 .nav > li.disabled > a {
   color: #777; }
@@ -3667,14 +3671,14 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
   .navbar-right ~ .navbar-right {
     margin-right: 0; } }
 .navbar-default {
-  background-color: #f8f8f8;
+  background-color: #061f30;
   border-color: #e7e7e7; }
 
 .navbar-default .navbar-brand {
   color: #777; }
 
 .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
-  color: #5e5e5e;
+  color: #092c45;
   background-color: transparent; }
 
 .navbar-default .navbar-text {
