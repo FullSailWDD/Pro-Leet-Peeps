@@ -7,7 +7,7 @@ var express = require('express'),
 var jwt  = require('jsonwebtoken'); // used to create, sign, and verify tokens
 // var config = require('./config/config'); // get our config file
 var dbConnect = require('./config/database'); // get our db file
-// var User   = require('./app/models/user'); // get our mongoose model
+// var User   = require('/modules/users/'); // get our mongoose model
 // var passport = require('./config/passport')();
    
 
@@ -62,29 +62,4 @@ app.get('/', function (req, res) {
 app.listen(port);
 console.log("Server listening on port:", port);
 
-
-// db.createUser(
-//    {
-//      user: "jimin",
-//      pwd: "jimin123",
-//      roles: [ "readWrite", "dbAdmin" ]
-//    }
-// )
-
-// db.createUser(
-//    {
-//      user: "alex",
-//      pwd: "alex123",
-//      roles: [ "readWrite", "dbAdmin" ]
-//    }
-// )
-
-
-// db.createUser(
-//    {
-//      user: "chris",
-//      pwd: "chris123",
-//      roles: [ "readWrite", "dbAdmin" ]
-//    }
-// )
 
