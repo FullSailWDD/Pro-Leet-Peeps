@@ -2653,13 +2653,13 @@ select[multiple].form-group-lg .form-control, textarea.form-group-lg .form-contr
 
 .btn-primary {
   color: #fff;
-  background-color: #337ab7;
-  border-color: #2e6da4; }
+  background-color: #061f30;
+  border-color: #061f30; }
 
 .btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open > .dropdown-toggle.btn-primary {
   color: #fff;
-  background-color: #286090;
-  border-color: #204d74; }
+  background-color: #061f30;
+  border-color: #061f30; }
 
 .btn-primary.active, .btn-primary:active, .open > .dropdown-toggle.btn-primary {
   background-image: none; }
@@ -2876,7 +2876,11 @@ tbody.collapse.in {
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175); }
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  top: 41px;
+  display: block;
+  left: 1300px;
+  right: auto; }
 
 .dropdown-menu.pull-right {
   right: 0;
@@ -3671,7 +3675,7 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
 
   .navbar-right {
     float: right !important;
-    margin-right: -15px; }
+    margin: 7px; }
 
   .navbar-right ~ .navbar-right {
     margin-right: 0; } }

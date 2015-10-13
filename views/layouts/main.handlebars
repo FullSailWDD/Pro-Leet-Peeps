@@ -1,5 +1,5 @@
 <!Doctype html>
-<html>
+<html ng-app="ui.bootstrap.demo">
 <head>
 	<title>Grading Rubric Form</title>
 	<script src="angular/angular.min.js"></script>
@@ -7,8 +7,10 @@
 	<meta name="proleetpeps" content="http://jeffmendez.com/public/images/jeff.jpg" />
 	<meta name="keywords" content="web design, pro-leet-peeps, proleetpeeps,dynamic form">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.1/angular-animate.js"></script>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.14.1.js"></script>
 
     <link href="css/navbar.min.css" rel="stylesheet" type="text/css">
 	<link href="css/metisMenu.min.css" rel="stylesheet" type="text/css">
@@ -24,7 +26,8 @@
 
 
 	<script src="controllers/MainController.js"></script>
-</head>
+
+  </head>
 <body>
 
  <div id="wrapper">
@@ -54,52 +57,27 @@
                 </span>
             </div>
 
-
-
-<ul class="nav navbar-top-links navbar-right">
-<div ng-app="ngAnimate">
-  <input type="checkbox" ng-model="checked" aria-label="Toggle ngHide">
-    <a ng-click="showme=true" aria-label="Toggle ngHide">
-        <i class="fa fa-user fa-fw"></i>
-        <i class="fa fa-caret-down"></i>
-    </a>
-  <br/>
-  <div>
-    <div class="check-element animate-show" ng-show="showme">
-    <ul class="dropdown-menu dropdown-user">
+<div ng-controller="DropdownCtrl" class="nav navbar-top-links navbar-right">
+   <div class="btn-group" uib-dropdown dropdown-append-to-body>
+      <button id="btn-append-to-body" type="button" class="btn btn-primary" uib-dropdown-toggle>
+        <span><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        My Account  <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+            </a></span>
+      </button>
+      <ul class="uib-dropdown-menu" role="menu" aria-labelledby="btn-append-to-body">
         <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-        </li>
-        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-        </li>
-        <li class="divider"></li>
-        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-        </li>
-    </ul>
-    </div>
-  </div>
-</div>
-</ul>
-
-<!-- 
-            <ul class="nav navbar-top-links navbar-right">
-                <li>
-                    <a>
-                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
                         </li>
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
                         <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
+      </ul>
+    </div>
+</div>
 
-                    </ul>
-                </li>
-            </ul> -->
 
-            
+
 
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
@@ -152,8 +130,7 @@
                 responsive: true
         });
     });
-
-</script>
+    </script>
 
 </body>
 </html>
