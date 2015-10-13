@@ -5,8 +5,12 @@
 	<meta name="description" content="proRubrics2">
 	<meta name="keywords" content="web design, pro-leet-peeps, proleetpeeps,dynamic form">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
     <script src="angular/angular.min.js"></script>
     <script src="angular-route/angular-route.min.js"></script>
+
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.14.1.js"></script>
+
     <link href="css/navbar.min.css" rel="stylesheet" type="text/css">
 	<link href="css/metisMenu.min.css" rel="stylesheet" type="text/css">
 	<link href="css/timeline.min.css" rel="stylesheet">
@@ -53,27 +57,25 @@
                 </span>
             </div>
 
-            <ul class="nav navbar-top-links navbar-right">
-                <!-- /.dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                        </li>
+<!-- Click me: <input type="checkbox" ng-model="checked" aria-label="Toggle ngShow"><br/> -->
+<ul class="nav navbar-top-links navbar-right">
+    <li class="dropdown">
+        <a class="dropdown-toggle" ng-click="isReplyFormOpen = !isReplyFormOpen">
+            <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+        </a>
+        <ul class="dropdown-menu dropdown-user" class="check-element animate-hide" ng-show="isReplyFormOpen">
+            <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+            </li>
+            <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+            </li>
+            <li class="divider"></li>
+            <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+            </li>
+        </ul>
+    </li>
+</ul>
 
-                    </ul>
-                    <!-- /.dropdown-user -->
-                </li>
-                <!-- /.dropdown -->
-            </ul>
-            <!-- /.navbar-top-links -->
+
 
             
             <div class="navbar-default sidebar" role="navigation">
@@ -104,9 +106,6 @@
         {{{ body }}}
 
     </div>
-	<!-- jQuery -->
-
-    <script src="js/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>

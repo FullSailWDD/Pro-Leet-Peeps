@@ -2862,7 +2862,7 @@ tbody.collapse.in {
   top: 100%;
   left: 0;
   z-index: 1000;
-  display: none;
+  display: inline;
   float: left;
   min-width: 160px;
   padding: 5px 0;
@@ -3536,6 +3536,7 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
 @media (max-width: 767px) {
   .navbar-nav .open .dropdown-menu {
     position: static;
+    display: inline;
     float: none;
     width: auto;
     margin-top: 0;
