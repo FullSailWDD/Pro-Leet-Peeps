@@ -25,51 +25,17 @@ app.use(express.static(__dirname + '/config'));
 //config port
 var port = process.env.PORT || 3000;
 
-
-// mongoose.connect(config.database); // connect to database
-// app.set('superSecret', config.secret); // secret variable
-
-
 app.get('/', function (req, res) {
   res.render('landing');
 })
 
 
-app.get('/home', function (req, res) {
-  res.render('home');
-})
-
-app.get('/activities', function (req, res) {
-  res.render('activities');
-})
-
-app.get('/my_courses', function (req, res) {
-  res.render('my_courses');
-})
+// mongoose.connect(config.database); // connect to database
+// app.set('superSecret', config.secret); // secret variable
 
 
-app.get('/edit_rubric', function (req, res) {
-  res.render('edit_rubric');
-})
+// app.use('/router' ,require('./router'))
 
-
-app.get('/signup', function (req, res) {
-  res.render('signup');
-})
-
-
-
-app.post('/edit_course', function (req, res) {
-  res.render('edit_rubric');
-})
-
-app.post('/rubricPost', function (req, res) {
-  res.render('dashboard');
-})
-
-app.get('/dashboard', function (req, res) {
-  res.render('dashboard');
-})
 
 // app.post('/dash', function (req, res) {
 //   res.render('dashboard');
