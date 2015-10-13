@@ -23,7 +23,7 @@ module.exports = function(grunt){
 		     	'app/css/bootstrap.min.css' : 'app/sass/bootstrap.scss',
 		     	'app/css/metisMenu.min.css' : 'app/sass/metisMenu.scss',
 		     	'app/css/timeline.css' : 'app/sass/timeline.scss',
-		     	'app/css/sb-admin-2.min.css' : 'app/sass/sb-admin-2.scss',
+		     	'app/css/sb-admin-2.css' : 'app/sass/sb-admin-2.scss',
 		     	'app/css/morris.css' : 'app/sass/morris.scss'
 
 		    	}

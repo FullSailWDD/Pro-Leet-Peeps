@@ -3239,7 +3239,7 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
 
 .nav > li {
   position: relative;
-  display: block; }
+  /*  display: block;*/ }
 
 .nav > li > a {
   position: relative;
