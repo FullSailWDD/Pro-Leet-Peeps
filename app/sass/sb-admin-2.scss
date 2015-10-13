@@ -96,11 +96,11 @@ body {
 }
 
 .sidebar ul li {
-    border-bottom: .5px solid $mainNavyHover;
+    border-bottom: .5px solid $mainLightNavy;
 }
 
 .sidebar ul li a.active {
-    background-color: #eee;
+    background-color: $mainLightNavy;
 }
 
 .sidebar .arrow {
