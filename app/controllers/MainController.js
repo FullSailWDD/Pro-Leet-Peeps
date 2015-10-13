@@ -1,11 +1,11 @@
-var formapp = angular.module('FormApp')
-formapp.config(['$interpolateProvider', function($interpolateProvider){
+var myApp = angular.module('myApp')
+myApp.config(['$interpolateProvider', function($interpolateProvider){
   // $interpolateProvider used to differentiate uses for angular from express
   $interpolateProvider.startSymbol('{[{'); 
   $interpolateProvider.endSymbol('}]}'); 
 }])
 
-formapp.controller('formsController',function($scope) {
+myApp.controller('formsController',function($scope) {
     // array to hold the form data
     $scope.formData = [];
 

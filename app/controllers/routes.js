@@ -32,15 +32,13 @@ var myApp = angular.module('myApp', ['ngRoute']);
 				templateUrl : '/dashboard.handlebars',
 				controller  : 'dashboardController'
 			})
-
 			.when('/form', {
 				templateUrl : '/form.handlebars',
-				controller  : 'formController'
+				controller  : 'formsController'
 			});
 	});
 
 	// create the controller and inject Angular's $scope
-
 	myApp.controller('signinController', function($scope){
 
 	});
