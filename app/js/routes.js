@@ -4,16 +4,12 @@ var app = angular.module('myApp', ['ngRoute']);
 
 app.config(['$routeProvider', function ($routeProvider) {
 	$routeProvider
-	.when('/', {
+	.when('/homeLanding', {
 		templateUrl: 'views/homeLanding'
 		controller: 'HomeCtrl'
 		}
 	)
-	.when('/home', {
-		templateUrl: 'views/home'
-		controller: 'HomeCtrl'
-		}
-	).when('/activities', {
+	.when('/activities', {
 		templateUrl: 'views/activities'
 		controller: 'LoginCtrl'
 		}

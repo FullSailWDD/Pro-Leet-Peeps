@@ -1,1 +1,12 @@
-<div ng-view></div>
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+        	<section id="moveContainer" ng-controller="MainController">
+        		<a href="/home">HOME</a>
+        		<a href="/activities">Courses</a>
+        		<a href="/dashboard">Dashboard</a>
+        	</section>
+			<div ng-view></div>
+		</div>
+	</div>
+</div>
