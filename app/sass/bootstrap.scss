@@ -2650,13 +2650,13 @@ select[multiple].form-group-lg .form-control, textarea.form-group-lg .form-contr
 
 .btn-primary {
   color: #fff;
-  background-color: #337ab7;
-  border-color: #2e6da4; }
+  background-color: $mainNavy;
+  border-color: $mainNavy; }
 
 .btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open > .dropdown-toggle.btn-primary {
   color: #fff;
-  background-color: #286090;
-  border-color: #204d74; }
+  background-color: $mainNavy;
+  border-color: $mainNavy; }
 
 .btn-primary.active, .btn-primary:active, .open > .dropdown-toggle.btn-primary {
   background-image: none; }
@@ -2859,7 +2859,10 @@ tbody.collapse.in {
   top: 100%;
   left: 0;
   z-index: 1000;
+<<<<<<< HEAD
   display: inline;
+=======
+>>>>>>> 8ae1a1035ab14c6313d3707e901c7dc9209dbec9
   float: left;
   min-width: 160px;
   padding: 5px 0;
@@ -2873,9 +2876,22 @@ tbody.collapse.in {
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, .15);
   border-radius: 4px;
+<<<<<<< HEAD
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
           box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 }
+=======
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175); 
+
+    top: 41px;
+    display: block;
+    left: 1300px;
+    right: auto;
+
+
+    }
+>>>>>>> 8ae1a1035ab14c6313d3707e901c7dc9209dbec9
 
 .dropdown-menu.pull-right {
   right: 0;
@@ -3243,7 +3259,7 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
 .nav > li > a {
   position: relative;
   display: block;
-  padding: 10px 15px; }
+  padding: 13px 15px; }
 
 .nav > li > a:focus, .nav > li > a:hover {
   text-decoration: none;
@@ -3672,7 +3688,7 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
 
   .navbar-right {
     float: right !important;
-    margin-right: -15px; }
+    margin:7px; }
 
   .navbar-right ~ .navbar-right {
     margin-right: 0; } }
@@ -5488,3 +5504,7 @@ button.close {
     display: none !important; } }
 
 /*# sourceMappingURL=bootstrap.min.css.map */
+    
+
+
+
