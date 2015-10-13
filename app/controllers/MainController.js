@@ -177,6 +177,8 @@ angular.module('dynamicFormApp', [])
       // show results in the console
       console.log(mainResult);
       return results2;
+
+      
     }      
   }
 
