@@ -1,11 +1,11 @@
-var formapp = angular.module('FormApp')
-formapp.config(['$interpolateProvider', function($interpolateProvider){
+angular.module('dynamicFormApp', [])
+.config(['$interpolateProvider', function($interpolateProvider){
   // $interpolateProvider used to differentiate uses for angular from express
   $interpolateProvider.startSymbol('{[{'); 
   $interpolateProvider.endSymbol('}]}'); 
 }])
 
-formapp.controller('formsController',function($scope) {
+.controller('mainController',function($scope) {
     // array to hold the form data
     $scope.formData = [];
 
@@ -177,8 +177,6 @@ formapp.controller('formsController',function($scope) {
       // show results in the console
       console.log(mainResult);
       return results2;
-
-      
     }      
   }
 

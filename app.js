@@ -4,7 +4,7 @@ var express = require('express'),
  bodyParser = require('body-parser'),util = require('util'),mongoose = require('mongoose'), morgan = require('morgan');
 
 
-var jwt    = require('jsonwebtoken'); // used to create, sign, and verify tokens
+var jwt  = require('jsonwebtoken'); // used to create, sign, and verify tokens
 // var config = require('./config/config'); // get our config file
 var dbConnect = require('./config/database'); // get our db file
 var User   = require('./app/models/user'); // get our mongoose model
@@ -19,57 +19,22 @@ app.set('view engine', 'handlebars');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/app'));
+app.use(express.static(__dirname + '/views'));
 app.use(express.static(__dirname + '/bower_components'));
 app.use(express.static(__dirname + '/config'));
 
 //config port
 var port = process.env.PORT || 3000;
 
-
-// mongoose.connect(config.database); // connect to database
-// app.set('superSecret', config.secret); // secret variable
-
-
 app.get('/', function (req, res) {
   res.render('landing');
 })
 
 
-app.get('/home', function (req, res) {
-  res.render('home');
-})
-
-app.get('/activities', function (req, res) {
-  res.render('activities');
-})
-
-app.get('/my_courses', function (req, res) {
-  res.render('my_courses');
-})
+// mongoose.connect(config.database); // connect to database
+// app.set('superSecret', config.secret); // secret variable
 
 
-app.get('/edit_rubric', function (req, res) {
-  res.render('edit_rubric');
-})
-
-
-app.get('/signup', function (req, res) {
-  res.render('signup');
-})
-
-
-
-app.post('/edit_course', function (req, res) {
-  res.render('edit_rubric');
-})
-
-app.post('/rubricPost', function (req, res) {
-  res.render('dashboard');
-})
-
-app.get('/dashboard', function (req, res) {
-  res.render('dashboard');
-})
 
 // app.post('/dash', function (req, res) {
 //   res.render('dashboard');
