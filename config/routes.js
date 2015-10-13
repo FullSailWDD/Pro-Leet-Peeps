@@ -1,10 +1,6 @@
 var express = require('express'),
  app = express();
 
-app.get('/', function (req, res) {
-  res.render('landing');
-})
-
 
 app.get('/home', function (req, res) {
   res.render('home');

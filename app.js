@@ -7,7 +7,7 @@ var express = require('express'),
 var jwt  = require('jsonwebtoken'); // used to create, sign, and verify tokens
 // var config = require('./config/config'); // get our config file
 var dbConnect = require('./config/database'); // get our db file
-var User   = require('./app/models/user'); // get our mongoose model
+// var User   = require('./app/models/user'); // get our mongoose model
 // var passport = require('./config/passport')();
    
 

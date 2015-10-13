@@ -2874,6 +2874,7 @@ tbody.collapse.in {
   border: 1px solid rgba(0, 0, 0, .15);
   border-radius: 4px;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+<<<<<<< HEAD
          box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
@@ -2882,6 +2883,20 @@ tbody.collapse.in {
     display: block;
     left: 1300px;
     right: auto;*/
+=======
+          box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+
+
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175); 
+
+/*    top: 41px;
+    display: block;
+    left: 1300px;
+    right: auto;
+
+*/
+>>>>>>> cde62780399fa1b3e3ca8918bba6f92b3598b765
     }
 
 
