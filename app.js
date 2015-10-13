@@ -4,7 +4,7 @@ var express = require('express'),
  bodyParser = require('body-parser'),util = require('util'),mongoose = require('mongoose'), morgan = require('morgan');
 
 
-var jwt    = require('jsonwebtoken'); // used to create, sign, and verify tokens
+var jwt  = require('jsonwebtoken'); // used to create, sign, and verify tokens
 // var config = require('./config/config'); // get our config file
 var dbConnect = require('./config/database'); // get our db file
 var User   = require('./app/models/user'); // get our mongoose model
@@ -19,6 +19,7 @@ app.set('view engine', 'handlebars');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/app'));
+app.use(express.static(__dirname + '/views'));
 app.use(express.static(__dirname + '/bower_components'));
 app.use(express.static(__dirname + '/config'));
 
@@ -33,8 +34,6 @@ app.get('/', function (req, res) {
 // mongoose.connect(config.database); // connect to database
 // app.set('superSecret', config.secret); // secret variable
 
-
-// app.use('/router' ,require('./router'))
 
 
 // app.post('/dash', function (req, res) {
