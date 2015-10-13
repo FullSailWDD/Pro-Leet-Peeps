@@ -2859,10 +2859,7 @@ tbody.collapse.in {
   top: 100%;
   left: 0;
   z-index: 1000;
-<<<<<<< HEAD
   display: inline;
-=======
->>>>>>> 8ae1a1035ab14c6313d3707e901c7dc9209dbec9
   float: left;
   min-width: 160px;
   padding: 5px 0;
@@ -2876,22 +2873,17 @@ tbody.collapse.in {
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, .15);
   border-radius: 4px;
-<<<<<<< HEAD
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-          box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-}
-=======
+         box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175); 
-
-    top: 41px;
+/*    top: 41px;
     display: block;
     left: 1300px;
-    right: auto;
-
-
+    right: auto;*/
     }
->>>>>>> 8ae1a1035ab14c6313d3707e901c7dc9209dbec9
+
 
 .dropdown-menu.pull-right {
   right: 0;
