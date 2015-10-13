@@ -10,19 +10,20 @@
                             <i class="fa fa-bell fa-fw"></i> Rubric List
                         </div>
                         <!-- /.panel-heading -->
-                        <div class="panel-body" ng-app="dynamicFormApp" ng-controller="mainController">
+                        <div class="panel-body">
                             <div class="list-group">
-                                <form name="rubricForm" action="/edit_course" method="post" novalidate>
+                                <form name="rubricForm" action="#/editRubric" novalidate>
                                     <a href="#" class="list-group-item">
                                         <i class="fa fa-tasks fa-fw"></i> Web Interaction & Animation
                                         <span class="pull-right text-muted small">
                                         <button type="submit" class="btn btn-success">Edit</button>
-                                        <button type="button" class="btn btn-danger">Remove</button></span>
+                                        <button type="button" class="btn btn-danger">Remove</button>
+                                        </span>
                                     </a>
                                 </form>
 
 
-                                <form name="rubricForm" action="/edit_course" method="post" novalidate>
+                                <form name="rubricForm" action="#/editRubric"  novalidate>
                                     <a href="#" class="list-group-item">
                                         <i class="fa fa-tasks fa-fw"></i> Design Patterns for Web Programming
                                         <span class="pull-right text-muted small">
@@ -31,7 +32,7 @@
                                     </a>
                                 </form>
 
-                                <form name="rubricForm" action="/edit_course" method="post" novalidate>
+                                <form name="rubricForm" action="#/editRubric" novalidate>
                                     <a href="#" class="list-group-item">
                                         <i class="fa fa-tasks fa-fw"></i> Database Structures
                                         <span class="pull-right text-muted small"><button type="button" class="btn btn-success">Edit</button><button type="button" class="btn btn-danger">Remove</button>
