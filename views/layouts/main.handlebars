@@ -8,6 +8,8 @@
 	<meta name="keywords" content="web design, pro-leet-peeps, proleetpeeps,dynamic form">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.1/angular-animate.js"></script>
+
     <link href="css/navbar.min.css" rel="stylesheet" type="text/css">
 	<link href="css/metisMenu.min.css" rel="stylesheet" type="text/css">
 	<link href="css/timeline.min.css" rel="stylesheet">
@@ -39,7 +41,6 @@
                 <img src="img/ProRubricLogo.png" width="12%">
                 <a class="navbar-brand" href="/">Pro-Leet-Peps</a>
                 
-                            <!-- /input-group -->
 
             </div>
             <!-- /.navbar-header -->
@@ -52,11 +53,33 @@
                     </button>
                 </span>
             </div>
+<ul class="nav navbar-top-links navbar-right">
+<div ng-app="ngAnimate">
+  <input type="checkbox" ng-model="checked" aria-label="Toggle ngHide">
+    <a>
+        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+    </a>
+  <br/>
+  <div>
+    <div class="check-element animate-show" ng-show="checked">
+    <ul class="dropdown-menu dropdown-user">
+        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+        </li>
+        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+        </li>
+        <li class="divider"></li>
+        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+        </li>
+    </ul>
+    </div>
+  </div>
+</div>
+</ul>
 
+<!-- 
             <ul class="nav navbar-top-links navbar-right">
-                <!-- /.dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <li>
+                    <a>
                         <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
@@ -69,11 +92,10 @@
                         </li>
 
                     </ul>
-                    <!-- /.dropdown-user -->
                 </li>
-                <!-- /.dropdown -->
-            </ul>
-            <!-- /.navbar-top-links -->
+            </ul> -->
+
+            
 
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
@@ -104,7 +126,7 @@
 
     </div>
 	<!-- jQuery -->
-     <script src="js/jquery.min.js"></script>
+     <!--<script src="js/jquery.min.js"></script>-->
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -126,9 +148,8 @@
                 responsive: true
         });
     });
-    </script>
 
-
+</script>
 
 </body>
 </html>
