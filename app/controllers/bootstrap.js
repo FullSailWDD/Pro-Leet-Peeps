@@ -3,6 +3,7 @@ myApp.controller('AccordionDemoCtrl', function ($scope) {
   $scope.groups = [
     {
       title : 'Select Degree Program and Course',
+      className : 'addingDegreeCourse',
       users : [ 
 
 	    { 
@@ -48,6 +49,7 @@ myApp.controller('AccordionDemoCtrl', function ($scope) {
 
     {
       title: 'Add Rubric',
+      className : 'addingRubric',
 	  users : [ { 
 	      // label will render the label for the input form.
 	      label: 'Rubric Name',
@@ -89,6 +91,7 @@ myApp.controller('AccordionDemoCtrl', function ($scope) {
 
 	{
       title: 'Add Student',
+      className : 'addingStudent',
 	  users : [ { 
 	      // label will render the label for the input form.
 	      label: 'Student Name',
