@@ -16,37 +16,33 @@
 
                 <uib-accordion-group heading="{[{group.title}]}" ng-repeat="group in groups" ng-class='{"addingDegreeCourse":tog==2}'>
                         
-                <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
-                <a ng-click="Post()">Fire</a>
+                    <form name="userForm" ng-submit="submitForm() && Post()" novalidate>
 
-                <div class="panel-heading" ng-hide="showme">
-                    Select Degree Program and Course
-                </div>
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-lg-6">
+                        <div class="panel-heading" ng-hide="showme">
+                            Select Degree Program and Course
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6">
 
-                        <form name="userForm" ng-submit="Post()" novalidate>
-                        
-                            <div class="form-group">
-                               
-                            <div ng-repeat="item in group.users">
+                                
+                                    <div class="form-group">
+                                       
+                                    <div ng-repeat="item in group.users">
 
-                                <label>{[{ item.label }]}</label>
+                                        <label>{[{ item.label }]}</label>
 
-                    <!--  TEXT -->
-                                <div class="form-group" ng-class="{ 'has-error' : userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine }">
-                                    <input type="text" class="form-control" name="{[{ item.name }]}" ng-model="status" placeholder="{[{item.placeholder}]}" required>
-                                    <p ng-show="userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine" class="help-block">
-                                    </p>
+                            <!--  TEXT -->
+                                        <div class="form-group" ng-class="{ 'has-error' : groupList.{[{ item.name }]}.$invalid && !groupList.{[{ item.name }]}.$pristine }">
+                                            <input   type="text" class="form-control" name="{[{ item.name }]}"  placeholder="{[{item.placeholder}]}" />
+                                            <p ng-show="groupList.{[{ item.name }]}.$invalid && !groupList.{[{ item.name }]}.$pristine" class="help-block">
+                                            </p>
+                                    </div>
+                        </div>
+                                  
                                 </div>
-
-
-                            </div>
-                              
-                            </div>
-                           <button type="submit" ng-click="showme=true" class="btn btn-default" ng-disabled="userForm.$invalid">Submit</button>     
-                        </form>
+                               <button type="submit" ng-click="showme=true && Post()" class="btn btn-default" ng-disabled="userForm.$invalid">Submit</button>     
+                    </form>
                 </uib-accordion-group>
 
               </uib-accordion>
