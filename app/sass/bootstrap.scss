@@ -43,6 +43,7 @@ dfn {
   font-style: italic; }
 
 h1 {
+  font-family: $headingFont;
   margin: .67em 0;
   font-size: 2em; }
 
@@ -187,6 +188,8 @@ td, th {
     max-width: 100% !important; }
 
   h2, h3, p {
+    font-family: $headingFont;
+    color: $mainGreen;
     orphans: 3;
     widows: 3; }
 
@@ -1114,7 +1117,7 @@ hr {
   font-family: inherit;
   font-weight: 500;
   line-height: 1.1;
-  color: inherit; }
+  color: $mainGreen; }
 
 .h1 .small, .h1 small, .h2 .small, .h2 small, .h3 .small, .h3 small, .h4 .small, .h4 small, .h5 .small, .h5 small, .h6 .small, .h6 small, h1 .small, h1 small, h2 .small, h2 small, h3 .small, h3 small, h4 .small, h4 small, h5 .small, h5 small, h6 .small, h6 small {
   font-weight: 400;
