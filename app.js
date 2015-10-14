@@ -22,7 +22,8 @@ app.use(express.static(__dirname + '/views'));
 app.use(express.static(__dirname + '/bower_components'));
 app.use(express.static(__dirname + '/config'));
 
-var Users   = require('./app/modules/config.js'); // get our mongoose model
+// var User   = require('./app/modules/config.js'); // get our mongoose model
+
 
 //config port
 var port = process.env.PORT || 3000;
