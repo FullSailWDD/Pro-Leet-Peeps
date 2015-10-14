@@ -1,18 +1,18 @@
 var router = require('express').Router();
 var bodyParser = require('body-parser');
-var Post = require('./app/modules/get/get.js')
+var Course = require('./app/modules/get/get.js')
 
 router.use(bodyParser.json())
-
 
 router.post('/post', function (req,res) {
 	console.log("HELLO");
 
-	var post = new Post({
-			status: req.body.status
+	var course = new Course({
+			status: req.body.status,
+			major: req.body.major
 		})
-	console.log(post)
-		post.save(function(err){
+		console.log(course)
+		course.save(function(err){
 		if(err){
 			console.log('error',err)
 		}

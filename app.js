@@ -31,6 +31,12 @@ app.get('/', function (req, res) {
 })
 
 
+
+app.get('/groupList', function (req, res) {
+	console.log("Waiting for get Request");
+
+})
+
 // mongoose.connect(config.database); // connect to database
 // app.set('superSecret', config.secret); // secret variable
 
