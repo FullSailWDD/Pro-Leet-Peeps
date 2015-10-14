@@ -1,4 +1,3 @@
-var myApp = angular.module('myApp')
 myApp.config(['$interpolateProvider', function($interpolateProvider){
   // $interpolateProvider used to differentiate uses for angular from express
   $interpolateProvider.startSymbol('{[{'); 
