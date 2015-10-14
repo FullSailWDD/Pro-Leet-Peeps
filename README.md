@@ -4,15 +4,15 @@
 
 -------
 ### Development Process
-#### Installation 
+### Installation 
 
-`npm install`
+```npm install```
 
 
 
 
 ### Runing the app
 
-`nodemon`
+```nodemon```
 
-`mongod`
+```mongod```
