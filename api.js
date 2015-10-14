@@ -8,9 +8,10 @@ router.post('/post', function (req,res) {
 	console.log("HELLO");
 
 	var course = new Course({
-			status: req.body.status
+			status: req.body.status,
+			major: req.body.major
 		})
-	console.log(course)
+		console.log(course)
 		course.save(function(err){
 		if(err){
 			console.log('error',err)

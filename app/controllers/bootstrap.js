@@ -2,7 +2,7 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout) {
 
     $scope.Post = function($scope){
       console.log('FIRED');
-       var data = {status:"CHECKING the status yo"};
+       var data = {status:"Status of course",major:"the major of the course"};
 
       $http.post('/api/post', data).then(function (successCallback, errorCallback){
         console.log("successfilled");
@@ -159,20 +159,20 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout) {
 	var email = results.slice(4, 4);
 	var message = results.slice(5, 5);
 
-  // WHEN FORM IS SUBMITED
-  $scope.submitForm = function(isValid){
-  // IF FORM IS VALID
+  	// WHEN FORM IS SUBMITED
+  	$scope.submitForm = function(isValid){
+  	// IF FORM IS VALID
   	var groupList = $scope.groups;
 
-if(isValid){
-      for (var i = 0; i < groupList.length; i++) {
-        var val = groupList[i]['value'];
-        // put the data submited by the form into the var results
-        groupList.push(val);
-      }
-      // show results in the console
-      console.log(groupList);
-}
+	if(isValid){
+	      for (var i = 0; i < groupList.length; i++) {
+	        var val = groupList[i.major.value]['value'];
+	        // put the data submited by the form into the var results
+	        groupList.push(val);
+	      }
+	      // show results in the console
+	      console.log(groupList);
+	}
       return groupList;
   }
 
