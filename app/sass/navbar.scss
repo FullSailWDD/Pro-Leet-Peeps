@@ -23,3 +23,10 @@ html{
 
 #page-wrapper {
 }
+
+@media only screen and (max-width: 10px) and (min-width: 799px) {
+  .sidebar {
+    height: 100%;
+    min-height: 100%;
+    width: 100%; } 
+}

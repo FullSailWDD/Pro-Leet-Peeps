@@ -1,4 +1,10 @@
-var myApp = angular.module('myApp', ['ngRoute']);
+var myApp = angular.module('myApp', ['ngRoute','ngAnimate','ui.bootstrap']);
+
+myApp.config(['$interpolateProvider', function($interpolateProvider){
+  // $interpolateProvider used to differentiate uses for angular from express
+  $interpolateProvider.startSymbol('{[{'); 
+  $interpolateProvider.endSymbol('}]}'); 
+}])
 
 	// configure our routes
 	myApp.config(function($routeProvider) {
@@ -34,7 +40,7 @@ var myApp = angular.module('myApp', ['ngRoute']);
 			})
 			.when('/form', {
 				templateUrl : '/form.handlebars',
-				controller  : 'formsController'
+				controller  : 'AccordionDemoCtrl'
 			});
 	});
 
