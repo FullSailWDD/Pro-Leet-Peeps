@@ -1,44 +1,23 @@
 var router = require('express').Router();
 var bodyParser = require('body-parser');
-
+var Post = require('./app/modules/get/get.js')
 
 router.use(bodyParser.json())
 
 
-router.get('/home', function (req, res) {
-  res.render('home');
-})
+router.post('/post', function (req,res) {
+	console.log("HELLO");
 
-router.get('/activities', function (req, res) {
-  res.render('activities');
-})
-
-router.get('/my_courses', function (req, res) {
-  res.render('my_courses');
-})
-
-
-router.get('/edit_rubric', function (req, res) {
-  res.render('edit_rubric');
-})
-
-
-router.get('/signup', function (req, res) {
-  res.render('signup');
-})
-
-
-
-router.post('/edit_course', function (req, res) {
-  res.render('edit_rubric');
-})
-
-router.post('/rubricPost', function (req, res) {
-  res.render('dashboard');
-})
-
-router.get('/dashboard', function (req, res) {
-  res.render('dashboard');
+	var post = new Post({
+			status: req.body.status
+		})
+	console.log(post)
+		post.save(function(err){
+		if(err){
+			console.log('error',err)
+		}
+		res.status(201).end()
+	})
 })
 
 

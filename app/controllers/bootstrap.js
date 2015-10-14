@@ -1,5 +1,19 @@
 myApp.controller('AccordionDemoCtrl', function ($scope) {
 
+
+
+    $scope.Post = function($scope){
+      console.log('FIRED');
+       var data = {status:'This wont work ever i suck'};
+
+      $http.post('/api/post', data).then(function (successCallback, errorCallback){
+        console.log("successfilled");
+      });
+
+    }
+
+
+    
   $scope.groups = [
     {
       title : 'Select Degree Program and Course',
