@@ -1,14 +1,3 @@
-.premier {
-    color: red
-}
-
-.green {
-    color: green
-}
-
-.random {
-    color: blue
-}
 
 
 @import 'styles';
@@ -5518,5 +5507,36 @@ button.close {
 /*# sourceMappingURL=bootstrap.min.css.map */
     
 
+
+.addingDegreeCourse{
+  position: absolute;
+  left: 15px;
+  top: 0px;
+}
+
+.addingRubric{
+  position: absolute;
+  left: 315px;
+    top: -5px;
+}
+
+.addingStudent{
+  position: absolute;
+  left: 435px;
+  top: -5px;
+}
+
+
+.premier {
+    color: red
+}
+
+.green {
+    color: green
+}
+
+.random {
+    color: blue
+}
 
 

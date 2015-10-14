@@ -1,4 +1,4 @@
-myApp.controller('AccordionDemoCtrl', function ($scope, $http) {
+myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout) {
 
     $scope.Post = function($scope){
       console.log('FIRED');
@@ -178,4 +178,26 @@ if(isValid){
 
 
 
+ $scope.premiers = [{name: 'premier1', correct:'premier'}, 
+                      {name: 'premier2', correct:'premier'}, 
+                      {name: 'green', correct:'green'}, 
+                      {name: 'random', correct:'random'}, ];
+
+    $scope.validateClick = function (premier, index) {
+        if (premier.correct == "premier") {
+            premier.isPremier = true;
+            console.log(premier.isPremier + index)
+            
+        } else if (premier.correct == "green") {
+            premier.isGreen = true;
+            console.log(premier.isGreen + index)
+            
+        } else {
+            premier.isRandom = true;
+            console.log(premier.isRandom + index)
+        }
+    }
+
+
 });
+// angular.bootstrap(document, ['myApp']);

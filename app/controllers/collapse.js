@@ -1,5 +1,4 @@
-var app = angular.module('Test', []);
-app.controller('collapseCtrl', function(){
+myApp.directive('collapseDirec', function(){
 
     $scope.premiers = [{name: 'premier1', correct:'premier'}, 
                       {name: 'premier2', correct:'premier'}, 
@@ -22,7 +21,5 @@ app.controller('collapseCtrl', function(){
             console.log(premiers.isRandom + index)
         }
     }
-
-angular.bootstrap(premiers, ['Test']);
 
 })
