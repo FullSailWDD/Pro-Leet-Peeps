@@ -4,9 +4,20 @@ myApp.config(['$interpolateProvider', function($interpolateProvider){
   $interpolateProvider.endSymbol('}]}'); 
 }])
 
-myApp.controller('formsController',function($scope) {
+myApp.controller('formsController',function($scope, $http) {
     // array to hold the form data
     $scope.formData = [];
+
+    $scope.Post = function($scope){
+      console.log('FIRED');
+       var data = {status:'This wont work ever i suck'};
+
+      $http.post('/api/post', data).then(function (successCallback, errorCallback){
+        console.log("successfilled");
+      });
+
+    }
+
 
     // variable contains json object
     var users = [ { 

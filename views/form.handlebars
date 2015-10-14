@@ -6,11 +6,11 @@
             </div>
             <!-- /.col-lg-12 -->
         </div>
-
     <div class="row">
         <div class="col-lg-12">
             <div class="panel panel-default" >
-
+<!--                 <a ng-click="Post()">Fire</a>
+ -->
                 <div class="panel-heading" ng-hide="showme">
                     Select Degree Program and Course
                 </div>
@@ -18,7 +18,7 @@
                     <div class="row">
                         <div class="col-lg-6">
 
-                        <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
+                        <form name="userForm" ng-submit="Post()" novalidate>
                         
                             <div class="form-group">
                                
@@ -26,49 +26,18 @@
 
                                 <label>{[{ item.label }]}</label>
 
-
-                    <!--  SELECT -->
-                                <div ng-if="item.type === 'select'" class="form-group" ng-class="{ 'has-error' : userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine }">
-                                    <select ng-model="item.value">
-                                        <option value="">--- Select a Major ---</option>
-                                        <option required ng-repeat="option in item.options" name="{[{ item.name }]}" value="{[{option.value}]}">{[{option.value}]}</option>
-                                    </select>
-                                    <p ng-show="userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine" class="help-block">Select a Department</p>
-                                </div>
-
-
                     <!--  TEXT -->
-                                <div ng-if="item.type === 'text'" class="form-group" ng-class="{ 'has-error' : userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine }">
-                                    <input type="text" class="form-control" name="{[{ item.name }]}" ng-model="item.value" placeholder="{[{item.placeholder}]}" required>
-                                    <p ng-show="userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine" class="help-block">Enter the full course name</p>
-                                </div>
-
-
-                    <!--  DATE -->
-                                <div ng-if="item.type === 'date'" class="form-group" ng-class="{ 'has-error' : userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine }">
-                                    <input type="date" class="form-control" name="{[{ item.name }]}" ng-model="item.value" placeholder="{[{item.placeholder}]}" required>
-                                    <p ng-show="userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine" class="help-block">Enter a start date</p>
-                                </div>
-
-
-                    <!--  TEXTAREA -->
-                                <div ng-if="item.type === 'textarea'" class="form-group" ng-class="{ 'has-error' : userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine }">
-                                    <textarea type="text" class="form-control" ng-model="item.value" ng-minlength="3" placeholder="{[{item.placeholder}]}" required>
-                                    </textarea>
-                                    <p ng-show="userForm.{[{ item.name }]}.$error.minlength" class="help-block">Message is too short.</p>
-                                </div>
-
-                    <!-- IF CHECKBOX -->          
-                                <div ng-if="item.type === 'checkbox'" class="form-group" ng-class="{ 'has-error' : userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine }">
-                                    <input type="checkbox" name="{[{ item.name }]}" ng-model="item.value" value="{[{item.value}]}" required><span>I accept all the terms and conditions</span>
-                                    <p ng-show="userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine" class="help-block">Please agree to terms</p>     
+                                <div class="form-group" ng-class="{ 'has-error' : userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine }">
+                                    <input type="text" class="form-control" name="{[{ item.name }]}" ng-model="status" placeholder="{[{item.placeholder}]}" required>
+                                    <p ng-show="userForm.{[{ item.name }]}.$invalid && !userForm.{[{ item.name }]}.$pristine" class="help-block">
+                                    </p>
                                 </div>
 
 
                             </div>
                               
                             </div>
-                           <button ng-click="showme=true" type="submit" class="btn btn-default" ng-disabled="userForm.$invalid">Submit</button>   
+                           <button ng-click="showme=true" type="submit" class="btn btn-default">Submit</button>   
                         </form>
                     </div>
                 </div>
