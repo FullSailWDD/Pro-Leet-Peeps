@@ -33,7 +33,7 @@ var myApp = angular.module('myApp', ['ngRoute','ngAnimate','ui.bootstrap']);
 			})
 			.when('/form', {
 				templateUrl : '/form.handlebars',
-				controller  : 'formsController'
+				controller  : 'AccordionDemoCtrl'
 			});
 	});
 

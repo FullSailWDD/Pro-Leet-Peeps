@@ -4,125 +4,14 @@ myApp.config(['$interpolateProvider', function($interpolateProvider){
   $interpolateProvider.endSymbol('}]}'); 
 }])
 
-myApp.controller('formsController',function($scope) {
-    // array to hold the form data
-    $scope.formData = [];
+myApp.controller('CONTROLLER_NAME',function($scope) {
 
-    // variable contains json object
-    var users = [ { 
-      // label will render the label for the input form.
-      label: 'Major Name',
-      placeholder: ' Enter the Major ',
-      value: '',
-      type: 'text',
-      name: 'major'
-
-    },
-    { 
-      // label will render the label for the input form.
-      label: 'Course Name',
-      placeholder: ' Enter Full Name ',
-      value: '',
-      type: 'text',
-      name: 'fullname'
-
-    },
-    {
-      // email data
-      label: 'Start Date',
-      placeholder: ' Enter start Date',
-      value: '',
-      type: 'date',
-      name: 'date'
-
-    },
-    {
-      // text area data
-      label: 'Description',
-      placeholder: ' Enter the course description ',
-      value: '',
-      type: 'textarea',
-      name: 'comments'
-
-    }
-  ];
-
-    
-    $scope.assignmentData = [];
-
-    // variable contains json object
-    var assignment = [ { 
-      // label will render the label for the input form.
-      label: 'Rubric Name',
-      placeholder: ' Enter the Name of the Assignment ',
-      value: '',
-      type: 'text',
-      name: 'major'
-
-    },
-    { 
-      // label will render the label for the input form.
-      label: 'Brief discription',
-      placeholder: ' Enter the Breif discription ',
-      value: '',
-      type: 'text',
-      name: 'fullname'
-
-    },
-    {
-      // email data
-      label: 'Due Date',
-      placeholder: ' Enter start Date',
-      value: '',
-      type: 'date',
-      name: 'endDate'
-
-    },
-    {
-      // text area data
-      label: 'Description',
-      placeholder: ' Enter the assignment description ',
-      value: '',
-      type: 'textarea',
-      name: 'comments'
-
-   } // },{
-    //   // check box data
-    //   label: 'Terms & Conditions',
-    //   type: 'checkbox',
-    //   name: 'terms'
-    // }
-  ];
-
-
-
+  $scope.formData = [];
+  var users = [];
+  $scope.assignmentData = [];
+  var assignment = [];
   $scope.studentData = [];
-
-  var student = [ { 
-      // label will render the label for the input form.
-      label: 'Student Name',
-      placeholder: ' Enter the Students Full Name ',
-      value: '',
-      type: 'text',
-      name: 'major'
-
-    },
-    {
-      // text area data
-      label: 'Notes about Student',
-      placeholder: ' How does this student partake in class? ',
-      value: '',
-      type: 'textarea',
-      name: 'comments'
-
-   } 
-   ,{
-      // check box data
-      label: 'Terms & Conditions',
-      type: 'checkbox',
-      name: 'terms'
-    }
-  ];
+  var student = [];
 
   var results = [];
   var results2 = [];    
