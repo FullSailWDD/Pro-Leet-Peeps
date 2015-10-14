@@ -128,13 +128,12 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http) {
 	    }
 	  ]
 	}
+];
 
+	var groupList = $scope.groups;
+	console.log(groupList);
 
-
-
-
-
-	];
+	$scope.groups = groupList;
 
   $scope.formData = [];
   var users = [];
@@ -219,6 +218,5 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http) {
 
     }      
   }
-
 
 });
