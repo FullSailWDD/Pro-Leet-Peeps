@@ -1,6 +1,10 @@
 myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout, $rootScope) {
 
-<<<<<<< HEAD
+$scope.status = {
+    isFirstOpen: true,
+    isFirstDisabled: false
+  };
+
     $scope.validateClick = function (group, index) {
         if (group.correct == "addingDegreeCourse") {
             group.isaddingDegreeCourse = true;
@@ -8,9 +12,7 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout, $rootSc
             group.isaddingRubric = true;
         }     
     }
-=======
 
->>>>>>> b1f65e1c6ec5ae60767f460a81b4cd8e58988c02
 
 
     $scope.Post = function($scope){
