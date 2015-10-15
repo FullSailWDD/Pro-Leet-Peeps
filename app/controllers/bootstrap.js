@@ -6,13 +6,12 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout, $rootSc
     $scope.Post = function($scope){
       console.log('FIRED', $rootScope.groups);
       //this the first form that gets submited
-       var cData = {status:"Status of course",major:"the major of the course", course: "Web design"};
+       var cData = {status:"Status of course",major:"the major of the course", course: "Web design", rubric:"Rubric"};
       //this is the rubric form 
-       var rData = {status:"Status of course",name:"the major of the course", title: "Web design", grade: "100",dueDate:"100years", description: "THIS IS THE BOMB"};
 
 
 
-      $http.post('/api/post', cData , rData).then(function (successCallback, errorCallback){
+      $http.post('/api/post', cData).then(function (successCallback, errorCallback){
         console.log("successfilled");
       });
 
@@ -78,7 +77,7 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout, $rootSc
 	      placeholder: ' Enter the Name of the Assignment ',
 	      value: '',
 	      type: 'text',
-	      name: 'rubric'
+	      name: 'name'
 
 	    },
 
@@ -88,7 +87,7 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout, $rootSc
 	      placeholder: 'Design,Functionality,Code',
 	      value: '',
 	      type: 'text',
-	      name: 'sTitles'
+	      name: 'title'
 
 	    },
 	    { 
@@ -119,7 +118,7 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout, $rootSc
 
 	   }
 	  ]
-	},
+	}
 
 	
 ];
