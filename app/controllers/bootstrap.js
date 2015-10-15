@@ -1,14 +1,9 @@
 myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout, $rootScope) {
-
-
-
 var parent = $rootScope;
-
 	$scope.status = {
 	    isFirstOpen: true,
 	    isFirstDisabled: false
 	  };
-
     $scope.validateClick = function (group, index) {
         if (group.correct == "addingDegreeCourse") {
             group.isaddingDegreeCourse = true;
@@ -16,13 +11,11 @@ var parent = $rootScope;
             group.isaddingRubric = true;
         }     
     }
-
    parent.groups = [
     {
       title : 'Select Degree Program and Course',
       className : 'addingDegreeCourse',
       users : [ 
-
 	    { 
 	      // label will render the label for the input form.
 	      label: 'Major Name',
@@ -37,7 +30,6 @@ var parent = $rootScope;
 	      ],
 	      type:"select",
 	      name:"major",      
-
 	    },
 	    { 
 	      // label will render the label for the input form.
@@ -46,7 +38,6 @@ var parent = $rootScope;
 	      value: '',
 	      type: 'text',
 	      name: 'course'
-
 	    },
 	    {
 	      // text area data
@@ -55,13 +46,9 @@ var parent = $rootScope;
 	      value: '',
 	      type: 'textarea',
 	      name: 'description'
-
 	    }
 	  ]
     },
-
-
-
     {
       title: 'Add Rubric',
       className : 'addingRubric',
@@ -72,9 +59,7 @@ var parent = $rootScope;
 	      value: '',
 	      type: 'text',
 	      name: 'name'
-
 	    },
-
 	    {
 	      // email data
 	      label: 'Section Titles',
@@ -82,7 +67,6 @@ var parent = $rootScope;
 	      value: '',
 	      type: 'text',
 	      name: 'title'
-
 	    },
 	    { 
 	      // label will render the label for the input form.
@@ -91,7 +75,6 @@ var parent = $rootScope;
 	      value: '',
 	      type: 'text',
 	      name: 'grade'
-
 	    },
 	    {
 	      // email data
@@ -108,64 +91,46 @@ var parent = $rootScope;
 	      value: '',
 	      type: 'textarea',
 	      name: 'rubricdescription'
-
 	   }
 	  ]
 	}];
-
 	
-
     // $http.get('/groupList').success(function(response){
     // 	console.log("i got the data");
     // 	$scope.groupList = response;
     // })
-
-
-
-
-
-
-
   
 	// put json object into the form data array
   	// WHEN FORM IS SUBMITED
   	$scope.submitForm = function($scope){
-
-
-  	console.log('FIRED', JSON.stringify($rootScope.groups[0].users[0].value));
-
-
-  	var majorName = JSON.stringify($rootScope.groups[0].users[0].value);
-    //this the first form that gets submited
-    var cData = {status:"Status of course", major: majorName, course: "Web design",description:"description of course", rubric:{name:"Lab 1",title:"paint a face", grade:"gradeVal", dueDate: "this is DUEEEE",rubricdescription:"about the rubric"}};
+        
+  		console.log('FIRED',$rootScope.groups);
+        var major = JSON.stringify($rootScope.groups[0].users[0].value);
+        var course = $rootScope.groups.course;
+        var courseDescript = $rootScope.groups.description;
+        var rubName = $rootScope.groups.name;
+        var secTitles = $rootScope.groups.title;
+        var grade = $rootScope.groups.grade;
+        var rDescript = $rootScope.groups.rubricdescription;
+        var due = $rootScope.groups.dueDate;
+      //this the first form that gets submited
+       var cData = { major: major, course: course ,description: courseDescript, rubric:{name:rubName,title:secTitles, grade:grade, dueDate: due,rubricdescription:rDescript}};
       //this is the rubric form 
-
-
-
       $http.post('/api/post', cData).then(function (successCallback, errorCallback){
         console.log("successfilled");
-
       });
-
 var callback1;
   	// IF FORM IS VALID
 if(callback1){
       for (var i = 0; i < groupList.length; i++) {
-        var val = groupList[i]['value'];
+        var val = JSON.stringify(groupList[i]['value']);
         // put the data submited by the form into the var results
         groupList.push(val);
-
       }
       // show results in the console
-      console.log(groupList);
-
-      console.log(groupList[i]['value'])
-
-
-      return groupList;
-
+      console.log(val);
+      return val;
     }      
   }
-
 });
 // angular.bootstrap(document, ['myApp']);

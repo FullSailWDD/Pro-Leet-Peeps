@@ -18,8 +18,6 @@ router.post('/post', function (req,res, next) {
 			grade: req.body.grade,
 			dueDate: req.body.dueDate,
 			rubricdescription: req.body.rubricdescription
-
-
 		})
 	console.log("Course ::::::::::::: ",course)
 
@@ -30,10 +28,10 @@ router.post('/post', function (req,res, next) {
 			console.log('error',err)
 
 
-			// Clear form fields
-				$scope.status = '';
-				$scope.major = '';
-				$scope.description = '';
+			// // Clear form fields
+			// 	$scope.status = '';
+			// 	$scope.major = '';
+			// 	$scope.description = '';
 		}
   	res.json(req.body);
 
