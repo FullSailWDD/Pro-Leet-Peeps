@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<div id="page-wrapper" ng-controller="AccordionDemoCtrl">
+<div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">Add Course</h1>
@@ -11,8 +10,7 @@
         <div class="col-lg-6">
             <uib-accordion close-others="oneAtATime">
                 <uib-accordion-group heading="{[{group.title}]}" ng-repeat="group in groups" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
-
-                  <form name="userForm" class="panel-open" ng-submit="submitForm() && Post()" novalidate>                        
+                  <form name="userForm" class="panel-open" ng-submit="submitForm() && Post()" novalidate>                       
                             <div class="panel-body">
                                 <div class="row">
                                     <div class="col-lg-6">
@@ -53,7 +51,7 @@
                                                 </div>
                                               
                                             </div>
-                                            <button type="submit" ng-click="showme=true" class="btn btn-default" ng-disabled="userForm.$invalid">Submit</button>     
+                                            <button type="submit" ng-click="showme=true " class="btn btn-default" ng-disabled="userForm.$invalid">Submit</button>     
                                     </div>
                                 </div>
                             </div>    

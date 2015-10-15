@@ -1,9 +1,9 @@
 myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout, $rootScope) {
 
-$scope.status = {
-    isFirstOpen: true,
-    isFirstDisabled: false
-  };
+	$scope.status = {
+	    isFirstOpen: true,
+	    isFirstDisabled: false
+	  };
 
     $scope.validateClick = function (group, index) {
         if (group.correct == "addingDegreeCourse") {
@@ -12,28 +12,6 @@ $scope.status = {
             group.isaddingRubric = true;
         }     
     }
-
-
-
-    $scope.Post = function($scope){
-      console.log('FIRED', $rootScope.groups);
-      //this the first form that gets submited
-       var cData = {status:"Status of course",major:"the major of the course", course: "Web design",description:"description of course", rubric:{name:"Lab 1",title:"paint a face", grade:"gradeVal", dueDate: "this is DUEEEE",rubricdescription:"about the rubric"}};
-      //this is the rubric form 
-
-
-
-      $http.post('/api/post', cData).then(function (successCallback, errorCallback){
-        console.log("successfilled");
-      });
-
-    }
-
-    $http.get('/groupList').success(function(response){
-    	console.log("i got the data");
-    	$scope.groupList = response;
-    })
-
 
    $rootScope.groups = [
     {
@@ -54,7 +32,7 @@ $scope.status = {
 	      	{"value": "Show Production"}
 	      ],
 	      type:"select",
-	      name:"MajorName",      
+	      name:"major",      
 
 	    },
 	    { 
@@ -129,68 +107,55 @@ $scope.status = {
 
 	   }
 	  ]
-	}
+	}];
 
-	
-];
+	$scope.Post = function($scope){
+     console.log('FIRED', $rootScope.groups);
+
+
+      //this the first form that gets submited
+       var cData = {status:"Status of course",major:$rootScope.groups.value, course: "Web design",description:"description of course", rubric:{name:"Lab 1",title:"paint a face", grade:"gradeVal", dueDate: "this is DUEEEE",rubricdescription:"about the rubric"}};
+      //this is the rubric form 
+
+
+
+      $http.post('/api/post', cData).then(function (successCallback, errorCallback){
+        console.log("successfilled");
+
+      });
+
+    }
+
+    // $http.get('/groupList').success(function(response){
+    // 	console.log("i got the data");
+    // 	$scope.groupList = response;
+    // })
+
+
 
 	var groupList = $rootScope.groups;
 
-
-	console.log(groupList)
   
-
-	$scope.formData = [];
-	var users = [];
-	var results = [];
-
-
 	// put json object into the form data array
-	$scope.formData = users;
-	var name = results.slice(1, 1);
-	var department = results.slice(3, 3);
-	var email = results.slice(4, 4);
-	var message = results.slice(5, 5);
-
   	// WHEN FORM IS SUBMITED
-  	$scope.submitForm = function(isValid){
+  	$scope.submitForm = function($scope){
   	// IF FORM IS VALID
-  	var groupList = $scope.groups;
+			var i = 0;
+		      if(i < groupList.length) {
+		        var val = groupList[i]['value'];
+		        // put the data submited by the form into the var results
+		        groupList.push(val);
+		        i++;
 
-	if(isValid){
-	      for (var i = 0; i < groupList.length; i++) {
-	        var val = groupList[i.name.value]['value'];
-	        // put the data submited by the form into the var results
-	        groupList.push(val);
-	      }
-	      // show results in the xwconsole
-	      console.log(groupList);
-	}
-      return groupList;
-  }
+		        var name = groupList.slice(4, 4);
 
+				console.log(name);
 
-
- $scope.premiers = [{name: 'premier1', correct:'premier'}, 
-                      {name: 'premier2', correct:'premier'}, 
-                      {name: 'green', correct:'green'}, 
-                      {name: 'random', correct:'random'}, ];
-
-    $scope.validateClick = function (premier, index) {
-        if (premier.correct == "premier") {
-            premier.isPremier = true;
-            console.log(premier.isPremier + index)
-            
-        } else if (premier.correct == "green") {
-            premier.isGreen = true;
-            console.log(premier.isGreen + index)
-            
-        } else {
-            premier.isRandom = true;
-            console.log(premier.isRandom + index)
-        }
-    }
-
-
+		      }
+		      // show results in the xwconsole
+		      console.log(groupList, "the group list");
+	      	  return groupList;
+  	
+		}
 });
 // angular.bootstrap(document, ['myApp']);

@@ -34,24 +34,5 @@ router.post('/post', function (req,res) {
 
 
 })
-// router.post('/post1', function (req,res) {
-
-// 	var rubric = new Rubric({
-// 		status: req.body.status,
-// 		major: req.body.major,
-// 		course: req.body.course,
-// 		rubric: req.body.rubric
-
-// 	})
-// 	console.log("Rubric ::::::::::::: ",rubric)
-
-
-// 	rubric.save(function(err){
-// 		if(err){
-// 			console.log('error',err)
-// 		}
-// 	res.sendStatus(201)
-// 	})
-// })
 
 module.exports = router;
