@@ -1,9 +1,6 @@
-myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout) {
-  $scope.status = {
-    isFirstOpen: true,
-    isFirstDisabled: false
-  };
+myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout, $rootScope) {
 
+<<<<<<< HEAD
     $scope.validateClick = function (group, index) {
         if (group.correct == "addingDegreeCourse") {
             group.isaddingDegreeCourse = true;
@@ -11,11 +8,15 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout) {
             group.isaddingRubric = true;
         }     
     }
+=======
+
+>>>>>>> b1f65e1c6ec5ae60767f460a81b4cd8e58988c02
 
 
     $scope.Post = function($scope){
-      console.log('FIRED');
-       var data = {status:"CHECKING the status yo"};
+      console.log('FIRED', $rootScope.groups);
+
+       var data = {status:"Status of course",major:"the major of the course"};
 
       $http.post('/api/post', data).then(function (successCallback, errorCallback){
         console.log("successfilled");
@@ -29,15 +30,15 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout) {
     })
 
 
-   $scope.groups = [
+   $rootScope.groups = [
     {
       title : 'Select Degree Program and Course',
-      correct : 'addingDegreeCourse',
+      className : 'addingDegreeCourse',
       users : [ 
 
 	    { 
 	      // label will render the label for the input form.
-	      label: 'Major Name',
+	      label: 'Major Name!',
 	      placeholder: ' Enter the Major ',
 	      value: '',
 	      type: 'text',
@@ -78,14 +79,14 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout) {
 
     {
       title: 'Add Rubric',
-      correct : 'addingRubric',
+      className : 'addingRubric',
 	  users : [ { 
 	      // label will render the label for the input form.
 	      label: 'Rubric Name',
 	      placeholder: ' Enter the Name of the Assignment ',
 	      value: '',
 	      type: 'text',
-	      name: 'major'
+	      name: 'rubricName'
 
 	    },
 	    { 
@@ -94,7 +95,7 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout) {
 	      placeholder: ' Enter the Breif discription ',
 	      value: '',
 	      type: 'text',
-	      name: 'fullname'
+	      name: 'rubDiscription'
 
 	    },
 	    {
@@ -103,7 +104,7 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout) {
 	      placeholder: ' Enter start Date',
 	      value: '',
 	      type: 'date',
-	      name: 'endDate'
+	      name: 'dueDate'
 
 	    },
 	    {
@@ -112,23 +113,20 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout) {
 	      placeholder: ' Enter the assignment description ',
 	      value: '',
 	      type: 'textarea',
-	      name: 'comments'
+	      name: 'rubDesc'
 
 	   }
 	  ]
-	}
+	},
+
+	
 ];
 
-	var groupList = $scope.groups;
-	console.log(groupList);
+	var groupList = $rootScope.groups;
 
-	$scope.groups = groupList;
-
-	var groupList = $scope.groups;
 
 	console.log(groupList)
   
-  	$scope.groups = groupList;
 
 	$scope.formData = [];
 	var users = [];
@@ -142,27 +140,44 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout) {
 	var email = results.slice(4, 4);
 	var message = results.slice(5, 5);
 
-  // WHEN FORM IS SUBMITED
-  $scope.submitForm = function(isValid){
-  // IF FORM IS VALID
+  	// WHEN FORM IS SUBMITED
+  	$scope.submitForm = function(isValid){
+  	// IF FORM IS VALID
   	var groupList = $scope.groups;
 
-if(isValid){
-      for (var i = 0; i < groupList.length; i++) {
-        var val = groupList[i]['value'];
-        // put the data submited by the form into the var results
-        groupList.push(val);
-      }
-      // show results in the console
-      console.log(groupList);
-}
+	if(isValid){
+	      for (var i = 0; i < groupList.length; i++) {
+	        var val = groupList[i.name.value]['value'];
+	        // put the data submited by the form into the var results
+	        groupList.push(val);
+	      }
+	      // show results in the xwconsole
+	      console.log(groupList);
+	}
       return groupList;
   }
 
 
 
+ $scope.premiers = [{name: 'premier1', correct:'premier'}, 
+                      {name: 'premier2', correct:'premier'}, 
+                      {name: 'green', correct:'green'}, 
+                      {name: 'random', correct:'random'}, ];
 
-
+    $scope.validateClick = function (premier, index) {
+        if (premier.correct == "premier") {
+            premier.isPremier = true;
+            console.log(premier.isPremier + index)
+            
+        } else if (premier.correct == "green") {
+            premier.isGreen = true;
+            console.log(premier.isGreen + index)
+            
+        } else {
+            premier.isRandom = true;
+            console.log(premier.isRandom + index)
+        }
+    }
 
 
 });

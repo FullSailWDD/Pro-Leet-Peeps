@@ -5,17 +5,18 @@ var Course = require('./app/modules/get/get.js')
 router.use(bodyParser.json())
 
 router.post('/post', function (req,res) {
-	console.log("HELLO");
+	console.log("HELLO", req.body);
 
 	var course = new Course({
-			status: req.body.status
+			status: req.body.status,
+			major: req.body.major
 		})
-	console.log(course)
+		console.log(course)
 		course.save(function(err){
 		if(err){
 			console.log('error',err)
 		}
-		res.status(201).end()
+		res.send("asduio");
 	})
 })
 
