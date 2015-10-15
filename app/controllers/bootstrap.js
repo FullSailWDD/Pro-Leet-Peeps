@@ -21,6 +21,7 @@ var parent = $rootScope;
     {
       title : 'Select Degree Program and Course',
       className : 'addingDegreeCourse',
+      display: 'none',
       users : [ 
 
 	    { 
@@ -65,6 +66,7 @@ var parent = $rootScope;
     {
       title: 'Add Rubric',
       className : 'addingRubric',
+      display: 'block',
 	  users : [ { 
 	      // label will render the label for the input form.
 	      label: 'Rubric Name',
