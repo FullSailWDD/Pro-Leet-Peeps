@@ -1,7 +1,11 @@
-myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout) {
+myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout, $rootScope) {
+
+
+
 
     $scope.Post = function($scope){
-      console.log('FIRED');
+      console.log('FIRED', $rootScope.groups);
+
        var data = {status:"Status of course",major:"the major of the course"};
 
       $http.post('/api/post', data).then(function (successCallback, errorCallback){
@@ -16,7 +20,7 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout) {
     })
 
 
-   $scope.groups = [
+   $rootScope.groups = [
     {
       title : 'Select Degree Program and Course',
       className : 'addingDegreeCourse',
@@ -72,7 +76,7 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout) {
 	      placeholder: ' Enter the Name of the Assignment ',
 	      value: '',
 	      type: 'text',
-	      name: 'major'
+	      name: 'rubricName'
 
 	    },
 	    { 
@@ -81,7 +85,7 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout) {
 	      placeholder: ' Enter the Breif discription ',
 	      value: '',
 	      type: 'text',
-	      name: 'fullname'
+	      name: 'rubDiscription'
 
 	    },
 	    {
@@ -90,7 +94,7 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout) {
 	      placeholder: ' Enter start Date',
 	      value: '',
 	      type: 'date',
-	      name: 'endDate'
+	      name: 'dueDate'
 
 	    },
 	    {
@@ -99,7 +103,7 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout) {
 	      placeholder: ' Enter the assignment description ',
 	      value: '',
 	      type: 'textarea',
-	      name: 'comments'
+	      name: 'rubDesc'
 
 	   }
 	  ]
@@ -136,16 +140,11 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout) {
 	}
 ];
 
-	var groupList = $scope.groups;
-	console.log(groupList);
+	var groupList = $rootScope.groups;
 
-	$scope.groups = groupList;
-
-	var groupList = $scope.groups;
 
 	console.log(groupList)
   
-  	$scope.groups = groupList;
 
 	$scope.formData = [];
 	var users = [];
@@ -166,11 +165,11 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout) {
 
 	if(isValid){
 	      for (var i = 0; i < groupList.length; i++) {
-	        var val = groupList[i.major.value]['value'];
+	        var val = groupList[i.name.value]['value'];
 	        // put the data submited by the form into the var results
 	        groupList.push(val);
 	      }
-	      // show results in the console
+	      // show results in the xwconsole
 	      console.log(groupList);
 	}
       return groupList;
