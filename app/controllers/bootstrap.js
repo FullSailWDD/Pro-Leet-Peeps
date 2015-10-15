@@ -1,4 +1,8 @@
 myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout) {
+  $scope.status = {
+    isFirstOpen: true,
+    isFirstDisabled: false
+  };
 
     $scope.validateClick = function (group, index) {
         if (group.correct == "addingDegreeCourse") {
@@ -11,7 +15,7 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout) {
        
     }
 
-    
+
     $scope.Post = function($scope){
       console.log('FIRED');
        var data = {status:"CHECKING the status yo"};
@@ -36,7 +40,7 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout) {
 
 	    { 
 	      // label will render the label for the input form.
-	      label: 'Major Name!',
+	      label: 'Major Name',
 	      placeholder: ' Enter the Major ',
 	      value: '',
 	      type: 'text',

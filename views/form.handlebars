@@ -5,36 +5,20 @@
             </div>
             <!-- /.col-lg-12 -->
         </div>
-   
-    
-
-
 
     <div class="row">
         <div class="col-lg-12">
-            <div class="panel panel-default">
+            <uib-accordion close-others="oneAtATime">
+                <uib-accordion-group heading="{[{group.title}]}" ng-repeat="group in groups" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
 
-            <div>
-              
-              <uib-accordion close-others="oneAtATime">
-
-                <uib-accordion-group heading="{[{group.title}]}" ng-repeat="group in groups">
-                   <div ng-class="{addingDegreeCourse: group.isaddingDegreeCourse, addingRubric: group.isaddingRubric}" 
-                             class="btn btn-default btn-game" data-correct="{{group.correct}}">
-                                                MOVING{[{group.title}]}     
-                    <form name="userForm" ng-submit="submitForm() && Post()" novalidate>
-                         
-
+                  <form name="userForm" class="panel-open" ng-submit="submitForm() && Post()" novalidate>                        
                             <div class="panel-body">
                                 <div class="row">
                                     <div class="col-lg-6">
 
-                                        
-
-                                            <div class="form-group">
+                                             <div class="form-group">
                                                    
                                                 <div ng-repeat="item in group.users">
-
                                                     <label>{[{ item.label }]}</label>
 
                                         <!--  TEXT -->
@@ -55,19 +39,12 @@
                                     
                                     </div>
                                 </div>
-                            </div>
-                        
-                                
+                            </div>    
                     </form>
-</div> <!-- End of moving div -->
+
+
                 </uib-accordion-group>
-
-              </uib-accordion>
-              
-            </div>
-
-        </div>
-    </div>
+            </uib-accordion>
         
     </div>
 </div>
