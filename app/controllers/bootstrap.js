@@ -131,11 +131,19 @@ var parent = $rootScope;
   	// WHEN FORM IS SUBMITED
   	$scope.submitForm = function($scope){
 
-
-  		console.log('FIRED', JSON.stringify($rootScope.groups[0].users[0].value));
+        
+  		console.log('FIRED',$rootScope.groups);
+        var major = JSON.stringify($rootScope.groups[0].users[0].value);
+        var course = $rootScope.groups.course;
+        var courseDescript = $rootScope.groups.description;
+        var rubName = $rootScope.groups.name;
+        var secTitles = $rootScope.groups.title;
+        var grade = $rootScope.groups.grade;
+        var rDescript = $rootScope.groups.rubricdescription;
+        var due = $rootScope.groups.dueDate;
 
       //this the first form that gets submited
-       var cData = {status:"Status of course", major: "THIS SUCKS", course: "Web design",description:"description of course", rubric:{name:"Lab 1",title:"paint a face", grade:"gradeVal", dueDate: "this is DUEEEE",rubricdescription:"about the rubric"}};
+       var cData = { major: major, course: course ,description: courseDescript, rubric:{name:rubName,title:secTitles, grade:grade, dueDate: due,rubricdescription:rDescript}};
       //this is the rubric form 
 
 
@@ -149,21 +157,16 @@ var callback1;
   	// IF FORM IS VALID
 if(callback1){
       for (var i = 0; i < groupList.length; i++) {
-        var val = groupList[i]['value'];
+        var val = JSON.stringify(groupList[i]['value']);
         // put the data submited by the form into the var results
         groupList.push(val);
 
       }
       // show results in the console
-      console.log(groupList);
-
-      console.log(groupList[i]['value'])
-
-
-      return groupList;
+      console.log(val);
+      return val;
 
     }      
   }
-
 });
 // angular.bootstrap(document, ['myApp']);
