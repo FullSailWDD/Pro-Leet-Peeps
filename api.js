@@ -5,7 +5,7 @@ var Course = require('./app/modules/get/course.js')
 
 router.use(bodyParser.json())
 
-router.post('/post', function (req,res) {
+router.post('/post', function (req,res, next) {
 	console.log("HELLO", req.body);
 
 	var course = new Course({
@@ -28,8 +28,16 @@ router.post('/post', function (req,res) {
 	course.save(function(err){
 		if(err){
 			console.log('error',err)
+
+
+			// Clear form fields
+				$scope.status = '';
+				$scope.major = '';
+				$scope.description = '';
 		}
-	res.sendStatus(201)
+  	res.json(req.body);
+
+  	return course;
 	})
 
 

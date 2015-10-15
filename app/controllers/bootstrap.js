@@ -1,5 +1,9 @@
 myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout, $rootScope) {
 
+
+
+var parent = $rootScope;
+
 	$scope.status = {
 	    isFirstOpen: true,
 	    isFirstDisabled: false
@@ -13,7 +17,7 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout, $rootSc
         }     
     }
 
-   $rootScope.groups = [
+   parent.groups = [
     {
       title : 'Select Degree Program and Course',
       className : 'addingDegreeCourse',
@@ -109,12 +113,29 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout, $rootSc
 	  ]
 	}];
 
-	$scope.Post = function($scope){
-     console.log('FIRED', $rootScope.groups);
+	
 
+    // $http.get('/groupList').success(function(response){
+    // 	console.log("i got the data");
+    // 	$scope.groupList = response;
+    // })
+
+
+
+
+
+
+
+  
+	// put json object into the form data array
+  	// WHEN FORM IS SUBMITED
+  	$scope.submitForm = function($scope){
+
+
+  		console.log('FIRED', $rootScope.groups);
 
       //this the first form that gets submited
-       var cData = {status:"Status of course",major:$rootScope.groups.value, course: "Web design",description:"description of course", rubric:{name:"Lab 1",title:"paint a face", grade:"gradeVal", dueDate: "this is DUEEEE",rubricdescription:"about the rubric"}};
+       var cData = {status:"Status of course", major: "THIS SUCKS", course: "Web design",description:"description of course", rubric:{name:"Lab 1",title:"paint a face", grade:"gradeVal", dueDate: "this is DUEEEE",rubricdescription:"about the rubric"}};
       //this is the rubric form 
 
 
@@ -124,38 +145,25 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout, $rootSc
 
       });
 
-    }
-
-    // $http.get('/groupList').success(function(response){
-    // 	console.log("i got the data");
-    // 	$scope.groupList = response;
-    // })
-
-
-
-	var groupList = $rootScope.groups;
-
-  
-	// put json object into the form data array
-  	// WHEN FORM IS SUBMITED
-  	$scope.submitForm = function($scope){
+var callback1;
   	// IF FORM IS VALID
-			var i = 0;
-		      if(i < groupList.length) {
-		        var val = groupList[i]['value'];
-		        // put the data submited by the form into the var results
-		        groupList.push(val);
-		        i++;
+if(callback1){
+      for (var i = 0; i < groupList.length; i++) {
+        var val = groupList[i]['value'];
+        // put the data submited by the form into the var results
+        groupList.push(val);
 
-		        var name = groupList.slice(4, 4);
+      }
+      // show results in the console
+      console.log(groupList);
 
-				console.log(name);
+      console.log(groupList[i]['value'])
 
-		      }
-		      // show results in the xwconsole
-		      console.log(groupList, "the group list");
-	      	  return groupList;
-  	
-		}
+
+      return groupList;
+
+    }      
+  }
+
 });
 // angular.bootstrap(document, ['myApp']);
