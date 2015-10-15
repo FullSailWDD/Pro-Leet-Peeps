@@ -109,35 +109,7 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout, $rootSc
 	  ]
 	},
 
-	{
-      title: 'Add Student',
-      className : 'addingStudent',
-	  users : [ { 
-	      // label will render the label for the input form.
-	      label: 'Student Name',
-	      placeholder: ' Enter the Students Full Name ',
-	      value: '',
-	      type: 'text',
-	      name: 'major'
-
-	    },
-	    {
-	      // text area data
-	      label: 'Notes about Student',
-	      placeholder: ' How does this student partake in class? ',
-	      value: '',
-	      type: 'textarea',
-	      name: 'comments'
-
-	   } 
-	   ,{
-	      // check box data
-	      label: 'Terms & Conditions',
-	      type: 'checkbox',
-	      name: 'terms'
-	    }
-	  ]
-	}
+	
 ];
 
 	var groupList = $rootScope.groups;
