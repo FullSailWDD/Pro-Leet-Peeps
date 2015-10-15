@@ -5,7 +5,7 @@ var Course = require('./app/modules/get/get.js')
 router.use(bodyParser.json())
 
 router.post('/post', function (req,res) {
-	console.log("HELLO");
+	console.log("HELLO", req.body);
 
 	var course = new Course({
 			status: req.body.status,
@@ -16,7 +16,7 @@ router.post('/post', function (req,res) {
 		if(err){
 			console.log('error',err)
 		}
-		res.status(201).end()
+		res.send("asduio");
 	})
 })
 
