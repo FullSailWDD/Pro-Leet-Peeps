@@ -9,7 +9,6 @@ router.post('/post', function (req,res, next) {
 	console.log("HELLO", req.body);
 
 	var course = new Course({
-			status: req.body.status,
 			major: req.body.major,
 			course: req.body.course,
 			description: req.body.description,
@@ -18,6 +17,8 @@ router.post('/post', function (req,res, next) {
 			grade: req.body.grade,
 			dueDate: req.body.dueDate,
 			rubricdescription: req.body.rubricdescription
+
+
 		})
 	console.log("Course ::::::::::::: ",course)
 
@@ -26,17 +27,16 @@ router.post('/post', function (req,res, next) {
 	course.save(function(err){
 		if(err){
 			console.log('error',err)
-
-
-			// // Clear form fields
-			// 	$scope.status = '';
-			// 	$scope.major = '';
-			// 	$scope.description = '';
 		}
-  	res.json(req.body);
-
+  		res.json(req.body);
   	return course;
 	})
+
+	course.find = function() {
+			$scope.course = Courses.query();
+
+			console.log("BANN")
+	};
 
 
 })
