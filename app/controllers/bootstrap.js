@@ -5,10 +5,14 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout, $rootSc
 
     $scope.Post = function($scope){
       console.log('FIRED', $rootScope.groups);
+      //this the first form that gets submited
+       var cData = {status:"Status of course",major:"the major of the course", course: "Web design"};
+      //this is the rubric form 
+       var rData = {status:"Status of course",name:"the major of the course", title: "Web design", grade: "100",dueDate:"100years", description: "THIS IS THE BOMB"};
 
-       var data = {status:"Status of course",major:"the major of the course"};
 
-      $http.post('/api/post', data).then(function (successCallback, errorCallback){
+
+      $http.post('/api/post', cData , rData).then(function (successCallback, errorCallback){
         console.log("successfilled");
       });
 
@@ -28,29 +32,27 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout, $rootSc
 
 	    { 
 	      // label will render the label for the input form.
-	      label: 'Major Name!',
-	      placeholder: ' Enter the Major ',
+	      label: 'Major Name',
 	      value: '',
-	      type: 'text',
-	      name: 'major'
+	      options:[
+	      	{"value": "Web Design and Development"},
+	      	{"value": "Mobile Development"},
+	      	{"value": "Recording Arts"},
+	      	{"value": "Film"},
+	      	{"value": "Emerging Technologies"},
+	      	{"value": "Show Production"}
+	      ],
+	      type:"select",
+	      name:"MajorName",      
 
 	    },
 	    { 
 	      // label will render the label for the input form.
 	      label: 'Course Name',
-	      placeholder: ' Enter Full Name ',
+	      placeholder: ' Enter course name ',
 	      value: '',
 	      type: 'text',
-	      name: 'fullname'
-
-	    },
-	    {
-	      // email data
-	      label: 'Start Date',
-	      placeholder: ' Enter start Date',
-	      value: '',
-	      type: 'date',
-	      name: 'date'
+	      name: 'course'
 
 	    },
 	    {
@@ -76,16 +78,26 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout, $rootSc
 	      placeholder: ' Enter the Name of the Assignment ',
 	      value: '',
 	      type: 'text',
-	      name: 'rubricName'
+	      name: 'rubric'
+
+	    },
+
+	    {
+	      // email data
+	      label: 'Section Titles',
+	      placeholder: 'Design,Functionality,Code',
+	      value: '',
+	      type: 'text',
+	      name: 'sTitles'
 
 	    },
 	    { 
 	      // label will render the label for the input form.
-	      label: 'Brief discription',
-	      placeholder: ' Enter the Breif discription ',
+	      label: 'Grade Options',
+	      placeholder: ' 0,25,50,75,100',
 	      value: '',
 	      type: 'text',
-	      name: 'rubDiscription'
+	      name: 'grade'
 
 	    },
 	    {
@@ -103,7 +115,7 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout, $rootSc
 	      placeholder: ' Enter the assignment description ',
 	      value: '',
 	      type: 'textarea',
-	      name: 'rubDesc'
+	      name: 'description'
 
 	   }
 	  ]
