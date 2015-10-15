@@ -17,10 +17,13 @@ $scope.status = {
 
     $scope.Post = function($scope){
       console.log('FIRED', $rootScope.groups);
+      //this the first form that gets submited
+       var cData = {status:"Status of course",major:"the major of the course", course: "Web design", rubric:"Rubric"};
+      //this is the rubric form 
 
-       var data = {status:"Status of course",major:"the major of the course"};
 
-      $http.post('/api/post', data).then(function (successCallback, errorCallback){
+
+      $http.post('/api/post', cData).then(function (successCallback, errorCallback){
         console.log("successfilled");
       });
 
@@ -40,29 +43,27 @@ $scope.status = {
 
 	    { 
 	      // label will render the label for the input form.
-	      label: 'Major Name!',
-	      placeholder: ' Enter the Major ',
+	      label: 'Major Name',
 	      value: '',
-	      type: 'text',
-	      name: 'major'
+	      options:[
+	      	{"value": "Web Design and Development"},
+	      	{"value": "Mobile Development"},
+	      	{"value": "Recording Arts"},
+	      	{"value": "Film"},
+	      	{"value": "Emerging Technologies"},
+	      	{"value": "Show Production"}
+	      ],
+	      type:"select",
+	      name:"MajorName",      
 
 	    },
 	    { 
 	      // label will render the label for the input form.
 	      label: 'Course Name',
-	      placeholder: ' Enter Full Name ',
+	      placeholder: ' Enter course name ',
 	      value: '',
 	      type: 'text',
-	      name: 'fullname'
-
-	    },
-	    {
-	      // email data
-	      label: 'Start Date',
-	      placeholder: ' Enter start Date',
-	      value: '',
-	      type: 'date',
-	      name: 'date'
+	      name: 'course'
 
 	    },
 	    {
@@ -88,16 +89,26 @@ $scope.status = {
 	      placeholder: ' Enter the Name of the Assignment ',
 	      value: '',
 	      type: 'text',
-	      name: 'rubricName'
+	      name: 'name'
+
+	    },
+
+	    {
+	      // email data
+	      label: 'Section Titles',
+	      placeholder: 'Design,Functionality,Code',
+	      value: '',
+	      type: 'text',
+	      name: 'title'
 
 	    },
 	    { 
 	      // label will render the label for the input form.
-	      label: 'Brief discription',
-	      placeholder: ' Enter the Breif discription ',
+	      label: 'Grade Options',
+	      placeholder: ' 0,25,50,75,100',
 	      value: '',
 	      type: 'text',
-	      name: 'rubDiscription'
+	      name: 'grade'
 
 	    },
 	    {
@@ -115,11 +126,11 @@ $scope.status = {
 	      placeholder: ' Enter the assignment description ',
 	      value: '',
 	      type: 'textarea',
-	      name: 'rubDesc'
+	      name: 'description'
 
 	   }
 	  ]
-	},
+	}
 
 	
 ];
