@@ -7,12 +7,9 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout) {
     $scope.validateClick = function (group, index) {
         if (group.correct == "addingDegreeCourse") {
             group.isaddingDegreeCourse = true;
-
         } else if (group.correct == "addingRubric") {
             group.isaddingRubric = true;
-
-        }
-       
+        }     
     }
 
 
