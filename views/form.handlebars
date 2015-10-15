@@ -43,7 +43,7 @@
 
                             <!--  TEXT -->
                                         <div class="form-group" ng-class="{ 'has-error' : groupList.{[{ item.name }]}.$invalid && !groupList.{[{ item.name }]}.$pristine }">
-                                            <input ng-model="groups[users.name]" type="{[{item.type}]}" class="form-control" name="{[{ item.name }]}"  placeholder="{[{item.placeholder}]}" />
+                                            <input ng-model="groups[item.name]" type="{[{item.type}]}" class="form-control" name="{[{ item.name }]}"  placeholder="{[{item.placeholder}]}" />
                                             <p ng-show="groupList.{[{ item.name }]}.$invalid && !groupList.{[{ item.name }]}.$pristine" class="help-block">
                                             </p>
                                     </div>
@@ -52,9 +52,6 @@
                                 </div>
                                <button type="submit" ng-click="showme=true" class="btn btn-default" ng-disabled="userForm.$invalid">Submit</button>     
                     </form>
-
-
-
                 </uib-accordion-group>
 
               </uib-accordion>
