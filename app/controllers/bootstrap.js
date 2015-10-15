@@ -1,5 +1,17 @@
 myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout) {
 
+    $scope.validateClick = function (group, index) {
+        if (group.correct == "addingDegreeCourse") {
+            group.isaddingDegreeCourse = true;
+
+        } else if (group.correct == "addingRubric") {
+            group.isaddingRubric = true;
+
+        }
+       
+    }
+
+    
     $scope.Post = function($scope){
       console.log('FIRED');
        var data = {status:"CHECKING the status yo"};
@@ -19,7 +31,7 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout) {
    $scope.groups = [
     {
       title : 'Select Degree Program and Course',
-      className : 'addingDegreeCourse',
+      correct : 'addingDegreeCourse',
       users : [ 
 
 	    { 
@@ -65,7 +77,7 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout) {
 
     {
       title: 'Add Rubric',
-      className : 'addingRubric',
+      correct : 'addingRubric',
 	  users : [ { 
 	      // label will render the label for the input form.
 	      label: 'Rubric Name',
@@ -102,36 +114,6 @@ myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout) {
 	      name: 'comments'
 
 	   }
-	  ]
-	},
-
-	{
-      title: 'Add Student',
-      className : 'addingStudent',
-	  users : [ { 
-	      // label will render the label for the input form.
-	      label: 'Student Name',
-	      placeholder: ' Enter the Students Full Name ',
-	      value: '',
-	      type: 'text',
-	      name: 'major'
-
-	    },
-	    {
-	      // text area data
-	      label: 'Notes about Student',
-	      placeholder: ' How does this student partake in class? ',
-	      value: '',
-	      type: 'textarea',
-	      name: 'comments'
-
-	   } 
-	   ,{
-	      // check box data
-	      label: 'Terms & Conditions',
-	      type: 'checkbox',
-	      name: 'terms'
-	    }
 	  ]
 	}
 ];
@@ -178,25 +160,8 @@ if(isValid){
 
 
 
- $scope.premiers = [{name: 'premier1', correct:'premier'}, 
-                      {name: 'premier2', correct:'premier'}, 
-                      {name: 'green', correct:'green'}, 
-                      {name: 'random', correct:'random'}, ];
 
-    $scope.validateClick = function (premier, index) {
-        if (premier.correct == "premier") {
-            premier.isPremier = true;
-            console.log(premier.isPremier + index)
-            
-        } else if (premier.correct == "green") {
-            premier.isGreen = true;
-            console.log(premier.isGreen + index)
-            
-        } else {
-            premier.isRandom = true;
-            console.log(premier.isRandom + index)
-        }
-    }
+
 
 
 });

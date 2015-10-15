@@ -6,55 +6,64 @@
             <!-- /.col-lg-12 -->
         </div>
    
-        <button ng-click="validateClick(premier, $index)" 
-                ng-class="{premier: premier.isPremier,
-                          green: premier.isGreen,
-                          random: premier.isRandom}" 
-                ng-repeat="premier in premiers" 
-                class="btn btn-default btn-game" 
-                data-correct="{{premier.correct}}" 
-                href="#" role="button">
-                {[{premier.name}]}
-</button>
+    
+
 
 
     <div class="row">
         <div class="col-lg-12">
             <div class="panel panel-default">
 
-            <div >
+            <div>
               
               <uib-accordion close-others="oneAtATime">
 
                 <uib-accordion-group heading="{[{group.title}]}" ng-repeat="group in groups">
-                        
+                   <div ng-class="{addingDegreeCourse: group.isaddingDegreeCourse, addingRubric: group.isaddingRubric}" 
+                             class="btn btn-default btn-game" data-correct="{{group.correct}}">
+                                                MOVING{[{group.title}]}     
                     <form name="userForm" ng-submit="submitForm() && Post()" novalidate>
+                         
 
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-lg-6">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-lg-6">
 
-                                
-                                    <div class="form-group">
-                                       
-                                    <div ng-repeat="item in group.users">
+                                        
 
-                                        <label>{[{ item.label }]}</label>
+                                            <div class="form-group">
+                                                   
+                                                <div ng-repeat="item in group.users">
 
-                            <!--  TEXT -->
-                                        <div class="form-group" ng-class="{ 'has-error' : groupList.{[{ item.name }]}.$invalid && !groupList.{[{ item.name }]}.$pristine }">
-                                            <input   type="text" class="form-control" name="{[{ item.name }]}"  placeholder="{[{item.placeholder}]}" />
-                                            <p ng-show="groupList.{[{ item.name }]}.$invalid && !groupList.{[{ item.name }]}.$pristine" class="help-block">
-                                            </p>
+                                                    <label>{[{ item.label }]}</label>
+
+                                        <!--  TEXT -->
+                                                    <div class="form-group" ng-class="{ 'has-error' : groupList.{[{ item.name }]}.$invalid && !groupList.{[{ item.name }]}.$pristine }">
+                                                        <input   type="text" class="form-control" name="{[{ item.name }]}"  placeholder="{[{item.placeholder}]}" />
+                                                        <p ng-show="groupList.{[{ item.name }]}.$invalid && !groupList.{[{ item.name }]}.$pristine" class="help-block">
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                              
+                                            </div>
+
+                                            <button ng-click="validateClick(group, $index)" 
+                                                    class="btn btn-default btn-game" data-correct="{{group.correct}}" 
+                                                    href="#" role="button">
+                                                    {[{group.title}]}
+                                            </button>
+                                    
                                     </div>
                                 </div>
-                                  
-                                </div>
-                               <button type="submit" ng-click="showme=true && Post()" class="btn btn-default" ng-disabled="userForm.$invalid">Submit</button>     
+                            </div>
+                        
+                                
                     </form>
+</div> <!-- End of moving div -->
                 </uib-accordion-group>
 
               </uib-accordion>
+              
             </div>
 
         </div>

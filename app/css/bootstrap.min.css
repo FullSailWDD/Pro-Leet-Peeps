@@ -5493,19 +5493,16 @@ button.close {
     display: none !important; } }
 /*# sourceMappingURL=bootstrap.min.css.map */
 .addingDegreeCourse {
-  position: absolute;
+  position: fixed;
   left: 15px;
-  top: 0px; }
+  top: 0px;
+  color: red; }
 
 .addingRubric {
-  position: absolute;
+  position: fixed;
   left: 315px;
-  top: -5px; }
-
-.addingStudent {
-  position: absolute;
-  left: 435px;
-  top: -5px; }
+  top: -5px;
+  color: green; }
 
 .premier {
   color: red; }
