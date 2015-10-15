@@ -144,6 +144,13 @@ var parent = $rootScope;
 
       //this the first form that gets submited
        var cData = { major: major, course: course ,description: courseDescript, rubric:{name:rubName,title:secTitles, grade:grade, dueDate: due,rubricdescription:rDescript}};
+        
+  	console.log('FIRED', JSON.stringify($rootScope.groups[0].users[0].value));
+
+
+  	var majorName = JSON.stringify($rootScope.groups[0].users[0].value);
+    //this the first form that gets submited
+    var cData = {status:"Status of course", major: majorName, course: "Web design",description:"description of course", rubric:{name:"Lab 1",title:"paint a face", grade:"gradeVal", dueDate: "this is DUEEEE",rubricdescription:"about the rubric"}};
       //this is the rubric form 
 
 
