@@ -23,50 +23,7 @@
                                                     <label>{[{ item.label }]}</label>
 
                                         <!--  TEXT -->
-                                                    <div class="form-group" ng-class="{ 'has-error' : groupList.{[{ item.name }]}.$invalid && !groupList.{[{ item.name }]}.$pristine }">
-                                                        <input ng-model="groups[item.name]" type="{[{item.type}]}" class="form-control" name="{[{ item.name }]}"  placeholder="{[{item.placeholder}]}" />
-                                                        <p ng-show="groupList.{[{ item.name }]}.$invalid && !groupList.{[{ item.name }]}.$pristine" class="help-block">
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                              
-                                            </div>
-                                            <button type="submit" ng-click="showme=true" class="btn btn-default" ng-disabled="userForm.$invalid">Submit</button>     
-                                    </div>
-                                </div>
-                            </div>    
-=======
-<div id="page-wrapper">
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">Add Course</h1>
-        </div>
-<!-- /.col-lg-12 -->
-    </div>
-   
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="panel panel-default">
-
-              <uib-accordion close-others="oneAtATime">
-
-                <uib-accordion-group heading="{[{group.title}]}" ng-repeat="group in groups">
-                        
-                    <form name="groupList" ng-submit="submitForm() && Post()" novalidate>
-
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-lg-6">
-
-                                
-                                    <div class="form-group">
-                                       
-                                    <div ng-repeat="item in group.users">
-
-                                        <label>{[{ item.label }]}</label>
-
-                            <!--  TEXT -->
-                                        <div ng-if="item.type === 'select'" class="form-group" ng-class="{ 'has-error' : groupList.{[{ item.name }]}.$invalid && !groupList.{[{ item.name }]}.$pristine }">
+                                                    <div ng-if="item.type === 'select'" class="form-group" ng-class="{ 'has-error' : groupList.{[{ item.name }]}.$invalid && !groupList.{[{ item.name }]}.$pristine }">
                                                 <select ng-model="item.value">
                                                     <option value="">--- Please Select ---</option>
                                                     <option required ng-repeat="option in item.options" name="{[{ item.name }]}" value="{[{option.value}]}">{[{option.value}]}</option>
@@ -93,23 +50,16 @@
                                             <p ng-show="groupList.{[{ item.name }]}.$invalid && !groupList.{[{ item.name }]}.$pristine" class="help-block">
                                             </p>
                                         </div>
-
-
-
+                                                </div>
+                                              
+                                            </div>
+                                            <button type="submit" ng-click="showme=true" class="btn btn-default" ng-disabled="userForm.$invalid">Submit</button>     
+                                    </div>
                                 </div>
-                                  
-                                </div>
-                               <button type="submit" ng-click="showme=true" class="btn btn-default" ng-disabled="groupList.$invalid">Submit</button>     
->>>>>>> 4fb6c33490b5cab50eca4f55ce7176e2dd1a489f
+                            </div>    
                     </form>
-
-
-<<<<<<< HEAD
                 </uib-accordion-group>
             </uib-accordion>
-=======
-        </div>
->>>>>>> 4fb6c33490b5cab50eca4f55ce7176e2dd1a489f
-        
+        </div>        
     </div>
 </div>
