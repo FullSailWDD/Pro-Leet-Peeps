@@ -1,7 +1,6 @@
 var router = require('express').Router();
 var bodyParser = require('body-parser');
 var Course = require('./app/modules/get/course.js')
-var Rubric = require('./app/modules/get/rubric.js')
 
 
 router.use(bodyParser.json())
@@ -12,7 +11,14 @@ router.post('/post', function (req,res) {
 	var course = new Course({
 			status: req.body.status,
 			major: req.body.major,
-			course: req.body.course
+			course: req.body.course,
+			description: req.body.description,
+			rubric: req.body.rubric,
+			title: req.body.title,
+			grade: req.body.grade,
+			dueDate: req.body.dueDate,
+			rubricdescription: req.body.rubricdescription
+
 
 		})
 	console.log("Course ::::::::::::: ",course)
@@ -27,25 +33,6 @@ router.post('/post', function (req,res) {
 	})
 
 
-})
-router.post('/post1', function (req,res) {
-
-	var rubric = new Rubric({
-		status: req.body.status,
-		major: req.body.major,
-		course: req.body.course,
-		rubric: req.body.rubric
-
-	})
-	console.log("Rubric ::::::::::::: ",rubric)
-
-
-	rubric.save(function(err){
-		if(err){
-			console.log('error',err)
-		}
-	res.sendStatus(201)
-	})
 })
 
 module.exports = router;
