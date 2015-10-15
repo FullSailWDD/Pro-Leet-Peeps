@@ -18,7 +18,7 @@ $scope.status = {
     $scope.Post = function($scope){
       console.log('FIRED', $rootScope.groups);
       //this the first form that gets submited
-       var cData = {status:"Status of course",major:"the major of the course", course: "Web design", rubric:"Rubric"};
+       var cData = {status:"Status of course",major:"the major of the course", course: "Web design",description:"description of course", rubric:{name:"Lab 1",title:"paint a face", grade:"gradeVal", dueDate: "this is DUEEEE",rubricdescription:"about the rubric"}};
       //this is the rubric form 
 
 
@@ -72,7 +72,7 @@ $scope.status = {
 	      placeholder: ' Enter the course description ',
 	      value: '',
 	      type: 'textarea',
-	      name: 'comments'
+	      name: 'description'
 
 	    }
 	  ]
@@ -118,7 +118,6 @@ $scope.status = {
 	      value: '',
 	      type: 'date',
 	      name: 'dueDate'
-
 	    },
 	    {
 	      // text area data
@@ -126,7 +125,7 @@ $scope.status = {
 	      placeholder: ' Enter the assignment description ',
 	      value: '',
 	      type: 'textarea',
-	      name: 'description'
+	      name: 'rubricdescription'
 
 	   }
 	  ]
