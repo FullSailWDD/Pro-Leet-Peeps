@@ -1,5 +1,17 @@
 myApp.controller('AccordionDemoCtrl', function ($scope, $http, $timeout, $rootScope) {
 
+$scope.status = {
+    isFirstOpen: true,
+    isFirstDisabled: false
+  };
+
+    $scope.validateClick = function (group, index) {
+        if (group.correct == "addingDegreeCourse") {
+            group.isaddingDegreeCourse = true;
+        } else if (group.correct == "addingRubric") {
+            group.isaddingRubric = true;
+        }     
+    }
 
 
 

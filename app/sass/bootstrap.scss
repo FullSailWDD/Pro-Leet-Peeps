@@ -5509,21 +5509,17 @@ button.close {
 
 
 .addingDegreeCourse{
-  position: absolute;
+  position: fixed;
   left: 15px;
   top: 0px;
+  color: red;
 }
 
 .addingRubric{
-  position: absolute;
+  position: fixed;
   left: 315px;
     top: -5px;
-}
-
-.addingStudent{
-  position: absolute;
-  left: 435px;
-  top: -5px;
+    color: green;
 }
 
 
@@ -5537,6 +5533,12 @@ button.close {
 
 .random {
     color: blue
+}
+
+body {
+    background-image:url("../img/bg.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 
