@@ -42,6 +42,11 @@ myApp.config(['$interpolateProvider', function($interpolateProvider){
 			.when('/form', {
 				templateUrl : '/form.handlebars',
 				controller  : 'AccordionDemoCtrl'
+			})
+			.when('/rubric', {
+				templateUrl : '/rubric.handlebars',
+				controller  : 'rubricController'
+
 			});
 	});
 
