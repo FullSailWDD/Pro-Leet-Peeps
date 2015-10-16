@@ -35,7 +35,7 @@ router.post('/post', function (req,res, next) {
 	course.find = function() {
 			$scope.course = Courses.query();
 
-			console.log("BANN")
+			console.log("BANN");
 	};
 
 

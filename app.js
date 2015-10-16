@@ -1,7 +1,7 @@
 var express = require('express'),
  app = express(),
  exphbs  = require('express-handlebars'),
- bodyParser = require('body-parser'),util = require('util'),mongoose = require('mongoose'), morgan = require('morgan');
+ bodyParser = require('body-parser'),util = require('util'),mongoose = require('mongodb'), morgan = require('morgan');
 
 
 var jwt  = require('jsonwebtoken'); // used to create, sign, and verify tokens
