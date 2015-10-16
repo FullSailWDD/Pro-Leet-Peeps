@@ -1,4 +1,4 @@
- <div class="container">
+ <div class="container" ng-controller="dashboardController">
     <h1>Course Dashboard</h1>
 
     <table class="table">
@@ -13,9 +13,9 @@
       </thead>
       <tbody>
         <tr ng-repeat="data in courses">
-          <td>{[{data.title}]}</td>
-          <td>{[{data.title]}}</td>
-          <td>{{data.title}}</td>
+          <td>{[{data.major}]}</td>
+          <td>{[{data.major]}}</td>
+          <td>{{data.major}}</td>
           <td><button class="btn btn-danger" ng-click="remove(courses._id)">Remove</button></td>
           <td><button class="btn btn-warning" ng-click="edit(courses._id)">Edit</button></td>
         </tr>
