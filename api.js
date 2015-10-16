@@ -17,7 +17,6 @@ router.post('/post', function (req,res, next) {
 			dueDate: req.body.dueDate,
 			rubricdescription: req.body.rubricdescription
 
-
 		})
 	console.log("Course ::::::::::::: ",course)
 
@@ -29,13 +28,14 @@ router.post('/post', function (req,res, next) {
 		}
   		res.json(req.body);
   		console.log("SAVED")
-  	return course;
+  		return course;
 	})
 
 
-
+	
 
 //finding the course that is in the mongod database
 })
+
 
 module.exports = router;

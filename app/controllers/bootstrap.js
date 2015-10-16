@@ -138,7 +138,6 @@ var parent = $rootScope;
         //posting to /api/post then sending to the database
       $http.post('/api/post', cData).then(function (successCallback, errorCallback){
         console.log("successfilled");
-         render('dashboard');
 
       });
 
@@ -158,5 +157,6 @@ var callback1;
 
     }      
   }
+  return parent
 });
 // angular.bootstrap(document, ['myApp']);
