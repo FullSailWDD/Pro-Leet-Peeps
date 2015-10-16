@@ -1,15 +1,4 @@
-<!DOCTYPE>
-<html ng-app="DashCtrl">
-<head>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-
-  <title>Course Dashboard</title>
-</head>
-<body>
   <div class="container" ng-controller="dashController">
     <h1>Course Dashboard</h1>
 
@@ -24,10 +13,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat="courses in courses">
-          <td>{{courses.major}}</td>
-          <td>{{courses.course}}</td>
-          <td>{{courses.description}}</td>
+        <tr ng-repeat="data in groups">
+          <td>{[{data.title}]}</td>
+          <td>{[{data.className}]}</td>
+          <td>{[{data.className}]}</td>
           <td><button class="btn btn-danger" ng-click="remove(courses._id)">Remove</button></td>
           <td><button class="btn btn-warning" ng-click="edit(courses._id)">Edit</button></td>
         </tr>
@@ -35,7 +24,3 @@
     </table>
 
   </div>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.12/angular.min.js"></script>
-<script src="/app/controllers/dashboardController"></script>
-</body>
-</html>
