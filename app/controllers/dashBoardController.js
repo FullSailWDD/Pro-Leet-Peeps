@@ -21,8 +21,8 @@ $scope.remove = function(id) {
 
 $scope.edit = function(id) {
   console.log(id);
-  $http.get('/courses/' + id).success(function(response) {
-    $scope.contact = response;
+  $http.get('api/courses/' + id).success(function(response) {
+    console.log("EDITME", response)
   });
 };  
 
