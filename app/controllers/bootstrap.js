@@ -108,7 +108,7 @@ var parent = $rootScope;
   	$scope.submitForm = function($scope){
 
         //parcing the data from the form
-        var major = JSON.stringify($rootScope.groups[0].users[0].value);
+        var major = $rootScope.groups[0].users[0].value;
         var course = $rootScope.groups.course;
         var courseDescript = $rootScope.groups.description;
         var rubName = $rootScope.groups.name;
@@ -121,7 +121,7 @@ var parent = $rootScope;
   		console.log('FIRED', JSON.stringify($rootScope.groups[0].users[0].value));
 
 
-  		var majorName = JSON.stringify($rootScope.groups[0].users[0].value);
+  		var majorName = $rootScope.groups[0].users[0].value;
     	//this the first form that gets submited
 
         //seperating the grade and sectitles on commas

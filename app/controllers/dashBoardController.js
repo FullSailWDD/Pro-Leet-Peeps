@@ -1,4 +1,4 @@
-myApp.controller('dashboardController', ['$scope', '$http', function($scope, $http) {
+myApp.controller('dashboardController', ['$scope', '$http','$uibModal', function($scope, $http, $uibModal) {
   console.log("Loaded dashboard controller");
 
 
@@ -14,7 +14,7 @@ refresh();
 
 $scope.remove = function(id) {
   console.log(id);
-  $http.delete('/courses/' + id).success(function(response) {
+  $http.delete('api/courses/' + id).success(function(response) {
     refresh();
   });
 };
@@ -23,6 +23,24 @@ $scope.edit = function(id) {
   console.log(id);
   $http.get('api/courses/' + id).success(function(response) {
     console.log("EDITME", response)
+
+
+    $scope.data = response;
+
+  var modalInstance = $uibModal.open({
+      animation: $scope.animationsEnabled,
+      templateUrl: 'modal.handlebars',
+      controller: 'ModalInstanceCtrl',
+      size: 'lg',
+      resolve: {
+        data: function () {
+          return $scope.data;
+      }
+    }
+  })
+
+
+
   });
 };  
 
