@@ -141,10 +141,12 @@ var parent = $rootScope;
 
       });
 
-      $http.get('/api/post'),function (req,res){
-      	console.log("GOGT YOU")
+      $http.get('/api/post', cData).then(function (req,res){
 
-      };
+      	
+      	console.log(cData)
+
+      });
 
 
 //adding a comment so it can be pulled

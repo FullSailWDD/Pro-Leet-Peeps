@@ -1,23 +1,40 @@
- <div class="container">
-    <h1>Course Dashboard</h1>
-
+<div id="page-wrapper">
+    <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Course Dashboard</h1>
     <table class="table">
       <thead>
         <tr>
           <th>Major</th>         
-          <th>Course</th>
+          <th>Rubric</th>
           <th>Description</th>
           <th>Action</th>
           <th>&nbsp;</th>
         </tr>
       </thead>
-      <tbody>
-        <tr ng-repeat="courses in courses">
-          <td>{[{courses.major}]}</td>
-          <td>{[{courses.course]}}</td>
-          <td>{{courses.description}}</td>
+        <tr ng-repeat="data in courses">
+          <td>{[{data.major}]}</td>
+          <td>{[{data.rubric.name}]}</td>
+        </tr>
+
+      <!--   <tr>
+          <td ng-repeat="major in courses">{[{major |json}]}</td>
+        </tr>
+
+        <tr>
+          <td ng-repeat="major in courses">{[{major |json}]}</td>
+        </tr>
+
+        <tr>
+          <td ng-repeat="major in courses">{[{major |json}]}</td>
+        </tr> -->
+
+        <tr>
           <td><button class="btn btn-danger" ng-click="remove(courses._id)">Remove</button></td>
           <td><button class="btn btn-warning" ng-click="edit(courses._id)">Edit</button></td>
         </tr>
-      </tbody>
     </table>
+            </div>
+        </div>
+    </div>
+</div>
