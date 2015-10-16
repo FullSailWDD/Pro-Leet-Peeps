@@ -9,30 +9,18 @@
             <tr>
               <th>Major</th>         
               <th>Rubric</th>
-              <th>Description</th>
-              <th>Action</th>
+              <th>Edit</th>
+              <th>Remove</th>
               <th>&nbsp;</th>
             </tr>
           </thead>
             <tr ng-repeat="data in courses">
-              <td>{[{data._id}]}</td>
-              <td>{[{data.rubric.name}]}</td>
-              <td><button ng-click="edit(data._id)">Edit</button></td>
-            </tr>
+<!--               <td>{[{data._id}]}</td>
+ -->        <td>{[{data.major}]}</td>
+            <td>{[{data.rubric.name}]}</td>
 
-      <!--   <tr>
-          <td ng-repeat="major in courses">{[{major |json}]}</td>
-        </tr>
-
-        <tr>
-          <td ng-repeat="major in courses">{[{major |json}]}</td>
-        </tr>
-
-        <tr>
-          <td ng-repeat="major in courses">{[{major |json}]}</td>
-        </tr> -->
-          <td><button class="btn btn-danger" ng-click="remove(courses._id)">Remove</button></td>
-          <td><button class="btn btn-warning" ng-click="edit(courses._id)">Edit</button></td>
+            <td><button ng-click="edit(data._id)">Edit</button></td>
+            <td><button ng-click="remove(data._id)">Remove</button></td>
         </tr>
     </table>
             </div>

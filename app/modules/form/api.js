@@ -21,7 +21,7 @@ app.get('/courses', function (req, res) {
 });
 
 //delete from database
-app.delete('/courses', function (req, res) {
+app.delete('/courses/:id', function (req, res) {
   var id = req.params.id;
   console.log(id);
   db.courses.remove({_id: mongojs.ObjectId(id)}, function (err, doc) {
