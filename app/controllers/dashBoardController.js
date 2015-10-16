@@ -1,7 +1,7 @@
-var dash = angular.module('DashCtrl', []);
 myApp.controller('dashboardController', ['$scope', '$http', function($scope, $http) {
-    console.log("Loaded dashboard controller");
+  console.log("Loaded dashboard controller");
 
+<<<<<<< HEAD
 var refresh = function() {
   $http.get('api/courses').success(function(response) {
     console.log("courses data pulled");
@@ -10,6 +10,14 @@ var refresh = function() {
     var coursesList = JSON.stringify(response);
     console.log(coursesList);
 
+=======
+
+  var refresh = function() {
+    $http.get('api/courses').success(function(response) {
+    console.log("courses data pulled");
+    $scope.courses = response;
+    
+>>>>>>> e61f14798cbedbcd718e06b21f2e3ff4c9468b5e
   });
 };
 
