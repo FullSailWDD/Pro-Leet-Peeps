@@ -10,7 +10,7 @@
   <title>Course Dashboard</title>
 </head>
 <body>
-  <div class="container" ng-controller="dashController">
+  <div class="container">
     <h1>Course Dashboard</h1>
 
     <table class="table">
@@ -25,8 +25,8 @@
       </thead>
       <tbody>
         <tr ng-repeat="courses in courses">
-          <td>{{courses.major}}</td>
-          <td>{{courses.course}}</td>
+          <td>{[{courses.major}]}</td>
+          <td>{[{courses.course]}}</td>
           <td>{{courses.description}}</td>
           <td><button class="btn btn-danger" ng-click="remove(courses._id)">Remove</button></td>
           <td><button class="btn btn-warning" ng-click="edit(courses._id)">Edit</button></td>

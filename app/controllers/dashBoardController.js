@@ -1,5 +1,5 @@
 var dash = angular.module('DashCtrl', []);
-myApp.controller('dashController', ['$scope', '$http', function($scope, $http) {
+myApp.controller('dashboardController', ['$scope', '$http', function($scope, $http) {
     console.log("Loaded dashboard controller");
 
 
