@@ -3,9 +3,6 @@ var express = require('express'),
  exphbs  = require('express-handlebars'),
  bodyParser = require('body-parser'),util = require('util'),mongoose = require('mongoose'), morgan = require('morgan');
 
-var Course = require("./app/modules/form/controllers/major.js")
-
-
 var db = require('./config/database'); // get our db file
 
 var jwt  = require('jsonwebtoken'); // used to create, sign, and verify tokens
@@ -31,30 +28,19 @@ app.use(express.static(__dirname + '/config'));
 var port = process.env.PORT || 3000;
 
 app.get('/', function (req, res) {
-
   res.render('landing');
-
 })
 
 
 
-app.get('/api/post', function (req, res , $scope) {
+app.get('/api/post', function (req, res) {
 	console.log("LISTENING TO POST");
-
-	// Course = Course.base.modelSchemas.Course.paths;
-
-	// var jsonString = JSON.stringify(Course);
-
-	console.log(Course.db.collections, "COURSECHECK");
-	// console.log(jsonString, "STRING CHECK");
-
-
-	$scope.find = function() {
-			$scope.course = Courses.query();
-	};
-
+	res.render('./form');
 })
 
+app.post('/api/post', function (req, res) {
+	console.log("Waiting for get Request");
+})
 
 app.listen(port);
 console.log("Server listening on port:", port);
