@@ -32,8 +32,17 @@ app.get('/', function (req, res) {
 
 
 
-app.get('/groupList', function (req, res) {
+app.get('/api/post', function (req, res) {
 	console.log("Waiting for get Request");
+
+
+})
+
+
+
+app.post('/api/post', function (req, res) {
+	console.log("Waiting for get Request");
+
 
 })
 

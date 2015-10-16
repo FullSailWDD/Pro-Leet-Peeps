@@ -7,7 +7,6 @@ router.use(bodyParser.json())
 
 router.post('/post', function (req,res, next) {
 	console.log("HELLO", req.body);
-
 	var course = new Course({
 			major: req.body.major,
 			course: req.body.course,
@@ -29,16 +28,14 @@ router.post('/post', function (req,res, next) {
 			console.log('error',err)
 		}
   		res.json(req.body);
+  		console.log("SAVED")
   	return course;
 	})
 
-	course.find = function() {
-			$scope.course = Courses.query();
-
-			console.log("BANN");
-	};
 
 
+
+//finding the course that is in the mongod database
 })
 
 module.exports = router;
