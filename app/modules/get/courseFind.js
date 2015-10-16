@@ -1,7 +1,7 @@
-var db = require('../../../config/database.js');
+// var db = require('../../../config/database.js');
 
-module.exports = db.model('Course',{
+// module.exports = db.model('Course',{
 
 
-})
+// })
 

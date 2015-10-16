@@ -53,9 +53,10 @@ myApp.config(['$interpolateProvider', function($interpolateProvider){
 		$scope.message = 'Everyone come and see how good I look!';
 	});
 
-	myApp.controller('dashboardController', function($scope) {
+	myApp.controller('dashboardController', function($scope, $route) {
 		// create a message to display in our view
-		$scope.title = 'Everyone come and see how good I look!';
+		console.log("DATABASe");
+		$scope.count = 0;
 
 
 	});

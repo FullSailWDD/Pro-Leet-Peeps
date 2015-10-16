@@ -2,8 +2,8 @@ var mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/test');
 
- var db = mongoose.connection;
+var db = mongoose.connection;
      
-module.exports = mongoose;
+module.exports = db;
 
  
