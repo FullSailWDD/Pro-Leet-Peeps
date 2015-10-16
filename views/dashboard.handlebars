@@ -10,14 +10,9 @@
                             <i class="fa fa-bell fa-fw"></i>
                              Rubric List
                         </div>
-                        <button ng-click="count = count + 1 * 5">Click me!</button>
-                            <p>{[{ count }]}</p>
+                        <button ng-model="parent">Click me!</button>
+                            <p>{[{ parent.major }]}</p>
 
-
-                        <div ng-repeat="courses in courses"> </div>
-
-                        <!-- /.panel-heading -->
-                      
                          
                         <!-- /.panel-body -->
                     </div>

@@ -37,6 +37,7 @@ myApp.config(['$interpolateProvider', function($interpolateProvider){
 			.when('/dashboard', {
 				templateUrl : '/dashboard.handlebars',
 				controller  : 'dashboardController'
+
 			})
 			.when('/form', {
 				templateUrl : '/form.handlebars',
@@ -56,8 +57,17 @@ myApp.config(['$interpolateProvider', function($interpolateProvider){
 	myApp.controller('dashboardController', function($scope, $route) {
 		// create a message to display in our view
 		console.log("DATABASe");
-		$scope.count = 0;
+		    $scope.count = 0;
 
+
+	// course.find({},function(err, course) {
+ //     if (err)
+	//      res.send(err);
+	//      console.log(Course);
+	//      res.json(Course);
+ //     });
+		
+		
 
 	});
 

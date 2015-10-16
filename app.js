@@ -1,15 +1,16 @@
 var express = require('express'),
  app = express(),
  exphbs  = require('express-handlebars'),
- bodyParser = require('body-parser'),util = require('util'),mongoose = require('mongodb'), morgan = require('morgan');
+ bodyParser = require('body-parser'),util = require('util'),mongoose = require('mongoose'), morgan = require('morgan');
 
+var db = require('./config/database'); // get our db file
 
 var jwt  = require('jsonwebtoken'); // used to create, sign, and verify tokens
 // var config = require('./config/config'); // get our config file
-var dbConnect = require('./config/database'); // get our db file
  
 
-app.use('/api', require('./api.js'))
+app.use('/api', require('./app/modules/form/api.js'))
+
 
 //view engine
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
@@ -33,46 +34,13 @@ app.get('/', function (req, res) {
 
 
 app.get('/api/post', function (req, res) {
-	console.log("Waiting for get Request");
-
-
+	console.log("LISTENING TO POST");
+	res.render('./form');
 })
-
-
 
 app.post('/api/post', function (req, res) {
 	console.log("Waiting for get Request");
-
-
 })
-
-// mongoose.connect(config.database); // connect to database
-// app.set('superSecret', config.secret); // secret variable
-
-
-
-// app.post('/dash', function (req, res) {
-//   res.render('dashboard');
-// });
-
-// app.get('/setup', function(req, res) {
-
-//   // create a sample user
-//   var nick = new User({ 
-//     name: 'Nick Cerminara', 
-//     password: 'password',
-//     admin: true 
-//   });
-
-//   // save the sample user
-//   nick.save(function(err) {
-//     if (err) throw err;
-
-//     console.log('User saved successfully');
-//     res.json({ success: true });
-//   });
-// });
-
 
 app.listen(port);
 console.log("Server listening on port:", port);
