@@ -15,6 +15,11 @@
         <tr ng-repeat="data in courses">
           <td>{[{data.major}]}</td>
           <td>{[{data.rubric.name}]}</td>
+          <td> Description </td>
+          <td><button class="btn btn-danger" ng-click="remove(courses._id)">Edit</button></td>
+          <td><button class="btn btn-success" ng-click="remove(courses._id)">Remove</button></td>
+
+
         </tr>
 
       <!--   <tr>
@@ -28,11 +33,6 @@
         <tr>
           <td ng-repeat="major in courses">{[{major |json}]}</td>
         </tr> -->
-
-        <tr>
-          <td><button class="btn btn-danger" ng-click="remove(courses._id)">Remove</button></td>
-          <td><button class="btn btn-warning" ng-click="edit(courses._id)">Edit</button></td>
-        </tr>
     </table>
             </div>
         </div>
