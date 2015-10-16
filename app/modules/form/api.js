@@ -1,12 +1,12 @@
 var router = require('express').Router();
 var bodyParser = require('body-parser');
 var Course = require('./controllers/major.js')
-
-
+var express = require('express'),
+app = express();
 router.use(bodyParser.json())
 
-router.post('/post', function (req,res) {
 
+router.post('/post', function (req,res) {
 	var course = new Course({
 			major: req.body.major,
 			course: req.body.course,
@@ -16,9 +16,9 @@ router.post('/post', function (req,res) {
 			grade: req.body.grade,
 			dueDate: req.body.dueDate,
 			rubricdescription: req.body.rubricdescription
-
 	})
-	console.log("HELLO", req.body);
+
+	console.log("Here is the Schematic", req.body);
 //save the course into the db
 	course.save(function(err){
 		if(err){
@@ -30,10 +30,5 @@ router.post('/post', function (req,res) {
 	})
 	console.log(course.major)
 })
-//getting the post object
-router.get('/post', function (req,res) {
-
-});
-
 
 module.exports = router;
