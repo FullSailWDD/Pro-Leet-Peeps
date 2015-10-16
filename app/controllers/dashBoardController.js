@@ -1,13 +1,13 @@
-var dash = angular.module('dash', []);
+var dash = angular.module('DashCtrl', []);
 myApp.controller('dashController', ['$scope', '$http', function($scope, $http) {
     console.log("Loaded dashboard controller");
 
 
 var refresh = function() {
-  $http.get('/courses').success(function(response) {
+  $http.get('api/courses').success(function(response) {
     console.log("courses data pulled");
-    $scope.contactlist = response;
-    $scope.contact = "";
+    $scope.courses = response;
+    $scope.courses = "";
   });
 };
 
