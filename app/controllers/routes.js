@@ -37,6 +37,7 @@ myApp.config(['$interpolateProvider', function($interpolateProvider){
 			.when('/dashboard', {
 				templateUrl : '/dashboard.handlebars',
 				controller  : 'dashboardController'
+
 			})
 			.when('/form', {
 				templateUrl : '/form.handlebars',
@@ -53,13 +54,22 @@ myApp.config(['$interpolateProvider', function($interpolateProvider){
 		$scope.message = 'Everyone come and see how good I look!';
 	});
 
-	myApp.controller('dashboardController', function($scope) {
+	myApp.controller('dashboardController', function($scope, $route) {
 		// create a message to display in our view
-		$scope.message = 'Everyone come and see how good I look!';
+		console.log("DATABASe");
+		    $scope.count = 0;
 
+
+	// course.find({},function(err, course) {
+ //     if (err)
+	//      res.send(err);
+	//      console.log(Course);
+	//      res.json(Course);
+ //     });
+		
+		
 
 	});
-
 	myApp.controller('signupController', function($scope) {
 		// create a message to display in our view
 		$scope.message = 'Everyone come and see how good I look!';
