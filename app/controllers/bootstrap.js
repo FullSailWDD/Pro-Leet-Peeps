@@ -100,12 +100,12 @@ var parent = $rootScope;
     // 	$scope.groupList = response;
     // })
   
+
 	// put json object into the form data array
   	// WHEN FORM IS SUBMITED
   	$scope.submitForm = function($scope){
 
-        
-  		console.log('FIRED',$rootScope.groups);
+        //parcing the data from the form
         var major = JSON.stringify($rootScope.groups[0].users[0].value);
         var course = $rootScope.groups.course;
         var courseDescript = $rootScope.groups.description;
@@ -115,19 +115,32 @@ var parent = $rootScope;
         var rDescript = $rootScope.groups.rubricdescription;
         var due = $rootScope.groups.dueDate;
 
-//this the first form that gets submited
-       var cData = { major: major, course: course ,description: courseDescript, rubric:{name:rubName,title:secTitles, grade:grade, dueDate: due,rubricdescription:rDescript}};
-        
-  	console.log('FIRED', JSON.stringify($rootScope.groups[0].users[0].value));
+//this the first form that gets submited   
+  		console.log('FIRED', JSON.stringify($rootScope.groups[0].users[0].value));
 
 
   	var majorName = JSON.stringify($rootScope.groups[0].users[0].value);
     //this the first form that gets submited
+
+        //seperating the grade and sectitles on commas
+        var sections = secTitles;
+        var sectionSplit = sections.split(",");
+        console.log(sectionSplit);
+        var grades = grade;
+        var gradeSplit = grades.split(",");
+        console.log(gradeSplit);
+        
+        //this the first form that gets submited
+       var cData = { major: major, course: course ,description: courseDescript, rubric:{name:rubName,title:sectionSplit, grade:gradeSplit, dueDate: due,rubricdescription:rDescript}};
+        
+        //posting to /api/post then sending to the database
       $http.post('/api/post', cData).then(function (successCallback, errorCallback){
         console.log("successfilled");
       });
 
-	var callback1;
+
+//adding a comment so it can be pulled
+var callback1;
   	// IF FORM IS VALID
 	if(callback1){
 	      for (var i = 0; i < groupList.length; i++) {
