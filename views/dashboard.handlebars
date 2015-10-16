@@ -15,8 +15,9 @@
             </tr>
           </thead>
             <tr ng-repeat="data in courses">
-              <td>{[{data.major}]}</td>
+              <td>{[{data._id}]}</td>
               <td>{[{data.rubric.name}]}</td>
+              <td><button ng-click="edit(data._id)">Edit</button></td>
             </tr>
 
       <!--   <tr>
@@ -38,7 +39,3 @@
         </div>
     </div>
 </div>
-=======
-
-  </div>
->>>>>>> 3e4213444e4fc5ea1a213c2d5173c8482deec1d8
