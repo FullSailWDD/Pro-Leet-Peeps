@@ -1,12 +1,12 @@
 var router = require('express').Router();
 var bodyParser = require('body-parser');
-var Course = require('./app/modules/get/course.js')
+var Course = require('./controllers/major.js')
 
 
 router.use(bodyParser.json())
 
-router.post('/post', function (req,res, next) {
-	console.log("HELLO", req.body);
+router.post('/post', function (req,res) {
+
 	var course = new Course({
 			major: req.body.major,
 			course: req.body.course,
@@ -17,11 +17,9 @@ router.post('/post', function (req,res, next) {
 			dueDate: req.body.dueDate,
 			rubricdescription: req.body.rubricdescription
 
-		})
-	console.log("Course ::::::::::::: ",course)
-
-
-
+	})
+	console.log("HELLO", req.body);
+//save the course into the db
 	course.save(function(err){
 		if(err){
 			console.log('error',err)
@@ -30,12 +28,12 @@ router.post('/post', function (req,res, next) {
   		console.log("SAVED")
   		return course;
 	})
-
-
-	
-
-//finding the course that is in the mongod database
+	console.log(course.major)
 })
+//getting the post object
+router.get('/post', function (req,res) {
+
+});
 
 
 module.exports = router;

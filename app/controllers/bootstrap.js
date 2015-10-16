@@ -117,12 +117,12 @@ var parent = $rootScope;
         var rDescript = $rootScope.groups.rubricdescription;
         var due = $rootScope.groups.dueDate;
 
-//this the first form that gets submited   
+		//this the first form that gets submited   
   		console.log('FIRED', JSON.stringify($rootScope.groups[0].users[0].value));
 
 
-  	var majorName = JSON.stringify($rootScope.groups[0].users[0].value);
-    //this the first form that gets submited
+  		var majorName = JSON.stringify($rootScope.groups[0].users[0].value);
+    	//this the first form that gets submited
 
         //seperating the grade and sectitles on commas
         var sections = secTitles;
@@ -140,6 +140,11 @@ var parent = $rootScope;
         console.log("successfilled");
 
       });
+
+      $http.get('/api/post'),function (req,res){
+      	console.log("GOGT YOU")
+
+      };
 
 
 //adding a comment so it can be pulled
