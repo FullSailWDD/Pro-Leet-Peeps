@@ -7,6 +7,7 @@
     <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">Course Dashboard</h1>
+<<<<<<< HEAD
 >>>>>>> e61f14798cbedbcd718e06b21f2e3ff4c9468b5e
     <table class="table">
       <thead>
@@ -26,6 +27,25 @@
 =======
           <td>{[{data.rubric.name}]}</td>
         </tr>
+=======
+
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Major</th>         
+              <th>Rubric</th>
+              <th>Description</th>
+              <th>Action</th>
+              <th>&nbsp;</th>
+            </tr>
+          </thead>
+            <tr ng-repeat="data in courses">
+              <td>{[{data._id}]}</td>
+              <td>{[{data.rubric.name}]}</td>
+              <td><button ng-click="edit(data._id)">Edit</button></td>
+            </tr>
+>>>>>>> ec670359a17e6c34fef6cf9939e4fdf0dbe3b80d
 
       <!--   <tr>
           <td ng-repeat="major in courses">{[{major |json}]}</td>
@@ -38,9 +58,12 @@
         <tr>
           <td ng-repeat="major in courses">{[{major |json}]}</td>
         </tr> -->
+<<<<<<< HEAD
 
         <tr>
 >>>>>>> e61f14798cbedbcd718e06b21f2e3ff4c9468b5e
+=======
+>>>>>>> ec670359a17e6c34fef6cf9939e4fdf0dbe3b80d
           <td><button class="btn btn-danger" ng-click="remove(courses._id)">Remove</button></td>
           <td><button class="btn btn-warning" ng-click="edit(courses._id)">Edit</button></td>
         </tr>
