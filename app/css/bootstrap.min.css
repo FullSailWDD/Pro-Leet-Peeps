@@ -5514,9 +5514,10 @@ button.close {
 .random {
   color: blue; }
 
-body {
-  background-image: url("../img/bg.jpeg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%; }
+.none {
+  display: none; }
+
+.block {
+  display: block; }
 
 /*# sourceMappingURL=bootstrap.min.css.map */

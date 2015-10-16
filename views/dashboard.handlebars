@@ -12,10 +12,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat="courses in courses">
-          <td>{[{courses.major}]}</td>
-          <td>{[{courses.course]}}</td>
-          <td>{{courses.description}}</td>
+        <tr ng-repeat="data in courses">
+          <td>{[{data.title}]}</td>
+          <td>{[{data.title]}}</td>
+          <td>{{data.title}}</td>
           <td><button class="btn btn-danger" ng-click="remove(courses._id)">Remove</button></td>
           <td><button class="btn btn-warning" ng-click="edit(courses._id)">Edit</button></td>
         </tr>
