@@ -8,6 +8,7 @@
           <thead>
             <tr>
                 <th>Major</th>         
+                <th>Course</th>
                 <th>Rubric</th>
                 <th>View</th>
                 <th>Edit</th>
@@ -18,6 +19,7 @@
             <tr ng-repeat="data in courses">
 <!--               <td>{[{data._id}]}</td>
  -->        <td>{[{data.major}]}</td>
+            <td>{[{data.course}]}</td>
             <td>{[{data.rubric.name}]}</td>
             
             <td><button ng-click="edit(data._id)">View</button></td>
