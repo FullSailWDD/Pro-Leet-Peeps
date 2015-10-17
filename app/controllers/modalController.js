@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 angular.module('myApp', ['ngAnimate', 'ui.bootstrap']);
 angular.module('myApp').controller('myCtrl', function ($scope, $uibModal, $log) {
 
@@ -45,20 +46,28 @@ angular.module('myApp').controller('ModalInstanceCtrl', function ($scope, $modal
   };
 });
 =======
+=======
+myApp.controller('ModalInstanceCtrl', function ($scope, $modalInstance, data, $http, $route) {
+  $scope.data = data;
+  $scope.selected = {
+    data: $scope.data
+  };
+    console.log("Scopre.data modalInstance",$scope.data);
+>>>>>>> 3767008f4d24c9a37c3d27531119fefdd31db1e9
 $scope.update = function() {
-  console.log($scope.data._id);
-    var a = document.body.appendChild(
-        document.createElement("a")
-    );
-    a.download = "export.html";
-    a.href = "data:text/html," + document.getElementById("test").innerHTML; // Grab the HTML
-    a.click(); // Trigger a click on the element
-    // Change the string in the result using JSON.parse from string
-
+  console.log("======", $scope.data);
   $http.put('/api/courses/' + $scope.data._id, $scope.data).success(function(response) {
-
   $modalInstance.close();
 })
 };
+<<<<<<< HEAD
 })
 >>>>>>> 71c8907b9548e71ebb41a62cb93ea92f3aa8d0da
+=======
+
+$scope.reloadRoute = function(){
+  $route.reload();
+};
+
+})
+>>>>>>> 3767008f4d24c9a37c3d27531119fefdd31db1e9

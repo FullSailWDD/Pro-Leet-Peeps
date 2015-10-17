@@ -6,41 +6,36 @@
             <ul id="test">
                 <li>
                     Course
-                    <input value = "{[{data.course}]}" />
+                    <input ng-model = "data.course" />
                 </li>
 
                 <li>
                     Description
-                    <input value = "{[{data.description}]}" />
+                    <input ng-model = "data.description" />
                 </li>
 
                 <li>
                     Rubric
-                    <input value = "{[{data.rubric.name}]}" />
+                    <input ng-model = "data.rubric.name" />
                 </li>
 
                 <li>
                     Title
-                    <input value = "{[{data.rubric.title}]}" />
-                </li>
+                    <input ng-model = "data.rubric.title" />
+                </
 
                 <li>
                     Grade
-                    <input value = "{[{data.rubric.grade}]}" />
-                </li>
-
-                <li>
-                    DueDate
-                    <input type="date" value = "{[{data.rubric.dueDate}]}" />
+                    <input ng-model = "data.rubric.grade" />
                 </li>
 
                 <li>
                     Rubric Description
-                    <input type="textarea" value = "{[{data.rubric.rubricdescription}]}" />
+                    <input type="textarea" ng-model = "data.rubric.rubricdescription" />
                 </li>
             </ul>
 
         <div class="modal-footer">
-            <button class="btn btn-primary" type="button" ng-click="update(contact._id)">Edit</button>
+            <button class="btn btn-primary" type="button" ng-click="update(contact._id); reloadRoute()">Edit</button>
             <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
         </div>

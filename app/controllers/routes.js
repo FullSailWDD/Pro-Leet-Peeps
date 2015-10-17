@@ -22,7 +22,7 @@ myApp.config(['$interpolateProvider', function($interpolateProvider){
 			// route for the about page
 			.when('/myCourse', {
 				templateUrl : '/my_courses.handlebars',
-				controller  : 'aboutController'
+				controller  : 'dashboardController'
 			})
 			.when('/editRubric', {
 				templateUrl : '/edit_rubric.handlebars',
@@ -61,10 +61,7 @@ myApp.config(['$interpolateProvider', function($interpolateProvider){
 
 	myApp.controller('dashboardController', function($scope, $route) {
 		// create a message to display in our view
-		console.log("DATABASe");
-		    $scope.count = 0;
-
-
+		$scope.count = 0;
 	// course.find({},function(err, course) {
  //     if (err)
 	//      res.send(err);
