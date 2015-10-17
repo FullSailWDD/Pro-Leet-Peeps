@@ -7,5 +7,3 @@ mongoose.connect(dbConnect);
 var db = mongoose.connection;
      
 module.exports = db;
-
- 

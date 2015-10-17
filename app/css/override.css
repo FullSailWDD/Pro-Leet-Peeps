@@ -13,4 +13,11 @@
   left: 435px;
   top: -5px; }
 
+.input-group-searchbox {
+  position: relative;
+  display: inline-table;
+  border-collapse: separate;
+  width: 94%;
+  margin: 10px; }
+
 /*# sourceMappingURL=override.css.map */
