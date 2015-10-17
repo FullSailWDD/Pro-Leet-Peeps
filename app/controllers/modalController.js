@@ -8,7 +8,7 @@ myApp.controller('ModalInstanceCtrl', function ($scope, $modalInstance, data, $h
 
 $scope.update = function() {
   console.log($scope.data._id);
-  $http.put('/api/courses/' + $scope.data._id, $scope.data.major, $scope.data.description).success(function(response) {
+  $http.put('/api/courses/' + $scope.data._id, $scope.data).success(function(response) {
 
   $modalInstance.close();
 

@@ -7,18 +7,20 @@
         <table class="table">
           <thead>
             <tr>
-              <th>Major</th>         
-              <th>Rubric</th>
-              <th>Edit</th>
-              <th>Remove</th>
-              <th>&nbsp;</th>
+                <th>Major</th>         
+                <th>Rubric</th>
+                <th>View</th>
+                <th>Edit</th>
+                <th>Remove</th>
+                <th>&nbsp;</th>
             </tr>
           </thead>
             <tr ng-repeat="data in courses">
 <!--               <td>{[{data._id}]}</td>
  -->        <td>{[{data.major}]}</td>
             <td>{[{data.rubric.name}]}</td>
-
+            
+            <td><button ng-click="edit(data._id)">View</button></td>
             <td><button ng-click="edit(data._id)">Edit</button></td>
             <td><button ng-click="remove(data._id)">Remove</button></td>
         </tr>
