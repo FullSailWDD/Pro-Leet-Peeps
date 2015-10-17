@@ -2,7 +2,7 @@ myApp.controller('dashboardController', ['$scope', '$http','$uibModal', function
   console.log("Loaded dashboard controller");
 
 
-  var refresh = function() {
+var refresh = function() {
     $http.get('api/courses').success(function(response) {
     console.log("courses data pulled");
     $scope.courses = response;
@@ -46,7 +46,7 @@ $scope.edit = function(id) {
 
 $scope.update = function() {
   console.log($scope.contact._id);
-  $http.put('/courses/' + $scope.contact._id, $scope.contact).success(function(response) {
+  $http.put('api/courses/' + $scope.contact._id, $scope.contact).success(function(response) {
     refresh();
   })
 };
