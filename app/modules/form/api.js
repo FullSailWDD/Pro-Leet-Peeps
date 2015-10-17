@@ -11,10 +11,7 @@ app.use(bodyParser.json());
 
 //get the database
 app.get('/courses', function (req, res) {
-  console.log('GET requested');
-
   db.courses.find(function (err, db) {
-    console.log(db);
     res.json(db);
 
   });
@@ -23,7 +20,6 @@ app.get('/courses', function (req, res) {
 //delete from database
 app.delete('/courses/:id', function (req, res) {
   var id = req.params.id;
-  console.log(id);
   db.courses.remove({_id: mongojs.ObjectId(id)}, function (err, doc) {
     res.json(doc);
   });
@@ -32,7 +28,6 @@ app.delete('/courses/:id', function (req, res) {
 //get data from database by ID
 app.get('/courses/:id', function (req, res) {
   var id = req.params.id;
-  console.log(id);
   db.courses.findOne({_id: mongojs.ObjectId(id)}, function (err, doc) {
     res.json(doc);
   });
@@ -41,8 +36,6 @@ app.get('/courses/:id', function (req, res) {
 //update the database
 app.put('/courses/:id', function (req, res) {
   var id = req.params.id;
-  console.log(req.body.major);
-  console.log(req.body.rubric);
   db.courses.findAndModify({
     query: {_id: mongojs.ObjectId(id)},
     update: {$set: {
@@ -77,17 +70,14 @@ app.post('/post', function (req,res) {
 			rubricdescription: req.body.rubricdescription
 
 	})
-	console.log("HELLO", req.body);
 //save the course into the db
 	course.save(function(err){
 		if(err){
-			console.log('error',err)
+
 		}
   		res.json(req.body);
-  		console.log("SAVED")
   		return course;
 	})
-	console.log(course.major)
 })
 //getting the post object
 
