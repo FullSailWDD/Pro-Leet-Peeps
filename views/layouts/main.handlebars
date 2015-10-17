@@ -44,8 +44,8 @@
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" ng-click="isReplyFormOpen = !isReplyFormOpen">
+                    <span class="sr-only" >Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -68,10 +68,10 @@
 
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
-                    <a class="dropdown-toggle" ng-click="isReplyFormOpen = !isReplyFormOpen">
+                    <a class="dropdown-toggle" ng-click="hamOpen = !hamOpen">
                         <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
-                    <ul class="dropdown-menu dropdown-user" class="check-element animate-hide" ng-show="isReplyFormOpen">
+                    <ul class="dropdown-menu dropdown-user" class="check-element animate-hide" ng-show="hamOpen">
                         <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
                         </li>
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
@@ -82,8 +82,8 @@
                     </ul>
                 </li>
             </ul>
-          
-            <div class="navbar-default sidebar" role="navigation">
+                                                         <!-- ng-show="isReplyFormOpen" -->
+            <div class="navbar-default sidebar" role="navigation" ng-hide="isReplyFormOpen">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         
