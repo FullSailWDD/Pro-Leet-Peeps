@@ -45,8 +45,8 @@ $scope.edit = function(id) {
 };  
 
 $scope.update = function() {
-  console.log($scope.contact._id);
-  $http.put('api/courses/' + $scope.contact._id, $scope.contact).success(function(response) {
+  console.log($scope.courses._id);
+  $http.put('api/courses/' + $scope.courses._id, $scope.courses).success(function(response) {
     refresh();
   })
 };
