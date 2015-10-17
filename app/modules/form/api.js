@@ -11,19 +11,15 @@ app.use(bodyParser.json());
 
 //get the database
 app.get('/courses', function (req, res) {
-  console.log('GET requested');
-
   db.courses.find(function (err, db) {
-    console.log(db);
     res.json(db);
 
   });
 });
 
 //delete from database
-app.delete('/courses', function (req, res) {
+app.delete('/courses/:id', function (req, res) {
   var id = req.params.id;
-  console.log(id);
   db.courses.remove({_id: mongojs.ObjectId(id)}, function (err, doc) {
     res.json(doc);
   });
@@ -32,7 +28,6 @@ app.delete('/courses', function (req, res) {
 //get data from database by ID
 app.get('/courses/:id', function (req, res) {
   var id = req.params.id;
-  console.log(id);
   db.courses.findOne({_id: mongojs.ObjectId(id)}, function (err, doc) {
     res.json(doc);
   });
@@ -41,10 +36,19 @@ app.get('/courses/:id', function (req, res) {
 //update the database
 app.put('/courses/:id', function (req, res) {
   var id = req.params.id;
-  console.log(req.body.major);
   db.courses.findAndModify({
     query: {_id: mongojs.ObjectId(id)},
-    update: {$set: {major: req.body.major, course: req.body.course, discription: req.body.discription}},
+    update: {$set: {
+            major: req.body.major,
+			course: req.body.course,
+			description: req.body.description,
+			rubric: req.body.rubric,
+			title: req.body.title,
+			grade: req.body.grade,
+			dueDate: req.body.dueDate,
+			rubricdescription: req.body.rubricdescription
+                    }
+            },
     new: true}, function (err, doc) {
       res.json(doc);
     }
@@ -66,17 +70,14 @@ app.post('/post', function (req,res) {
 			rubricdescription: req.body.rubricdescription
 
 	})
-	console.log("HELLO", req.body);
 //save the course into the db
 	course.save(function(err){
 		if(err){
-			console.log('error',err)
+
 		}
   		res.json(req.body);
-  		console.log("SAVED")
   		return course;
 	})
-	console.log(course.major)
 })
 //getting the post object
 
