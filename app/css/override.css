@@ -1,23 +1,39 @@
+@charset "UTF-8";
+/*main Color*/
+/*main Hover Color*/
+/*font Color*/
+/*Fonts*/
+​
 .addingDegreeCourse {
   position: absolute;
   left: 15px;
   top: 0px; }
 
+​
 .addingRubric {
   position: absolute;
   left: 315px;
   top: -5px; }
 
+​
 .addingStudent {
   position: absolute;
   left: 435px;
   top: -5px; }
 
+​
 .input-group-searchbox {
   position: relative;
   display: inline-table;
   border-collapse: separate;
   width: 94%;
   margin: 10px; }
+
+​
+.divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #c1dcde; }
 
 /*# sourceMappingURL=override.css.map */

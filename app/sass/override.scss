@@ -1,21 +1,23 @@
+@import 'styles';
+​
 .addingDegreeCourse{
 	position: absolute;
 	left: 15px;
 	top: 0px;
 }
-
+​
 .addingRubric{
 	position: absolute;
 	left: 315px;
     top: -5px;
 }
-
+​
 .addingStudent{
 	position: absolute;
 	left: 435px;
 	top: -5px;
 }
-
+​
 .input-group-searchbox {
     position: relative;
     display: inline-table;
@@ -23,3 +25,9 @@
     width: 94%;
     margin: 10px;
 }
+​
+.divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: $lightGrey; }
