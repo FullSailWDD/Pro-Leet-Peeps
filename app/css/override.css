@@ -1,3 +1,7 @@
+/*main Color*/
+/*main Hover Color*/
+/*font Color*/
+/*Fonts*/
 .addingDegreeCourse {
   position: absolute;
   left: 15px;
@@ -19,5 +23,11 @@
   border-collapse: separate;
   width: 94%;
   margin: 10px; }
+
+.divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #c1dcde; }
 
 /*# sourceMappingURL=override.css.map */
