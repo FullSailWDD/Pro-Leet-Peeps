@@ -7,7 +7,6 @@ var db = require('./config/database'); // get our db file
 
 var jwt  = require('jsonwebtoken'); // used to create, sign, and verify tokens
 // var config = require('./config/config'); // get our config file
- 
 
 app.use('/api', require('./app/modules/form/api.js'))
 
