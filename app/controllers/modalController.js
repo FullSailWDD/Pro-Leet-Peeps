@@ -23,6 +23,7 @@ angular.module('myApp').controller('myCtrl', function ($scope, $uibModal, $log) 
   };
 
 
+<<<<<<< HEAD
 });
 
 // Please note that $modalInstance represents a modal window (instance) dependency.
@@ -43,3 +44,21 @@ angular.module('myApp').controller('ModalInstanceCtrl', function ($scope, $modal
     $modalInstance.dismiss('cancel');
   };
 });
+=======
+$scope.update = function() {
+  console.log($scope.data._id);
+    var a = document.body.appendChild(
+        document.createElement("a")
+    );
+    a.download = "export.html";
+    a.href = "data:text/html," + document.getElementById("test").innerHTML; // Grab the HTML
+    a.click(); // Trigger a click on the element
+    // Change the string in the result using JSON.parse from string
+
+  $http.put('/api/courses/' + $scope.data._id, $scope.data).success(function(response) {
+
+  $modalInstance.close();
+})
+};
+})
+>>>>>>> 71c8907b9548e71ebb41a62cb93ea92f3aa8d0da
