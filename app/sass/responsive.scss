@@ -32,5 +32,15 @@ $mainColor : rgba(118,140,245,.6);
     text-align: center;
 }
 
+.row {
+	margin-top: 0;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.sidebar ul li {
+    border-bottom: .5px solid #3e4570;
+    font-size: 20px;
+}
 
 }

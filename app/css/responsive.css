@@ -23,6 +23,15 @@
     margin: 10px; }
 
   .nav > li > a {
-    text-align: center; } }
+    text-align: center; }
+
+  .row {
+    margin-top: 0;
+    margin-right: 0px;
+    margin-left: 0px; }
+
+  .sidebar ul li {
+    border-bottom: .5px solid #3e4570;
+    font-size: 20px; } }
 
 /*# sourceMappingURL=responsive.css.map */
