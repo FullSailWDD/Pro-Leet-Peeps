@@ -42,9 +42,10 @@ app.get('/courses/:id', function (req, res) {
 app.put('/courses/:id', function (req, res) {
   var id = req.params.id;
   console.log(req.body.major);
+  console.log(req.body.rubric);
   db.courses.findAndModify({
     query: {_id: mongojs.ObjectId(id)},
-    update: {$set: {major: req.body.major, course: req.body.course, discription: req.body.discription}},
+    update: {$set: {major: req.body.major, course: req.body.course, discription: req.body.discription, name: req.body.rubric }},
     new: true}, function (err, doc) {
       res.json(doc);
     }
