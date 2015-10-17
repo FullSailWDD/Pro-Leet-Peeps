@@ -22,7 +22,7 @@ myApp.config(['$interpolateProvider', function($interpolateProvider){
 			// route for the about page
 			.when('/myCourse', {
 				templateUrl : '/my_courses.handlebars',
-				controller  : 'aboutController'
+				controller  : 'dashboardController'
 			})
 			.when('/editRubric', {
 				templateUrl : '/edit_rubric.handlebars',
