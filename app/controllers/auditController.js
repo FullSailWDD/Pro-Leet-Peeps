@@ -1,4 +1,4 @@
-myApp.controller('auditController', function ($scope, $modalInstance, data, $http, $route) {
+myApp.controller('auditController', function ($scope, $modalInstance, data, $http, $route, $location) {
 
 var refresh = function() {
     $http.get('api/courses').success(function(response) {
@@ -23,5 +23,11 @@ $scope.update = function() {
 $scope.reloadRoute = function(){
   $route.reload();
 };
+
+$scope.actionLeave = function(){
+  console.log('actionLeave')
+  $location.path('/myCourse')
+  $modalInstance.close();
+}
 
 })
