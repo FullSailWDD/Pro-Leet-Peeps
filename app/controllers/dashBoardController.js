@@ -21,9 +21,10 @@ $scope.search = function(id) {
 
 
 $scope.audit = function(id) {
+
   $http.get('api/courses/' + id).success(function(response) {
     console.log("EDITME", response)
-    
+
   $scope.data = response;
   var modalInstance = $uibModal.open({
       animation: $scope.animationsEnabled,
@@ -36,6 +37,11 @@ $scope.audit = function(id) {
       }
     }
   })
+
+   $http.get('api/courses').success(function(response) {
+    $scope.courses = response;
+    
+  });
   });
 };   
 
@@ -58,7 +64,9 @@ $scope.edit = function(id) {
     }
   })
   });
-};  
+}; 
+
+
   $scope.update = function() {
     $http.put('api/courses/' + $scope.courses._id, $scope.courses).success(function(response) {
       refresh();

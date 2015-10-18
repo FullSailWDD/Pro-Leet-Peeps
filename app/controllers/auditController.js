@@ -1,4 +1,13 @@
 myApp.controller('auditController', function ($scope, $modalInstance, data, $http, $route) {
+
+var refresh = function() {
+    $http.get('api/courses').success(function(response) {
+    $scope.courses = response;
+    
+  });
+};
+refresh();
+
   $scope.data = data;
   $scope.selected = {
     data: $scope.data
