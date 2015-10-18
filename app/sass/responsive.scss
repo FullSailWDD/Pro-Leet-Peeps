@@ -1,9 +1,6 @@
 @import 'styles';
-
-/* color schematics */
-$mainColor : rgba(118,140,245,.6);
 /* end of schema */
-
+​
 /* tablets */
 @media (max-width: 699px) {
 	.page-header{
@@ -12,7 +9,7 @@ $mainColor : rgba(118,140,245,.6);
 	}
 	
 }
-
+​
 /* mobile phones */
 @media (max-width: 460px) {
 
@@ -25,7 +22,7 @@ $mainColor : rgba(118,140,245,.6);
 		margin-top:120px;
 		text-align:center;
 	}
-
+​
 .input-group-searchbox {
     position: relative;
     display: inline-table;
@@ -33,10 +30,11 @@ $mainColor : rgba(118,140,245,.6);
     width: 94%;
     margin: 10px;
 }
-
+​
 .nav > li > a {
     text-align: center;
 }
+
 
 .row {
 	margin-top: 0;

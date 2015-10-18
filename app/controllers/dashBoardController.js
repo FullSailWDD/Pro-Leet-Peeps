@@ -11,6 +11,14 @@ $scope.remove = function(id) {
     refresh();
   });
 };
+
+$scope.search = function(id) {
+  $http.get('api/courses/' + id).success(function(response) {
+    
+    refresh();
+  });
+};
+
 $scope.edit = function(id) {
   $http.get('api/courses/' + id).success(function(response) {
     console.log("EDITME", response)
