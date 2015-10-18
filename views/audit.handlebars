@@ -1,0 +1,47 @@
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+
+    <div class="modal-header">
+        <h3 class="modal-title">{[{data.major}]}</h3>
+    </div>
+
+    <div class="modal-body">
+        <ul id="test">
+            <li>
+                Course
+                <input ng-model = "data.course" />
+            </li>
+
+            <li>
+                Description
+                <input ng-model = "data.description" />
+            </li>
+
+            <li>
+                Rubric
+                <input ng-model = "data.rubric.name" />
+            </li>
+
+            <li>
+                Title
+                <input ng-model = "data.rubric.title" />
+            </li>
+
+            <li>
+                Grade
+                <input ng-model = "data.rubric.grade" />
+            </li>
+
+            <li>
+                Rubric Description
+                <input type="textarea" ng-model = "data.rubric.rubricdescription" />
+            </li>
+        </ul>
+    </div>
+
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="update(contact._id); reloadRoute()">Edit</button>
+        <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+    </div>
+</div>

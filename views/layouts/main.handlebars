@@ -34,7 +34,7 @@
     <script src="controllers/bootstrap.js"></script>
     <script src="controllers/modalController.js"></script>
     <script src="controllers/dashBoardController.js"></script>
-
+    <script src="controllers/auditController.js"></script>
 </head>
 <body ng-app="myApp">
 
@@ -69,22 +69,22 @@
                     <ul class="nav" id="side-menu">
                         
                         <li>
-                            <a href="#/myCourse"><i class="fa fa-table fa-fw"></i> My Courses</a>
+                            <a href="#/myCourse" ng-click="ToggleNav = !ToggleNav"><i class="fa fa-table fa-fw"></i> My Courses</a>
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="#/form"><i class="fa fa-edit fa-fw"></i> Add Rubric</a>
+                            <a href="#/form" ng-click="ToggleNav = !ToggleNav"><i class="fa fa-edit fa-fw"></i> Add Rubric</a>
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="#/dashboard"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="#/dashboard" ng-click="ToggleNav = !ToggleNav"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="#"><i class="fa fa-user fa-fw"></i> Login</a>
+                            <a href="#" ng-click="ToggleNav = !ToggleNav"><i class="fa fa-user fa-fw"></i> Login</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a href="login.html" ng-click="ToggleNav = !ToggleNav"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                 </div>
