@@ -21,16 +21,23 @@ $scope.search = function(id) {
 
 
 $scope.audit = function(id) {
-  console.log($location)
-
   $http.get('api/courses/' + id).success(function(response) {
-  console.log("Audit Fired")
-  $location.path('/audit');
+    console.log("EDITME", response)
+    
   $scope.data = response;
-    return $scope.data;
-
+  var modalInstance = $uibModal.open({
+      animation: $scope.animationsEnabled,
+      templateUrl: 'audit.handlebars',
+      controller: 'auditController',
+      size: 'lg',
+      resolve: {
+        data: function () {
+          return $scope.data;
+      }
+    }
+  })
   });
-};
+};   
 
 
 

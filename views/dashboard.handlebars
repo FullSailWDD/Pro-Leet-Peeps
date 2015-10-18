@@ -9,6 +9,7 @@
                 <th>Major</th> 
                 <th>Course</th>        
                 <th>Rubric</th>
+                <th>Grade</th>
                 <th>View</th>
                 <th>Edit</th>
                 <th>Remove</th>
@@ -19,6 +20,8 @@
                 <td>{[{data.major}]}</td>
                 <td>{[{data.course}]}</td>
                 <td>{[{data.rubric.name}]}</td>
+                <td>{[{data.rubric.grade}]}</td>
+
                 <td><button ng-click="audit(data._id)" class="btn btn-default">Audit</button>
                 </td>
                 <td><button ng-click="edit(data._id)" class="btn btn-danger">Edit</button></td>

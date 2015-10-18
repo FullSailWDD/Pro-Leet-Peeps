@@ -1,6 +1,5 @@
-myApp.controller('auditController', ['$scope', '$http', '$location', function($scope, $http,$location) {
-
- $scope.data = data;
+myApp.controller('auditController', function ($scope, $modalInstance, data, $http, $route) {
+  $scope.data = data;
   $scope.selected = {
     data: $scope.data
   };
@@ -16,5 +15,4 @@ $scope.reloadRoute = function(){
   $route.reload();
 };
 
-}]);
-
+})
