@@ -5,7 +5,6 @@
     <meta name="description" content="proRubrics2">
     <meta name="keywords" content="web design, pro-leet-peeps, proleetpeeps,dynamic form">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Grading Rubric Form</title>
     <meta name="description" content="proRubrics2">
     <meta name="keywords" content="web design, pro-leet-peeps, proleetpeeps,dynamic form">
@@ -69,22 +68,22 @@
                     <ul class="nav" id="side-menu">
                         
                         <li>
-                            <a href="#/myCourse"><i class="fa fa-table fa-fw"></i> My Courses</a>
+                            <a href="#/myCourse" ng-click="ToggleNav = !ToggleNav"><i class="fa fa-table fa-fw"></i>All Courses</a>
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="#/form"><i class="fa fa-edit fa-fw"></i> Add Rubric</a>
+                            <a href="#/form" ng-click="ToggleNav = !ToggleNav"><i class="fa fa-edit fa-fw"></i> Add Rubric</a>
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="#/dashboard"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="#/dashboard" ng-click="ToggleNav = !ToggleNav"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="#"><i class="fa fa-user fa-fw"></i> Login</a>
+                            <a href="#/" ng-click="ToggleNav = !ToggleNav"><i class="fa fa-user fa-fw"></i> Login</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a href="#/signup" ng-click="ToggleNav = !ToggleNav"><i class="fa fa-sign-out fa-fw"></i> Sign up</a>
                         </li>
                     </ul>
                 </div>
