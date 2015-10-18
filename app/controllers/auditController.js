@@ -1,16 +1,20 @@
 myApp.controller('auditController', ['$scope', '$http', '$location', function($scope, $http,$location) {
 
-  
- //  $scope.audit = function(id) {
- //  console.log($location)
+ $scope.data = data;
+  $scope.selected = {
+    data: $scope.data
+  };
+    console.log("Scopre.data modalInstance",$scope.data);
+$scope.update = function() {
+  console.log("======", $scope.data);
+  $http.put('/api/courses/' + $scope.data._id, $scope.data).success(function(response) {
+  $modalInstance.close();
+})
+};
 
-	// 	$http.get('api/courses/' + id).success(function(response) {
-	// 	console.log("Audit Fired")
-	// 	$scope.data = response;
-
-	// 	});
-	// };
-
+$scope.reloadRoute = function(){
+  $route.reload();
+};
 
 }]);
 

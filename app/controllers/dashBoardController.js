@@ -27,6 +27,7 @@ $scope.audit = function(id) {
   console.log("Audit Fired")
   $location.path('/audit');
   $scope.data = response;
+    return $scope.data;
 
   });
 };
