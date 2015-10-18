@@ -1,4 +1,4 @@
-myApp.controller('dashboardController', ['$scope', '$http','$uibModal', function($scope, $http, $uibModal) {
+myApp.controller('dashboardController', ['$scope', '$http','$uibModal','$location', function($scope, $http, $uibModal, $location) {
 var refresh = function() {
     $http.get('api/courses').success(function(response) {
     $scope.courses = response;
@@ -19,6 +19,21 @@ $scope.search = function(id) {
   });
 };
 
+
+$scope.audit = function(id) {
+  console.log($location)
+
+  $http.get('api/courses/' + id).success(function(response) {
+  console.log("Audit Fired")
+  $location.path('/audit');
+  $scope.data = response;
+
+  });
+};
+
+
+
+
 $scope.edit = function(id) {
   $http.get('api/courses/' + id).success(function(response) {
     console.log("EDITME", response)
@@ -36,12 +51,12 @@ $scope.edit = function(id) {
   })
   });
 };  
-$scope.update = function() {
-  $http.put('api/courses/' + $scope.courses._id, $scope.courses).success(function(response) {
-    refresh();
-  })
-};
-$scope.deselect = function() {
-  $scope.contact = "";
-}
+  $scope.update = function() {
+    $http.put('api/courses/' + $scope.courses._id, $scope.courses).success(function(response) {
+      refresh();
+    })
+  };
+  $scope.deselect = function() {
+    $scope.contact = "";
+  }
 }]);

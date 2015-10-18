@@ -28,6 +28,10 @@ myApp.config(['$interpolateProvider', function($interpolateProvider){
 				templateUrl : '/edit_rubric.handlebars',
 				controller  : 'rubricController'
 			})
+			.when('/audit', {
+				templateUrl : '/audit.handlebars',
+				controller  : 'auditController'
+			})
 			// route for the contact page
 			.when('/contact', {
 				templateUrl : '/activites.handlebars',
