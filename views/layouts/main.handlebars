@@ -5,21 +5,14 @@
     <meta name="description" content="proRubrics2">
     <meta name="keywords" content="web design, pro-leet-peeps, proleetpeeps,dynamic form">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Grading Rubric Form</title>
-    <meta name="description" content="proRubrics2">
-    <meta name="keywords" content="web design, pro-leet-peeps, proleetpeeps,dynamic form">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="angular/angular.min.js"></script>
     <script src="angular-route/angular-route.min.js"></script>
     <script src="angular-animate/angular-animate.min.js"></script>
     <script src="angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-
     <link href="css/navbar.min.css" rel="stylesheet" type="text/css">
     <link href="css/metisMenu.min.css" rel="stylesheet" type="text/css">
     <link href="css/timeline.min.css" rel="stylesheet">
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-    <link href="css/morris.css" rel="stylesheet">
     <link href="css/master.min.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/responsive.min.css" rel="stylesheet">
@@ -29,12 +22,11 @@
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-
     <script src="controllers/routes.js"></script>
     <script src="controllers/bootstrap.js"></script>
     <script src="controllers/modalController.js"></script>
     <script src="controllers/dashBoardController.js"></script>
-
+    <script src="controllers/auditController.js"></script>
 </head>
 <body ng-app="myApp">
 
@@ -69,23 +61,22 @@
                     <ul class="nav" id="side-menu">
                         
                         <li>
-                            <a href="#/myCourse"><i class="fa fa-table fa-fw"></i> My Courses</a>
-                        </li>
-                        <li>
-                            <a href="#/form"><i class="fa fa-edit fa-fw"></i> Add Rubric</a>
-                        </li>
-
-                        <li>
-                            <a href="#/dashboard"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="#/myCourse" ng-click="ToggleNav = !ToggleNav"><i class="fa fa-table fa-fw"></i> My Courses</a>
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                            <a href="#/form" ng-click="ToggleNav = !ToggleNav"><i class="fa fa-edit fa-fw"></i> Add Rubric</a>
                         </li>
+                        <li class="divider"></li>
                         <li>
-                            <a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                            <a href="#/dashboard" ng-click="ToggleNav = !ToggleNav"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#" ng-click="ToggleNav = !ToggleNav"><i class="fa fa-user fa-fw"></i> Login</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.html" ng-click="ToggleNav = !ToggleNav"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                 </div>
@@ -93,7 +84,7 @@
             </div>
             <!-- /.navbar-static-side -->
         </nav>
-
+        
         {{{ body }}}
 
     </div>

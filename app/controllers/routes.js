@@ -28,6 +28,10 @@ myApp.config(['$interpolateProvider', function($interpolateProvider){
 				templateUrl : '/edit_rubric.handlebars',
 				controller  : 'rubricController'
 			})
+			.when('/audit', {
+				templateUrl : '/audit.handlebars',
+				controller  : 'auditController'
+			})
 			// route for the contact page
 			.when('/contact', {
 				templateUrl : '/activites.handlebars',
@@ -59,19 +63,6 @@ myApp.config(['$interpolateProvider', function($interpolateProvider){
 		$scope.message = 'Everyone come and see how good I look!';
 	});
 
-	myApp.controller('dashboardController', function($scope, $route) {
-		// create a message to display in our view
-		$scope.count = 0;
-	// course.find({},function(err, course) {
- //     if (err)
-	//      res.send(err);
-	//      console.log(Course);
-	//      res.json(Course);
- //     });
-		
-		
-
-	});
 	myApp.controller('signupController', function($scope) {
 		// create a message to display in our view
 		$scope.message = 'Everyone come and see how good I look!';

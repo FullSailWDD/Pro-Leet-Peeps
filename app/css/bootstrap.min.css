@@ -2742,7 +2742,9 @@ select[multiple].form-group-lg .form-control, textarea.form-group-lg .form-contr
 .btn-danger {
   color: #fff;
   background-color: #747EA1;
-  border-color: #747EA1; }
+  border-color: #747EA1;
+  margin-top: 16px;
+  margin-left: 26%; }
 
 .btn-danger.active, .btn-danger.focus, .btn-danger:active, .btn-danger:focus, .btn-danger:hover, .open > .dropdown-toggle.btn-danger {
   color: #fff;

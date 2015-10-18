@@ -80,6 +80,4 @@ app.post('/post', function (req,res) {
 	})
 })
 //getting the post object
-
 module.exports = app
-//module.exports = router;
