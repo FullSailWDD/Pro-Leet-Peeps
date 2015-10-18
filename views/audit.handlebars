@@ -5,23 +5,15 @@
                 <div id="topBlock" ng-click="actionLeave()">
                 x
                 </div>
-                    <div id="repeatData" ng-repeat="data in courses">
-                        <div class="login-panel panel panel-default">
-                                <div class="panel-heading">
-                                    <h1 class="panel-title">{[{data.course}]}</h1>
-                                </div>
-
-                            <div class="panel-body">
-                                <div class="modal-header">                        
-                                    <p>{[{data.description}]}</p>
-                                </div>
-                            <div>
-                                Grade
-                                <input ng-model="data.rubric.grade"/>
-                            </div>
-                            <button ng-click="update(data._id)" class="btn btn-danger">Audit the Course</button>
-                        </div>
-                    </div>
+            <h2>{[{ data.rubric.name }]}</h2>
+            <div ng-repeat="section in sectionSplit">
+                {[{ section }]}
+            <div ng-repeat="grade in gradeSplit">
+                
+            <button>{[{ grade }]}</button>
+                </div>
+            </div>
+                    
         </div>
     </div>
 </div>
