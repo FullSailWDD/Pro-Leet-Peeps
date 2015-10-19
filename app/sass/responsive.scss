@@ -1,3 +1,4 @@
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++Mobile size*/
 @media (max-width: 768px) {
   .page-header {
     margin-top: 120px;
@@ -48,10 +49,9 @@
     margin-left: 0%;
   }
 
-  .section {
+ .section {
     clear: both;
     padding: 0px;
-    margin: 0px;
   }
 
   /*  COLUMN SETUP  */
@@ -79,7 +79,7 @@
   }
 
   .span_1_of_6 { 
-    width: 32%;
+    width: 100%;
   }
 
   .span_3_of_6 { 
@@ -103,14 +103,20 @@
   .desktop-sidebar{
     display: none;
   }
+
   .desktop-sidebar-search{
     display: none;
-
   }
 
 
 }
 
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++Tablet size*/
+@media (max-width: 992px) {
+
+}
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++Desktop size*/
 @media screen and (min-width: 769px){
   .sidebar-search{
     display: none;
@@ -119,6 +125,9 @@
     display: table;
     position: fixed;
     right: 10px;
+  }
+  .span_1_of_6 { 
+    width: 16%;
   }
 
 }
