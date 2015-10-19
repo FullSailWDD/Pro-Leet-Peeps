@@ -20,7 +20,7 @@
                                             <label>{[{ item.label }]}</label>
                                             <div ng-if="item.type === 'select'" class="form-group" ng-class="{ 'has-error' : groupList.{[{ item.name }]}.$invalid && !groupList.{[{ item.name }]}.$pristine }">
                                                 <select class="form-control" id="auditBtn" ng-model="item.value">
-                                                    <op tion value="">--- Please Select ---</option>
+                                                    <option value="">--- Select a Major ---</option>
                                                     <option required ng-repeat="option in item.options" name="{[{ item.name }]}" value="{[{option.value}]}">{[{option.value}]}</option>
                                                 </select>
                                             <p ng-show="groupList.{[{ item.name }]}.$invalid && !groupList.{[{ item.name }]}.$pristine" class="help-block">Select a Department</p>

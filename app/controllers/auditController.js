@@ -34,30 +34,15 @@ var parent = $rootScope;
         name:"major"      
       }
     ]
-  },{
-      title : 'Select a Course',
-      className : 'addingDegreeCourse',
-      display: 'block',
-      users : [ 
-      { 
-        // label will render the label for the input form.
-        label: 'Course Name',
-        value: '',
-        options:[
-          {"value": "Web Design and Development"},
-          {"value": "Mobile Development"},
-          {"value": "Recording Arts"},
-          {"value": "Film"},
-          {"value": "Emerging Technologies"},
-          {"value": "Show Production"}
-        ],
-        type:"select",
-        name:"major"      
-      }
-    ]
   }
   ];
   
+$scope.search = function(id) {
+  $http.get('api/courses/' + id).success(function(response) {
+    console.log(response)
+    refresh();
+  });
+};
 
 $scope.edit = function() {
   $http.get('api/courses/').success(function(response) {
