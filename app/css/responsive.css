@@ -1,21 +1,21 @@
 /*
 Error: Invalid CSS after "...obile phones *\/": expected selector, was "@media (max-wid..."
-        on line 21 of app/sass/responsive.scss
+        on line 6 of app/sass/responsive.scss
 
-16: 		
-17: 	}	
-18: }
-19: ​
-20: /* mobile phones *\/
-21: @media (max-width: 460px) {
-22: .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9{
-23: 	float:none;
-24: }
-25: 
-26: .page-header{
+1: @media screen and (max-width: 460px) {
+2: 	
+3: }
+4: ​
+5: /* mobile phones *\/
+6: @media (max-width: 460px) {
+7: .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9{
+8: 	float:none;
+9: }
+10: 
+11: .page-header{
 
 Backtrace:
-app/sass/responsive.scss:21
+app/sass/responsive.scss:6
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:1162:in `expected'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:1098:in `expected'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/static_parser.rb:21:in `parse_selector'
@@ -52,4 +52,4 @@ app/sass/responsive.scss:21
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"...obile phones */\": expected selector, was \"@media (max-wid...\"\A         on line 21 of app/sass/responsive.scss\A \A 16: 		\A 17: 	}	\A 18: }\A 19: ​\A 20: /* mobile phones */\A 21: @media (max-width: 460px) {\A 22: .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9{\A 23: 	float:none;\A 24: }\A 25: \A 26: .page-header{"; }
+  content: "Error: Invalid CSS after \"...obile phones */\": expected selector, was \"@media (max-wid...\"\A         on line 6 of app/sass/responsive.scss\A \A 1: @media screen and (max-width: 460px) {\A 2: 	\A 3: }\A 4: ​\A 5: /* mobile phones */\A 6: @media (max-width: 460px) {\A 7: .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9{\A 8: 	float:none;\A 9: }\A 10: \A 11: .page-header{"; }
