@@ -20,8 +20,22 @@ $scope.search = function(id) {
   });
 };
 
-$scope.find = function() {
-      $scope.courses = Courses.query();
+$scope.view = function(id) {
+  $http.get('api/courses/' + id).success(function(response) {
+    console.log("EDITME", response)
+    $scope.data = response;
+  var modalInstance = $uibModal.open({
+      animation: $scope.animationsEnabled,
+      templateUrl: 'view.handlebars',
+      controller: 'ModalInstanceCtrl',
+      size: 'lg',
+      resolve: {
+        data: function () {
+          return $scope.data;
+      }
+    }
+  })
+  });
 };
 
 $scope.edit = function(id) {
