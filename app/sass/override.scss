@@ -53,6 +53,7 @@
   border-color: #e7e7e7;
   position: fixed;
   margin-top: 50px;
+  height: 100%;
 }
 .marginLogin {
   margin-top: 130px; 
@@ -63,8 +64,11 @@
   float: left;
 }
 
- .section {
-    clear: both;
-    padding: 0px;
-    margin: 0 0 50px;
-  }
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0 0 50px;
+}
+.navbar-default .navbar-brand {
+  font-family: 'Pacifico', cursive;
+}
