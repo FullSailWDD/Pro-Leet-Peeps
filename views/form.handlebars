@@ -18,8 +18,8 @@
                                     <div class="form-group">    
                                         <div ng-repeat="item in group.users">
                                             <label>{[{ item.label }]}</label>
-                                            <div ng-if="item.type === 'select'" class="form-group" ng-class="{ 'has-error' : groupList.{[{ item.name }]}.$invalid && !groupList.{[{ item.name }]}.$pristine }">
-                                                <select ng-model="item.value">
+                                            <div ng-if="item.type === 'select'" ng-class="{ 'has-error' : groupList.{[{ item.name }]}.$invalid && !groupList.{[{ item.name }]}.$pristine }">
+                                                <select ng-model="item.value" class="form-control select-form-control">
                                                     <option value="">--- Please Select ---</option>
                                                     <option required ng-repeat="option in item.options" name="{[{ item.name }]}" value="{[{option.value}]}">{[{option.value}]}</option>
                                                 </select>

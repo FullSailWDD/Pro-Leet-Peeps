@@ -1438,7 +1438,7 @@ pre code {
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
-  float: left; }
+  float: center; }
 
 .col-xs-12 {
   width: 100%; }
@@ -3695,7 +3695,7 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
   color: #fff; }
 
 .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
-  color: $mainNavyHover;
+  color: $lightGrey;
   background-color: transparent; }
 
 .navbar-default .navbar-text {
