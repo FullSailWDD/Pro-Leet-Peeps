@@ -1441,7 +1441,7 @@ pre code {
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
-  float: left; }
+  float: center; }
 
 .col-xs-12 {
   width: 100%; }
@@ -3134,11 +3134,10 @@ tbody.collapse.in {
   margin-bottom: 0; }
 
 .input-group-searchbox {
-  position: fixed;
   display: inline-table;
   border-collapse: separate;
-  width: 30%;
-  margin: 8px 0 8px 102px; }
+  width: 40%;
+  margin: 8px 0 8px 2px; }
 
 .input-group-lg > .form-control, .input-group-lg > .input-group-addon, .input-group-lg > .input-group-btn > .btn {
   height: 46px;
@@ -3249,7 +3248,8 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
 .nav > li > a {
   position: relative;
   display: block;
-  padding: 13px 15px; }
+  padding: 13px 15px;
+  text-align: center; }
 
 .nav > li > a:focus, .nav > li > a:hover {
   text-decoration: none;
@@ -3691,7 +3691,7 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
   color: #fff; }
 
 .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
-  color: #092c45;
+  color: #c1dcde;
   background-color: transparent; }
 
 .navbar-default .navbar-text {

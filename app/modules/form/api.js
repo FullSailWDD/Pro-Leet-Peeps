@@ -8,12 +8,17 @@ var mongojs = require('mongojs');
 var db = mongojs('test', ['courses']);
 app.use(bodyParser.json());
 
+// [AUDIT] getting major
+app.get('/major', function (req, res) {
+  db.courses.find(function (err, db) {
+    res.json(db);
+  });
+});
 
 //get the database
 app.get('/courses', function (req, res) {
   db.courses.find(function (err, db) {
     res.json(db);
-
   });
 });
 
