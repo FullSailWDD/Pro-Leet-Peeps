@@ -1,68 +1,40 @@
-    <div class="modal-header">
-        <h3 class="modal-title" ng-model="data.major">Web Design and Development
-        </h3>
+ <div class="modal-header">
+        <h3 class="modal-title">{[{data.major}]}</h3>
     </div>
 
     <div class="modal-body">
-            <ul id="test">
+            <ul id="test" class="list-unstyled">
                 <li>
-                    <h1>Course</h1>
-                    <p>Deployment of Web Applications</p>
+                    <p><strong class="strongFont">Course</strong></p>
+                    <p>{[{ data.course }]}</p>
                 </li>
 
                 <li>
-                    <h1>Rubric</h1>
+                    <p><strong class="strongFont">Description</strong></p>
+                    <p>{[{ data.description }]}</p>
                 </li>
 
                 <li>
-                    Lab 1
-                    <button>10</button>
-                    <button>20</button>
-                    <button>40</button>
-                    <button>60</button>
-                    <button>80</button>
-                    <button>100</button>
-
+                    <p><strong class="strongFont">Rubric</strong></p>
+                    <p>{[{ data.rubric.name }]}</p>
                 </li>
 
                 <li>
-                    Lab 2
-                    <button>10</button>
-                    <button>20</button>
-                    <button>40</button>
-                    <button>60</button>
-                    <button>80</button>
-                    <button>100</button>
+                    <p><strong class="strongFont">Title</strong></p>
+                    <p>{[{ data.rubric.title }]}</p>
 
                 </li>
 
-
-                <li>
-                    Lab 3
-                    <button>10</button>
-                    <button>20</button>
-                    <button>40</button>
-                    <button>60</button>
-                    <button>80</button>
-                    <button>100</button>
+                <li><p><strong class="strongFont">Grade</strong></p>
+                    <p>{[{ data.rubric.grade }]}</p>
 
                 </li>
 
-                <li>
-                    Lab 4
-                    <button>10</button>
-                    <button>20</button>
-                    <button>40</button>
-                    <button>60</button>
-                    <button>80</button>
-                    <button>100</button>
-
+                <li><p><strong class="strongFont">Description</strong></p>
+                    <p>{[{ data.description }]}</p>
                 </li>
-
-
-
             </ul>
 
         <div class="modal-footer">
-            <button class="btn btn-primary" type="button" ng-click="update(contact._id); reloadRoute()">Update Grades</button>
+            <button class="btn btn-warning" type="button" ng-click="cancel()">Exit</button>
         </div>

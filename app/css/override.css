@@ -66,4 +66,12 @@
 .navbar-default .navbar-brand {
   font-family: 'Pacifico', cursive; }
 
+p {
+  margin: 0 0 10px;
+  color: #65666b; }
+
+.strongFont {
+  font-weight: 1000;
+  color: #575f99; }
+
 /*# sourceMappingURL=override.css.map */

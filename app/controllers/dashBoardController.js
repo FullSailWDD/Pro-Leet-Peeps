@@ -22,7 +22,7 @@ $scope.search = function(id) {
 
 $scope.view = function(id) {
   $http.get('api/courses/' + id).success(function(response) {
-    console.log("EDITME", response)
+    console.log("View me", response)
     $scope.data = response;
   var modalInstance = $uibModal.open({
       animation: $scope.animationsEnabled,
