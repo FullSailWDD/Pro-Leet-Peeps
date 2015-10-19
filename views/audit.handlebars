@@ -16,15 +16,14 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group" >    
-                                        <div ng-repeat="item in group.users">
+                                        <div ng-repeat="item in group.users" ng-click=find()>
                                             <label>{[{ item.label }]}</label>
                                             <div ng-if="item.type === 'select'" class="form-group" ng-class="{ 'has-error' : groupList.{[{ item.name }]}.$invalid && !groupList.{[{ item.name }]}.$pristine }">
-                                                <select class="form-control" id="auditBtn" ng-model="item.value">
+                                                <select class="form-control" id="auditBtn" ng-model="item.value" >
                                                     <option value="">--- Select a Major ---</option>
                                                     <option required ng-repeat="option in item.options" name="{[{ item.name }]}" value="{[{option.value}]}">{[{option.value}]}</option>
                                                 </select>
-                                            <p ng-show="groupList.{[{ item.name }]}.$invalid && !groupList.{[{ item.name }]}.$pristine" class="help-block">Select a Department</p>
-                                            <button ng-click="edit(data._id)" class="btn btn-danger float-left {[{ item.display }]}">Edit</button>                                        </div>
+                                                                                   </div>
                                         </div>
                                     </div>
                                 </div>

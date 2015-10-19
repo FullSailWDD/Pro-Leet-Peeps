@@ -37,14 +37,24 @@ var parent = $rootScope;
   }
   ];
   
-$scope.search = function(id) {
-  $http.get('api/courses/' + id).success(function(response) {
-    console.log(response)
-    refresh();
+
+
+var refresh = function() {
+    $http.get('api/courses').success(function(response) {
+    $scope.courses = response;
+    
   });
 };
+refresh();
 
-$scope.edit = function() {
+
+$scope.find = function() {
+      $scope.courses = Courses.query();
+
+      console.log($scope.courses)
+};
+
+$scope.edit = function($scope) {
   $http.get('api/courses/').success(function(response) {
     console.log("EDITME", response)
     $scope.data = response;

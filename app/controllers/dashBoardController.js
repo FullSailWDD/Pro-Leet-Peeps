@@ -20,6 +20,9 @@ $scope.search = function(id) {
   });
 };
 
+$scope.find = function() {
+      $scope.courses = Courses.query();
+};
 
 $scope.edit = function(id) {
   $http.get('api/courses/' + id).success(function(response) {
