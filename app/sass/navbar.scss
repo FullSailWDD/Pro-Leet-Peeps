@@ -1,6 +1,13 @@
 /* color schematics */
 $mainColor : rgba(255,190,0,.4);
 
+
+/* end of schema */
+
+html{
+}
+#wrapper {
+}
 .navbar {
     position: fixed;
     min-height: 50px;
@@ -15,8 +22,13 @@ $mainColor : rgba(255,190,0,.4);
     min-height:100%;
     width: 100%;
 }
-select #auditBtn{
-    width:100%;
-}
+
 #page-wrapper {
+}
+
+@media only screen and (max-width: 10px) and (min-width: 799px) {
+  .sidebar {
+    height: 100%;
+    min-height: 100%;
+    width: 100%; } 
 }

@@ -1,33 +1,36 @@
 <div id="page-wrapper">
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Audit a Course</h1>
-            </div>
-            <!-- /.col-lg-12 -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Audit a Course</h1>
         </div>
         <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.col-lg-12 -->
 
     <div class="row">
         <div class="col-lg-6">
             <uib-accordion close-others="oneAtATime">
-                <uib-accordion-group heading="{[{group.title}]}" ng-repeat="group in groups" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
-                    <form name="userForm" class="panel-open" novalidate>                       
-                        <div class="panel-body">
+                <uib-accordion-group heading="Select major and course" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
+                    <form name="userForm" class="panel-open" novalidate  ng-repeat="group in groups">                       
+                        <div class="panel-body" >
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <div class="form-group">    
+                                    <div class="form-group" >    
                                         <div ng-repeat="item in group.users">
                                             <label>{[{ item.label }]}</label>
                                             <div ng-if="item.type === 'select'" class="form-group" ng-class="{ 'has-error' : groupList.{[{ item.name }]}.$invalid && !groupList.{[{ item.name }]}.$pristine }">
                                                 <select class="form-control" id="auditBtn" ng-model="item.value">
-                                                    <option value="">--- Please Select ---</option>
+                                                    <op tion value="">--- Please Select ---</option>
                                                     <option required ng-repeat="option in item.options" name="{[{ item.name }]}" value="{[{option.value}]}">{[{option.value}]}</option>
                                                 </select>
                                             <p ng-show="groupList.{[{ item.name }]}.$invalid && !groupList.{[{ item.name }]}.$pristine" class="help-block">Select a Department</p>
-                                            <button ng-click="edit(data._id)" class="btn btn-danger float-left">Edit</button>                                        </div>
+                                            <button ng-click="edit(data._id)" class="btn btn-danger float-left {[{ item.display }]}">Edit</button>                                        </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </form>
+                            </div>
+                        </div>
+                    </form>
 
                 </uib-accordion-group>
             </uib-accordion>

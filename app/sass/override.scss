@@ -43,3 +43,14 @@
 .select-form-control{
     margin-bottom: 15px;
 }
+
+.desktop-sidebar{
+  margin-top: 0;
+  z-index: 1;
+  position: absolute;
+  width: 250px;
+  background-color: $mainNavy;
+  border-color: #e7e7e7;
+  position: fixed;
+  margin-top: 50px;
+}
