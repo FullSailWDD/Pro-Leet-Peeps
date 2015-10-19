@@ -3,27 +3,31 @@
         <div class="col-lg-12">
             <h1 class="page-header">Course Dashboard</h1>
 
-            <div>
-                <ul class="dashList">
-                    <li>Major</li> 
-                    <li>Course</li>        
-                    <li>Rubric</li>
-                </ul>
-            </div>
+        <table class="table">
+          <thead>
+            <tr>
+                <th>Major</th> 
+                <th>Course</th>        
+                <th>Rubric</th>
+                <th>Grade</th>
+                <th>View</th>
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
 
-            <section ng-repeat="data in courses">
-                <ul>
-                    <li>{[{data.major}]}</li>
-                    <li>{[{data.course}]}</li>
-                    <li>{[{data.rubric.name}]}</li>
-                    <li id="moveBlock">
-                    <button ng-click="edit(data._id)" class="btn btn-default">Audit</button>
-                    <button ng-click="edit(data._id)" class="btn btn-danger">Edit</button>
-                   <button ng-click="remove(data._id)" class="btn btn-success">Remove</button>
-                    </li>
-                </ul>
-            </section>
+        <tr ng-repeat="data in courses">
+                <td>{[{data.major}]}</td>
+                <td>{[{data.course}]}</td>
+                <td>{[{data.rubric.name}]}</td>
+                <td>{[{data.rubric.grade}]}</td>
 
+                <td><button ng-click="audit(data._id)" class="btn btn-default">Audit</button>
+                </td>
+                <td><button ng-click="edit(data._id)" class="btn btn-danger">Edit</button></td>
+                <td><button ng-click="remove(data._id)" class="btn btn-success">Remove</button></td>
+        </tr>
+    </table>
 
         </div>
     </div>

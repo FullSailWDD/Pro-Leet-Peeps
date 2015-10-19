@@ -130,14 +130,14 @@ var parent = $rootScope;
         var grades = grade;
         var gradeSplit = grades.split(",");        
         //this the first form that gets submited
-        var cData = { major: major, course: course ,description: courseDescript, rubric:{name:rubName,title:sectionSplit, grade:gradeSplit, dueDate: due,rubricdescription:rDescript}};
+        var Data = { major: major, course: course ,description: courseDescript, rubric:{name:rubName,title:sectionSplit, grade:gradeSplit, dueDate: due,rubricdescription:rDescript}};
         
         //posting to /api/post then sending to the database
-      $http.post('/api/post', cData).then(function (successCallback, errorCallback){
+      $http.post('/api/post', Data).then(function (successCallback, errorCallback){
 
       });
 
-      $http.get('/api/post', cData).then(function (req,res){
+      $http.get('/api/post', Data).then(function (req,res){
 
       	
       });
