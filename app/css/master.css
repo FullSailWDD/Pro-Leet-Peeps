@@ -11,4 +11,12 @@
 #moveContainer {
   margin-top: 50px; }
 
+#courseGroup {
+  padding: 25px;
+  text-align: center;
+  width: 100%;
+  height: 70px;
+  background: red;
+  opacity: .4; }
+
 /*# sourceMappingURL=master.css.map */
