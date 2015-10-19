@@ -47,6 +47,7 @@
   width: 250px;
   background-color: #061f30;
   border-color: #e7e7e7;
-  position: fixed; }
+  position: fixed;
+  margin-top: 50px; }
 
 /*# sourceMappingURL=override.css.map */

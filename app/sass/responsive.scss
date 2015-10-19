@@ -100,12 +100,26 @@
 
   .desktop-sidebar{
     display: none;
+  }
+  .desktop-sidebar-search{
+    display: none;
 
   }
 
+
 }
 
+@media screen and (min-width: 480px){
+  .sidebar-search{
+    display: none;
+  }
+  .desktop-sidebar-search{
+    display: table;
+    position: fixed;
+    right: 10px;
+  }
 
+}
 
 
 
