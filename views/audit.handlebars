@@ -11,19 +11,18 @@
         <div class="col-lg-6">
             <uib-accordion close-others="oneAtATime">
                 <uib-accordion-group heading="Select major and course" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
-                    <form name="userForm" class="panel-open" novalidate  ng-repeat="group in groups">                       
+                    <form name="userForm" class="panel-open" novalidate>                       
                         <div class="panel-body" >
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group" >    
-                                        <div ng-repeat="item in group.users" ng-click=find()>
-                                            <label>{[{ item.label }]}</label>
-                                            <div ng-if="item.type === 'select'" class="form-group" ng-class="{ 'has-error' : groupList.{[{ item.name }]}.$invalid && !groupList.{[{ item.name }]}.$pristine }">
-                                                <select class="form-control" id="auditBtn" ng-model="item.value" >
-                                                    <option value="">--- Select a Major ---</option>
-                                                    <option required ng-repeat="option in item.options" name="{[{ item.name }]}" value="{[{option.value}]}">{[{option.value}]}</option>
+                                        <div ng-click=find()>
+                                            <label for="audit-form">{[{data.major}]}</label>
+                                            <div>
+                                                <select class="form-control" id="auditBtn">
+                                                    <option ng-repeat="data in courses"  required name="{[{ data.major }]}" value="{[{ data.major }]}">{[{ data.major }]}</option>
                                                 </select>
-                                                                                   </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

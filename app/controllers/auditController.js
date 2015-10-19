@@ -40,7 +40,7 @@ var parent = $rootScope;
 
 
 var refresh = function() {
-    $http.get('api/courses').success(function(response) {
+    $http.get('api/major').success(function(response) {
     $scope.courses = response;
     
   });
@@ -48,10 +48,10 @@ var refresh = function() {
 refresh();
 
 
-$scope.find = function() {
-      $scope.courses = Courses.query();
-
-      console.log($scope.courses)
+$scope.find = function(req, res) {
+      $http.get('api/major').success(function(response) {
+      console.log("hello")
+    })
 };
 
 $scope.edit = function($scope) {
