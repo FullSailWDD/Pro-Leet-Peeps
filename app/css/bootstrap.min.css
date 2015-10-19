@@ -3691,7 +3691,7 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
   color: #fff; }
 
 .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
-  color: #092c45;
+  color: #c1dcde;
   background-color: transparent; }
 
 .navbar-default .navbar-text {
