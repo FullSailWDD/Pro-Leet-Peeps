@@ -5,17 +5,20 @@
 
             <div class="section group" ng-repeat="data in courses">
                 <div class="col span_1_of_6">
-                {[{data.major}]}
+                <strong class="strongFont">Major</strong>
+                <p>{[{data.major}]}</p>
                 </div>
                 <div class="col span_1_of_6">
-                {[{data.course}]}
+                <strong class="strongFont">Course</strong>
+                <p>{[{data.course}]}</p>
                 </div>
                 <div class="col span_1_of_6">
-                {[{data.rubric.name}]}
+                <strong class="strongFont">Rubric</strong>
+                <p>{[{data.rubric.name}]}</p>
                 </div>
                 <div class="col span_3_of_6">
-                <button ng-click="audit(data._id)" class="btn btn-default float-left">Audit</button>
-                <button ng-click="edit(data._id)" class="btn btn-danger float-left">Edit</button>
+                <button ng-click="view(data._id)" class="btn btn-default float-left">Audit</button>
+                <button ng-click="edit(data._id)" class="btn btn-danger float-left">Update/Remove</button>
                 </div>
             </div>
            
