@@ -81,3 +81,9 @@ p {
   font-weight:1000;
   color: $mainSatLightNavyHover;
 }
+
+@media (min-width: 992px){
+.modal-lg {
+    width: 500px;
+}
+}

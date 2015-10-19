@@ -74,4 +74,8 @@ p {
   font-weight: 1000;
   color: #575f99; }
 
+@media (min-width: 992px) {
+  .modal-lg {
+    width: 500px; } }
+
 /*# sourceMappingURL=override.css.map */
