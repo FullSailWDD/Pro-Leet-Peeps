@@ -1,4 +1,4 @@
-myApp.controller('auditController', function ($scope,data , $http) {
+myApp.controller('auditController', function ($scope, data , $http) {
 
 var refresh = function() {
     $http.get('api/courses').success(function(response) {
@@ -13,15 +13,6 @@ refresh();
     data: $scope.data
   };
 
-    
-    console.log("Scope.data",$scope.data);
-$scope.update = function() {
-  console.log("======", $scope.data);    
-  $http.put('/api/courses/' + $scope.data._id, $scope.data).success(function(response) {
-  $modalInstance.close();
-})
-};
-
     //grabbing the grades and sections
     var grades = $scope.data.rubric.grade;
     var sections = $scope.data.rubric.title;
@@ -35,4 +26,14 @@ $scope.update = function() {
     
     console.log("grade Split" , gradeSplit);
     console.log("Section Split" , sectionSplit);
+    
+    console.log("Scope.data",$scope.data);
+$scope.update = function() {
+  console.log("======", $scope.data);    
+  $http.put('/api/courses/' + $scope.data._id, $scope.data).success(function(response) {
+  $modalInstance.close();
+})
+};
+
+
 })
