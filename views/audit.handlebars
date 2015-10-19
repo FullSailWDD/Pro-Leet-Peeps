@@ -11,7 +11,7 @@
         <div class="col-lg-6">
             <uib-accordion close-others="oneAtATime">
                 <uib-accordion-group heading="{[{group.title}]}" ng-repeat="group in groups" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
-                    <form name="userForm" class="panel-open" ng-submit="submitForm()" method="get" action="#/dashboard"novalidate>                       
+                    <form name="userForm" class="panel-open" novalidate>                       
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-6">
@@ -24,10 +24,7 @@
                                                     <option required ng-repeat="option in item.options" name="{[{ item.name }]}" value="{[{option.value}]}">{[{option.value}]}</option>
                                                 </select>
                                             <p ng-show="groupList.{[{ item.name }]}.$invalid && !groupList.{[{ item.name }]}.$pristine" class="help-block">Select a Department</p>
-                                            <div>
-                                                <button type="submit" class="btn btn-danger {[{ item.display }]}">Audit a Course</button>
-                                            </div>
-                                        </div>
+                                            <button ng-click="edit(data._id)" class="btn btn-danger float-left">Edit</button>                                        </div>
                                     </div>
                                 </div>
                             </form>

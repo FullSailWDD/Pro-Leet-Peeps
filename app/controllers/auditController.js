@@ -1,4 +1,4 @@
-myApp.controller('auditController', function ($scope, $http, $timeout, $rootScope, $location) {
+myApp.controller('auditController', function ($scope, $http, $timeout, $rootScope, $location,$uibModal) {
 var parent = $rootScope;
   $scope.status = {
       isFirstOpen: true,
@@ -58,11 +58,24 @@ var parent = $rootScope;
   }
   ];
   
-    // $http.get('/groupList').success(function(response){
-    //  console.log("i got the data");
-    //  $scope.groupList = response;
-    // })
-  
+
+$scope.edit = function() {
+  $http.get('api/courses/').success(function(response) {
+    console.log("EDITME", response)
+    $scope.data = response;
+  var modalInstance = $uibModal.open({
+      animation: $scope.animationsEnabled,
+      templateUrl: 'modal.handlebars',
+      controller: 'ModalInstanceCtrl',
+      size: 'lg',
+      resolve: {
+        data: function () {
+          return $scope.data;
+      }
+    }
+  })
+  });
+}; 
 
   // put json object into the form data array
     // WHEN FORM IS SUBMITED

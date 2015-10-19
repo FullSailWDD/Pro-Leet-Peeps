@@ -5,6 +5,11 @@ $mainGreen : rgba(56, 170, 131, 1);
 $mainLightCoolGrey : rgba(162, 185, 186, 1);
 $mainDarkOrange : rgba(194, 129, 106, 1);
 
+.move{
+	margin:30px;
+}
+
+
 /*main Hover Color*/
 $mainNavyHover : rgab(9, 44, 69, 1);
 
@@ -26,6 +31,7 @@ $mainFont : 'Open Sans', sans-serif;
 }
 
 
+
 #courseGroup{
 	padding:25px;
 	text-align:center;
@@ -34,3 +40,4 @@ $mainFont : 'Open Sans', sans-serif;
 	background:red;
 	opacity:.4;
 }
+
