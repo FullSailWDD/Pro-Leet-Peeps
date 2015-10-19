@@ -1,19 +1,40 @@
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h1>{[{data.major}]}</h1>
-                <div id="topBlock" ng-click="actionLeave()">
-                x
-                </div>
-            <h2>{[{ data.rubric.name }]}</h2>
-            <div ng-repeat="section in sectionSplit">
-                {[{ section }]}
-            <div ng-repeat="grade in gradeSplit">
-                
-            <button>{[{ grade }]}</button>
-                </div>
-            </div>
-                    
+            <h1 class="page-header">Audit a Course</h1>
         </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.col-lg-12 -->
+
+    <div class="row">
+        <div class="col-lg-6">
+            <uib-accordion close-others="oneAtATime">
+                <uib-accordion-group heading="Select major and course" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
+                    <form name="userForm" class="panel-open" novalidate  ng-repeat="group in groups">                       
+                        <div class="panel-body" >
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group" >    
+                                        <div ng-repeat="item in group.users" ng-click=find()>
+                                            <label>{[{ item.label }]}</label>
+                                            <div ng-if="item.type === 'select'" class="form-group" ng-class="{ 'has-error' : groupList.{[{ item.name }]}.$invalid && !groupList.{[{ item.name }]}.$pristine }">
+                                                <select class="form-control" id="auditBtn" ng-model="item.value" >
+                                                    <option value="">--- Select a Major ---</option>
+                                                    <option required ng-repeat="option in item.options" name="{[{ item.name }]}" value="{[{option.value}]}">{[{option.value}]}</option>
+                                                </select>
+                                                                                   </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </uib-accordion-group>
+            </uib-accordion>
+        </div> 
     </div>
 </div>
+
+

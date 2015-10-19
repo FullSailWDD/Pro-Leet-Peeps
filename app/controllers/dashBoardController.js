@@ -6,6 +6,7 @@ var refresh = function() {
   });
 };
 refresh();
+
 $scope.remove = function(id) {
   $http.delete('api/courses/' + id).success(function(response) {
     refresh();
@@ -19,34 +20,9 @@ $scope.search = function(id) {
   });
 };
 
-
-$scope.audit = function(id) {
-
-  $http.get('api/courses/' + id).success(function(response) {
-    console.log("EDITME", response)
-
-  $scope.data = response;
-  var modalInstance = $uibModal.open({
-      animation: $scope.animationsEnabled,
-      templateUrl: 'audit.handlebars',
-      controller: 'auditController',
-      size: 'lg',
-      resolve: {
-        data: function () {
-          return $scope.data;
-      }
-    }
-  })
-
-   $http.get('api/courses').success(function(response) {
-    $scope.courses = response;
-    
-  });
-  });
-};   
-
-
-
+$scope.find = function() {
+      $scope.courses = Courses.query();
+};
 
 $scope.edit = function(id) {
   $http.get('api/courses/' + id).success(function(response) {

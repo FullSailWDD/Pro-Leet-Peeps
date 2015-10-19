@@ -1,4 +1,43 @@
-myApp.controller('auditController', function ($scope, $modalInstance, data, $http, $route, $location) {
+myApp.controller('auditController', function ($scope, $http, $timeout, $rootScope, $location,$uibModal) {
+var parent = $rootScope;
+  $scope.status = {
+      isFirstOpen: true,
+      isFirstDisabled: false
+    };
+    $scope.validateClick = function (group, index) {
+        if (group.correct == "addingDegreeCourse") {
+            group.isaddingDegreeCourse = true;
+        } else if (group.correct == "addingRubric") {
+            group.isaddingRubric = true;
+        }     
+    }
+   parent.groups = [
+    {
+      title : 'Select Degree Program and Course',
+      className : 'addingDegreeCourse',
+      display: 'none',
+      users : [ 
+      { 
+        // label will render the label for the input form.
+        label: 'Major Name',
+        value: '',
+        display: 'none',
+        options:[
+          {"value": "Web Design and Development"},
+          {"value": "Mobile Development"},
+          {"value": "Recording Arts"},
+          {"value": "Film"},
+          {"value": "Emerging Technologies"},
+          {"value": "Show Production"}
+        ],
+        type:"select",
+        name:"major"      
+      }
+    ]
+  }
+  ];
+  
+
 
 var refresh = function() {
     $http.get('api/courses').success(function(response) {
@@ -8,42 +47,85 @@ var refresh = function() {
 };
 refresh();
 
-  $scope.data = data;
-  $scope.selected = {
-    data: $scope.data
-  };
 
-    
-    console.log("Scope.data modalInstance",$scope.data);
-$scope.update = function() {
-  console.log("======", $scope.data);    
-  $http.put('/api/courses/' + $scope.data._id, $scope.data).success(function(response) {
-  $modalInstance.close();
-})
+$scope.find = function() {
+      $scope.courses = Courses.query();
+
+      console.log($scope.courses)
 };
 
-$scope.reloadRoute = function(){
-  $route.reload();
-};
+$scope.edit = function($scope) {
+  $http.get('api/courses/').success(function(response) {
+    console.log("EDITME", response)
+    $scope.data = response;
+  var modalInstance = $uibModal.open({
+      animation: $scope.animationsEnabled,
+      templateUrl: 'modal.handlebars',
+      controller: 'ModalInstanceCtrl',
+      size: 'lg',
+      resolve: {
+        data: function () {
+          return $scope.data;
+      }
+    }
+  })
+  });
+}; 
 
-$scope.actionLeave = function(){
-  console.log('actionLeave')
-  $location.path('/myCourse')
-  $modalInstance.close();
-}
-    //grabbing the grades and sections
-    var grades = $scope.data.rubric.grade;
-    var sections = $scope.data.rubric.title;
-    //split the string from the dataBase
-    var gradeSplit = grades.split(",");
-    var sectionSplit = sections.split(",");
-    //making it viewable to scope
-    $scope.gradeSplit = gradeSplit;
-    $scope.sectionSplit = sectionSplit;
-    
-    
-    console.log("grade Split" , gradeSplit);
-    console.log("Section Split" , sectionSplit);
-})
+  // put json object into the form data array
+    // WHEN FORM IS SUBMITED
+    $scope.submitForm = function($scope){
+
+        //parcing the data from the form
+        var major = $rootScope.groups[0].users[0].value;
+        var course = $rootScope.groups.course;
+        var courseDescript = $rootScope.groups.description;
+        var rubName = $rootScope.groups.name;
+        var secTitles = $rootScope.groups.title;
+        var grade = $rootScope.groups.grade;
+        var rDescript = $rootScope.groups.rubricdescription;
+        var due = $rootScope.groups.dueDate;
+
+    //this the first form that gets submited   
 
 
+      var majorName = $rootScope.groups[0].users[0].value;
+      //this the first form that gets submited
+
+        //seperating the grade and sectitles on commas
+        var sections = secTitles;
+        var sectionSplit = sections.split(",");
+
+        var grades = grade;
+        var gradeSplit = grades.split(",");        
+        //this the first form that gets submited
+        var Data = { major: major, course: course ,description: courseDescript, rubric:{name:rubName,title:sectionSplit, grade:gradeSplit, dueDate: due,rubricdescription:rDescript}};
+        
+        //posting to /api/post then sending to the database
+      $http.post('/api/post', Data).then(function (successCallback, errorCallback){
+
+      });
+
+      $http.get('/api/post', Data).then(function (req,res){
+
+        
+      });
+
+
+//adding a comment so it can be pulled
+var callback1;
+    // IF FORM IS VALID
+  if(callback1){
+        for (var i = 0; i < groupList.length; i++) {
+          var val = JSON.stringify(groupList[i]['value']);
+          // put the data submited by the form into the var results
+          groupList.push(val);
+        }
+        // show results in the console
+        return val;
+
+    }      
+  }
+  return parent
+});
+// angular.bootstrap(document, ['myApp']);

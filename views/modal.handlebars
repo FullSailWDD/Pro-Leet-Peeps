@@ -1,41 +1,68 @@
     <div class="modal-header">
-        <h3 class="modal-title">{[{data.major}]}</h3>
+        <h3 class="modal-title" ng-model="data.major">Web Design and Development
+        </h3>
     </div>
 
     <div class="modal-body">
             <ul id="test">
                 <li>
-                    Course
-                    <input ng-model = "data.course" />
+                    <h1>Course</h1>
+                    <p>Deployment of Web Applications</p>
                 </li>
 
                 <li>
-                    Description
-                    <input ng-model = "data.description" />
+                    <h1>Rubric</h1>
                 </li>
 
                 <li>
-                    Rubric
-                    <input ng-model = "data.rubric.name" />
+                    Lab 1
+                    <button>10</button>
+                    <button>20</button>
+                    <button>40</button>
+                    <button>60</button>
+                    <button>80</button>
+                    <button>100</button>
+
                 </li>
 
                 <li>
-                    Title
-                    <input ng-model = "data.rubric.title" />
-                </
+                    Lab 2
+                    <button>10</button>
+                    <button>20</button>
+                    <button>40</button>
+                    <button>60</button>
+                    <button>80</button>
+                    <button>100</button>
+
+                </li>
+
 
                 <li>
-                    Grade
-                    <input ng-model = "data.rubric.grade" />
+                    Lab 3
+                    <button>10</button>
+                    <button>20</button>
+                    <button>40</button>
+                    <button>60</button>
+                    <button>80</button>
+                    <button>100</button>
+
                 </li>
 
                 <li>
-                    Rubric Description
-                    <input type="textarea" ng-model = "data.rubric.rubricdescription" />
+                    Lab 4
+                    <button>10</button>
+                    <button>20</button>
+                    <button>40</button>
+                    <button>60</button>
+                    <button>80</button>
+                    <button>100</button>
+
                 </li>
+
+
+
             </ul>
 
         <div class="modal-footer">
-            <button class="btn btn-primary" type="button" ng-click="update(contact._id); reloadRoute()">Edit</button>
-            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+            <button class="btn btn-primary" type="button" ng-click="update(contact._id); reloadRoute()">Update Grades</button>
         </div>
