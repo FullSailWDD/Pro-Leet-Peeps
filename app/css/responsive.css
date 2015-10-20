@@ -1,39 +1,114 @@
-/*
-Error: Invalid CSS after "...sive.css.map *\/": expected "}", was ""
-        on line 138 of app/sass/responsive.scss
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++Mobile size*/
+@media (max-width: 768px) {
+  .page-header {
+    margin-top: 120px;
+    text-align: center; }
 
-133: 
-134: }
-135: 
-136: 
-137: 
-138: /*# sourceMappingURL=responsive.css.map *\/
+  .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    float: none; }
 
-Backtrace:
-app/sass/responsive.scss:138
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:1161:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:1097:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:1092:in `tok!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:639:in `block'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:400:in `media_directive'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:218:in `special_directive'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:193:in `directive'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:656:in `block_child'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:649:in `block_contents'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:117:in `stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:42:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/engine.rb:403:in `_to_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/engine.rb:378:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/engine.rb:295:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/exec/sass_scss.rb:412:in `run'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/exec/sass_scss.rb:63:in `process_result'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/exec/base.rb:52:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/exec/base.rb:19:in `parse!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/bin/sass:13:in `<top (required)>'
-/usr/bin/sass:23:in `load'
-/usr/bin/sass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...sive.css.map */\": expected \"}\", was \"\"\A         on line 138 of app/sass/responsive.scss\A \A 133: \A 134: }\A 135: \A 136: \A 137: \A 138: /*# sourceMappingURL=responsive.css.map */"; }
+  .page-header {
+    margin-top: 120px;
+    text-align: center; }
+
+  .input-group-searchbox {
+    position: relative;
+    display: inline-table;
+    border-collapse: separate;
+    width: 94%;
+    margin: 10px; }
+
+  .nav > li > a {
+    text-align: center; }
+
+  .row {
+    margin-top: 0;
+    margin-right: 0px;
+    margin-left: 0px; }
+
+  .sidebar ul li {
+    border-bottom: .5px solid #3e4570;
+    font-size: 20px; }
+
+  .marginLogin {
+    margin-top: 130px; }
+
+  .btn-danger {
+    color: #fff;
+    background-color: #747EA1;
+    border-color: #747EA1;
+    margin-top: 0%;
+    margin-left: 0%; }
+
+  .section {
+    clear: both;
+    padding: 0px; }
+
+  /*  COLUMN SETUP  */
+  .col {
+    display: block;
+    float: left;
+    margin: 1% 0 1% 1.6%; }
+
+  .col:first-child {
+    margin-left: 0; }
+
+  /*  GROUPING  */
+  .group:before,
+  .group:after {
+    content: "";
+    display: table; }
+
+  .group:after {
+    clear: both; }
+
+  .group {
+    zoom: 1;
+    /* For IE 6/7 */ }
+
+  .span_1_of_6 {
+    width: 15.33%; }
+
+  .col {
+    margin: 1% 0 1% 0%; }
+
+  .span_1_of_6 {
+    width: 100%; }
+
+  .span_3_of_6 {
+    width: 100%; }
+
+  .btn-danger {
+    color: #fff;
+    background-color: #747EA1;
+    border-color: #747EA1;
+    margin-top: 0px;
+    margin-left: 0px; }
+
+  .float-left {
+    float: left;
+    margin: 0 1%; }
+
+  .desktop-sidebar {
+    display: none; }
+
+  .desktop-sidebar-search {
+    display: none; } }
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++Tablet size*/
+@media (min-width: 992px) {
+  .modal-lg {
+    width: 500px; } }
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++Desktop size*/
+@media screen and (min-width: 769px) {
+  .sidebar-search {
+    display: none; }
+
+  .desktop-sidebar-search {
+    display: table;
+    position: fixed;
+    right: 10px; }
+
+  .span_1_of_6 {
+    width: 16%; } }
+
+/*# sourceMappingURL=responsive.css.map */
