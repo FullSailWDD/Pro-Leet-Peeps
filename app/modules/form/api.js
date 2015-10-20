@@ -1,15 +1,18 @@
-var router = require('express').Router();
-var http = require('https');
-var bodyParser = require('body-parser');
-var Course = require('./controllers/major.js')
-router.use(bodyParser.json())
 var express = require('express');
+var router = require('express').Router();
+var bodyParser = require('body-parser');
+var Course = require('./models/major.js')
 var app = express();
+var mongoose = require('mongoose');
 var mongojs = require('mongojs');
-var db = mongojs('test', ['courses'] || '/ds041154.mongolab.com:41154/heroku_07vkcnb1/', ['courses']);
-app.use(bodyParser.json());
 
-// [AUDIT] getting major
+
+
+var db = mongojs('test', ['courses'] || 'jeff:nissan12@ds041154.mongolab.com:41154/heroku_07vkcnb1', ['courses'], {authMechanism: 'ScramSHA1'});
+app.use(bodyParser.json());
+router.use(bodyParser.json())
+
+// [AUDIT] getting major schemaatics
 app.get('/major', function (req, res) {
   db.courses.find(function (err, db) {
     res.json(db);
@@ -79,10 +82,7 @@ app.post('/post', function (req,res) {
 
 	})
 //save the course into the db
-	course.save(function(err){
-		if(err){
-
-		}
+	course.save(function(){
   		res.json(req.body);
   		return course;
 

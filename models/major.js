@@ -1,6 +1,6 @@
-var db = require('../../../../config/database.js');
+var mongoose = require('mongoose');
 
-module.exports = db.model('Course',{
+var Course = mongoose.model('Course',{
 
 	major:{ type: String},
 	course:{type: String},
@@ -19,3 +19,4 @@ module.exports = db.model('Course',{
 
 
 
+module.exports = Course;

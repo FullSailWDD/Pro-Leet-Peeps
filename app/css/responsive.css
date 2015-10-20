@@ -101,15 +101,25 @@
 
   .eyeBtn {
     position: relative;
-    right: -280px;
+    right: -88%;
     margin-top: -25px; }
 
   .section {
-    margin: 0 0 30px; } }
-/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++Tablet size*/
-@media (min-width: 992px) {
-  .modal-lg {
-    width: 500px; } }
+    margin: 0 0 30px; }
+
+  div.dashboard-block {
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: solid 1px;
+    border-bottom-color: #c1dcde;
+    border-left-style: none;
+    padding-bottom: 20px; }
+
+  .desktop-block {
+    display: none; }
+
+  .desktop-none {
+    display: block; } }
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++Desktop size*/
 @media screen and (min-width: 769px) {
   .sidebar-search {
@@ -121,13 +131,67 @@
     right: 10px; }
 
   .span_1_of_6 {
-    width: 16%; } }
-div.dashboard-block {
-  border-top-style: none;
-  border-right-style: none;
-  border-bottom-style: solid 1px;
-  border-bottom-color: #c1dcde;
-  border-left-style: none;
-  padding-bottom: 20px; }
+    width: 100%; }
+
+  .span_3_of_6 {
+    width: 100%; }
+
+  .eyeBtn {
+    position: relative;
+    right: -280px;
+    margin-top: -25px; }
+
+  div.dashboard-block {
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: solid 1px;
+    border-bottom-color: #c1dcde;
+    border-left-style: none;
+    padding-bottom: 230px; }
+
+  .eyeBtn {
+    position: relative;
+    right: -88%;
+    margin-top: -25px; }
+
+  .desktop-block {
+    display: none; }
+
+  .desktop-none {
+    display: block; } }
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++Tablet size*/
+@media (min-width: 992px) {
+  .modal-lg {
+    width: 500px; }
+
+  .span_1_of_6 {
+    width: 19%; }
+
+  .span_3_of_6 {
+    width: 100%; }
+
+  .eyeBtn {
+    position: relative;
+    right: -88%;
+    margin-top: -25px; }
+
+  div.dashboard-block {
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: solid 1px;
+    border-bottom-color: #c1dcde;
+    border-left-style: none;
+    padding-bottom: 20px; }
+
+  .desktop-block {
+    display: block; }
+
+  .desktop-none {
+    display: none; }
+
+  div.dashboard-block {
+    border-top-color: #c1dcde;
+    padding-bottom: 70px;
+    border-style: none none solid; } }
 
 /*# sourceMappingURL=responsive.css.map */

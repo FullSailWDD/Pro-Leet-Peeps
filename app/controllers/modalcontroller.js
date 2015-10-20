@@ -1,4 +1,4 @@
-myApp.controller('ModalInstanceCtrl', function ($scope, $modalInstance, data, $http, $route) {
+myApp.controller('ModalInstanceCtrl', function ($scope, $modalInstance, data, $http, $route, $location) {
   $scope.data = data;
   $scope.selected = {
     data: $scope.data
@@ -26,3 +26,4 @@ $scope.reloadRoute = function(){
   $route.reload();
 };
 });
+

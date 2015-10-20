@@ -1,6 +1,6 @@
 myApp.controller('dashboardController', ['$scope', '$http','$uibModal','$location', function($scope, $http, $uibModal, $location) {
 var refresh = function() {
-    $http.get('api/courses').success(function(response) {
+    $http.get('/courses').success(function(response) {
     $scope.courses = response;
     
   });
@@ -8,20 +8,20 @@ var refresh = function() {
 refresh();
 
 $scope.remove = function(id) {
-  $http.delete('api/courses/' + id).success(function(response) {
+  $http.delete('/courses/' + id).success(function(response) {
     refresh();
   });
 };
 
 $scope.search = function(id) {
-  $http.get('api/courses/' + id).success(function(response) {
+  $http.get('/courses/' + id).success(function(response) {
     
     refresh();
   });
 };
 
 $scope.view = function(id) {
-  $http.get('api/courses/' + id).success(function(response) {
+  $http.get('/courses/' + id).success(function(response) {
     console.log("View me", response)
     $scope.data = response;
   var modalInstance = $uibModal.open({
@@ -39,7 +39,7 @@ $scope.view = function(id) {
   });
 };
     $scope.audit = function(id) {
-  $http.get('api/courses/' + id).success(function(response) {
+  $http.get('/courses/' + id).success(function(response) {
     console.log("EDITME", response)
     $scope.data = response;
   var modalInstance = $uibModal.open({
@@ -58,7 +58,7 @@ $scope.view = function(id) {
 
 
 $scope.audit = function(id) {
-  $http.get('api/courses/' + id).success(function(response) {
+  $http.get('/courses/' + id).success(function(response) {
     console.log("View me", response)
     $scope.data = response;
   var modalInstance = $uibModal.open({
@@ -76,7 +76,7 @@ $scope.audit = function(id) {
 };
 
 $scope.edit = function(id) {
-  $http.get('api/courses/' + id).success(function(response) {
+  $http.get('/courses/' + id).success(function(response) {
     console.log("EDITME", response)
     $scope.data = response;
   var modalInstance = $uibModal.open({
@@ -95,7 +95,7 @@ $scope.edit = function(id) {
 
 
   $scope.update = function() {
-    $http.put('api/courses/' + $scope.courses._id, $scope.courses).success(function(response) {
+    $http.put('/courses/' + $scope.courses._id, $scope.courses).success(function(response) {
       refresh();
     })
   };
