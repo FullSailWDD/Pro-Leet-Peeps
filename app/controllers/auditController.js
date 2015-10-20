@@ -40,15 +40,15 @@ $scope.update = function() {
 $scope.calculateAudit = function() { 
     var arySections = [
         {   sectionWeight:80,
-            aryGradedItems[75,100,100,100,75]
+            aryGradedItems:[75,100,100,100,75]
         },
         {
             sectionWeight:10,
-            aryGradedItems[50,50,75]
+            aryGradedItems:[50,50,75]
         },
         {
             sectionWeight:10,
-            aryGradedItems[75,100,100]
+            aryGradedItems:[75,100,100]
         }];
     
     console.log('section weights: ' +sectionWeights);
