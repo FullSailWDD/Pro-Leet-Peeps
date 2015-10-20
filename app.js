@@ -1,10 +1,11 @@
-var express = require('express'),
- app = express(),
- exphbs  = require('express-handlebars'),
- bodyParser = require('body-parser'),mongojs = require('mongojs');
-
-var https = require('https');
-var http = require('http');
+var express 	= require('express'),
+	io 			= require('socket.io'),
+	https 		= require('https'),
+	http 		= require('http'),
+	app 		= express(),
+	exphbs  	= require('express-handlebars'),
+	bodyParser 	= require('body-parser'),
+	mongojs 	= require('mongojs');
 
 var db = require('./config/database'); // get our db file
 
