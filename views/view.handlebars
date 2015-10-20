@@ -1,4 +1,4 @@
- <div class="modal-header">
+    <div class="modal-header">
         <h3 class="modal-title">{[{data.major}]}</h3>
     </div>
 
@@ -6,38 +6,89 @@
             <ul id="test" class="list-unstyled">
                 <li>
                     <p><strong class="strongFont">Course</strong></p>
-                    <p>{[{ data.course }]}</p>
+                    <div ng-hide="editorEnabled">
+                        <a ng-click="enableEditor()">{[{ data.course }]}</a>
+                    </div>
+                    <div ng-show="editorEnabled">
+                        
+                        <input value="{[{ data.course }]}"ng-model="editableTitle" ng-show="editorEnabled">
+                        <a ng-click="save()">Save</a>
+                        or                
+                        <a ng-click="disableEditor()">cancel</a>.
+                        
+                    </div>
                 </li>
 
                 <li>
                     <p><strong class="strongFont">Description</strong></p>
-                    <p>{[{ data.description }]}</p>
+                    <div ng-hide="editorEnabled">
+                        <a ng-click="enableEditor()">{[{ data.description }]}</a>
+                    </div>
+                    <div ng-show="editorEnabled">
+                        
+                        <input value="{[{ data.description }]}"ng-model="editableTitle" ng-show="editorEnabled">
+                        <a ng-click="save()">Save</a>
+                        or                
+                        <a ng-click="disableEditor()">cancel</a>.
+                        
+                    </div>
                 </li>
 
                 <li>
                     <p><strong class="strongFont">Rubric</strong></p>
-                    <p>{[{ data.rubric.name }]}</p>
+                    <div ng-hide="editorEnabled">
+                        <a ng-click="enableEditor()">{[{ data.rubric.name }]}</a>
+                    </div>
+                    <div ng-show="editorEnabled">
+                        
+                        <input value="{[{ data.rubric.name }]}"ng-model="editableTitle" ng-show="editorEnabled">
+                        <a ng-click="save()">Save</a>
+                        or                
+                        <a ng-click="disableEditor()">cancel</a>.
+                        
+                    </div>
                 </li>
 
                 <li>
                     <p><strong class="strongFont">Sections</strong></p>
                     <div ng-repeat="section in sectionSplit">
+                        <div ng-hide="editorEnabled">
+                        <a ng-click="enableEditor()">{[{ section }]}</a>
+                    </div>
+                    <div ng-show="editorEnabled">
                         
-                        <p>{[{ section }]}</p>
-                        <a ng-click="toggle = !toggle" ng-show="toggle">add a section category</a><div ng-hide="toggle"><input name="newSectionCat"><button ng-click="addSectionCat()">add category</button></div>
+                        <input value="{[{ section }]}"ng-model="editableTitle" ng-show="editorEnabled">
+                        <a ng-click="save()">Save</a>
+                        or                
+                        <a ng-click="disableEditor()">cancel</a>.
                         
+                    </div>
+                        <a ng-click="toggle = !toggle" ng-show="toggle">add a section category</a>
+                        <div ng-hide="toggle">
+                        <form>
+                            <input placeholder="name of category" name="newSectionCat">
+                            <input placeholder="Description of category" type="textarea">
+                            <button ng-click="addSectionCat()">add category</button>
+                        </form>
+                        </div>                       
                     </div>
                     
 
                 </li>
 
                 <li><p><strong class="strongFont">Grade</strong></p>
-                    <p>{[{ data.rubric.grade }]}</p>
+                    <div ng-hide="editorEnabled">
+                        <a ng-click="enableEditor()">{[{ data.rubric.grade }]}</a>
+                    </div>
+                    <div ng-show="editorEnabled">
+                        
+                        <input value="{[{ data.rubric.grade }]}"ng-model="editableTitle" ng-show="editorEnabled">
+                        <a ng-click="save()">Save</a>
+                        or                
+                        <a ng-click="disableEditor()">cancel</a>.
+                        
+                    </div>
 
-                </li>
-
-                <li><p><strong class="strongFont">Description</strong></p>
-                    <p>{[{ data.description }]}</p>
                 </li>
             </ul>
 
