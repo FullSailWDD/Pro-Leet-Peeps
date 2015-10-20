@@ -1,11 +1,11 @@
 var express = require('express'),
  app = express(),
  exphbs  = require('express-handlebars'),
- bodyParser = require('body-parser'),util = require('util'),mongoose = require('mongoose'), morgan = require('morgan'),mongojs = require('mongojs');
-;
+ bodyParser = require('body-parser'),mongojs = require('mongojs');
+
 var http = require('https');
 
-// var db = require('./config/database'); // get our db file
+var db = require('./config/database'); // get our db file
 
 app.use('/api', require('./app/modules/form/api.js' || '/modules/form/api.js'))
 
