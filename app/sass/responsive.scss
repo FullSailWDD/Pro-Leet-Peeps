@@ -96,7 +96,6 @@
 
   .float-left{
     float: left;
-    width: 30%;
     margin: 0 1%;
   }
 
@@ -112,10 +111,11 @@
 }
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++Tablet size*/
-@media (max-width: 992px) {
-
+@media (min-width: 992px){
+  .modal-lg {
+      width: 500px;
+  }
 }
-
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++Desktop size*/
 @media screen and (min-width: 769px){
   .sidebar-search{
@@ -131,7 +131,3 @@
   }
 
 }
-
-
-
-/*# sourceMappingURL=responsive.css.map */

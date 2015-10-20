@@ -87,7 +87,6 @@
 
   .float-left {
     float: left;
-    width: 30%;
     margin: 0 1%; }
 
   .desktop-sidebar {
@@ -96,6 +95,9 @@
   .desktop-sidebar-search {
     display: none; } }
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++Tablet size*/
+@media (min-width: 992px) {
+  .modal-lg {
+    width: 500px; } }
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++Desktop size*/
 @media screen and (min-width: 769px) {
   .sidebar-search {
@@ -108,6 +110,5 @@
 
   .span_1_of_6 {
     width: 16%; } }
-/*# sourceMappingURL=responsive.css.map */
 
 /*# sourceMappingURL=responsive.css.map */

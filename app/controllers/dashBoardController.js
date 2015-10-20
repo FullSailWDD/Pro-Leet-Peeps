@@ -22,12 +22,48 @@ $scope.search = function(id) {
 
 $scope.view = function(id) {
   $http.get('api/courses/' + id).success(function(response) {
-    console.log("EDITME", response)
+    console.log("View me", response)
     $scope.data = response;
   var modalInstance = $uibModal.open({
       animation: $scope.animationsEnabled,
       templateUrl: 'view.handlebars',
       controller: 'ModalInstanceCtrl',
+      size: 'lg',
+      resolve: {
+        data: function () {
+          return $scope.data;
+      }
+    }
+  })
+  });
+};
+    $scope.audit = function(id) {
+  $http.get('api/courses/' + id).success(function(response) {
+    console.log("EDITME", response)
+    $scope.data = response;
+  var modalInstance = $uibModal.open({
+      animation: $scope.animationsEnabled,
+      templateUrl: 'audit.handlebars',
+      controller: 'auditController',
+      size: 'lg',
+      resolve: {
+        data: function () {
+          return $scope.data;
+      }
+    }
+  })
+  });
+};
+
+
+$scope.audit = function(id) {
+  $http.get('api/courses/' + id).success(function(response) {
+    console.log("View me", response)
+    $scope.data = response;
+  var modalInstance = $uibModal.open({
+      animation: $scope.animationsEnabled,
+      templateUrl: 'audit.handlebars',
+      controller: 'auditController',
       size: 'lg',
       resolve: {
         data: function () {

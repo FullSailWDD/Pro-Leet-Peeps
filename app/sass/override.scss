@@ -72,3 +72,26 @@
 .navbar-default .navbar-brand {
   font-family: 'Pacifico', cursive;
 }
+
+p {
+  margin: 0 0 10px;
+  color: $darkGrey; }
+
+strong{
+  color: $mainSatLightNavyHover;
+}
+
+.strongFont{
+  font-weight:1000;
+}
+
+.float-left{
+    float: left;
+    margin: 0 1%;
+  }
+
+@media (min-width: 992px){
+.modal-lg {
+    width: 500px;
+}
+}

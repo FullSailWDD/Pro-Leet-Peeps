@@ -1,39 +1,18 @@
-<div id="page-wrapper">
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">Audit a Course</h1>
+    <div class="modal-header">
+        <h1>{[{data.major}]}</h1>
+    </div>
+
+    <div class="modal-body">
+                
+            <h2>{[{ data.rubric.name }]}</h2>
+            <div ng-repeat="section in sectionSplit">
+                {[{ section }]}
+            <div ng-repeat="grade in gradeSplit">
+                
+            <button>{[{ grade }]}</button>
+            </div>
+        </div>  
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="update(contact._id); reloadRoute()">Update Grades</button>
         </div>
-        <!-- /.col-lg-12 -->
-    </div>
-    <!-- /.col-lg-12 -->
-
-    <div class="row">
-        <div class="col-lg-6">
-            <uib-accordion close-others="oneAtATime">
-                <uib-accordion-group heading="Select major and course" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
-                    <form name="userForm" class="panel-open" novalidate>                       
-                        <div class="panel-body" >
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="form-group" >    
-                                        <div ng-click=find()>
-                                            <label for="audit-form">{[{data.major}]}</label>
-                                            <div>
-                                                <select class="form-control" id="auditBtn">
-                                                    <option ng-repeat="data in courses"  required name="{[{ data.major }]}" value="{[{ data.major }]}">{[{ data.major }]}</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-
-                </uib-accordion-group>
-            </uib-accordion>
-        </div> 
-    </div>
 </div>
-
-
