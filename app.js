@@ -8,6 +8,8 @@ var router = require('express').Router();
 var https = require('https');
 var http = require('http');
 
+var db = require('./config/database'); // get our db file
+
 var Course = require('./models/major.js')
 
 
@@ -43,7 +45,7 @@ app.get('/major', function (req, res) {
 });
 
 //get the database
-app.get('/courses', function (req, res) {
+app.get('/courses/', function (req, res) {
   db.courses.find(function (err, db) {
     res.json(db);
   });
