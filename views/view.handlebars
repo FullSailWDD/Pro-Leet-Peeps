@@ -1,4 +1,4 @@
- <div class="modal-header">
+    <div class="modal-header">
         <h3 class="modal-title">{[{data.major}]}</h3>
     </div>
 
@@ -22,10 +22,15 @@
                 <li>
                     <p><strong class="strongFont">Sections</strong></p>
                     <div ng-repeat="section in sectionSplit">
-                        
                         <p>{[{ section }]}</p>
-                        <a ng-click="toggle = !toggle" ng-show="toggle">add a section category</a><div ng-hide="toggle"><input name="newSectionCat"><button ng-click="addSectionCat()">add category</button></div>
-                        
+                        <a ng-click="toggle = !toggle" ng-show="toggle">add a section category</a>
+                        <div ng-hide="toggle">
+                        <form>
+                            <input placeholder="name of category" name="sectionCat">
+                            <input placeholder="Description of category" type="textarea" name="sectionDesc">
+                            <button ng-click="add()">add category</button>
+                        </form>
+                        </div>                       
                     </div>
                     
 
