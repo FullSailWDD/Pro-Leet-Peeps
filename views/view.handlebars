@@ -20,8 +20,14 @@
                 </li>
 
                 <li>
-                    <p><strong class="strongFont">Title</strong></p>
-                    <p>{[{ data.rubric.title }]}</p>
+                    <p><strong class="strongFont">Sections</strong></p>
+                    <div ng-repeat="section in sectionSplit">
+                        
+                        <p>{[{ section }]}</p>
+                        <a ng-click="toggle = !toggle" ng-show="toggle">add a section category</a><div ng-hide="toggle"><input name="newSectionCat"><button ng-click="addSectionCat()">add category</button></div>
+                        
+                    </div>
+                    
 
                 </li>
 
