@@ -8,7 +8,7 @@ var mongojs = require('mongojs');
 
 
 
-var db = mongojs('test', ['courses'] || 'ds041154.mongolab.com:41154/heroku_07vkcnb1', ['courses']);
+var db = mongojs('test', ['courses'] || 'jeff:nissan12@ds041154.mongolab.com:41154/heroku_07vkcnb1', ['courses'], {authMechanism: 'ScramSHA1'});
 app.use(bodyParser.json());
 router.use(bodyParser.json())
 
