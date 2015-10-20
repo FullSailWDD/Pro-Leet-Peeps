@@ -19,28 +19,10 @@ $scope.update = function() {
     $scope.sectionSplit = sectionSplit;
     
     console.log("Section Split" , sectionSplit);
-
+    
+    
+    
 $scope.reloadRoute = function(){
   $route.reload();
 };
-    
-function ClickToEditCtrl($scope){    
-    $scope.editorEnabled = false;
-  
-
-        $scope.enableEditor = function() {
-            $scope.editorEnabled = true;
-            $scope.editableTitle = $scope.title;
-        };
-  
-        $scope.disableEditor = function() {
-            $scope.editorEnabled = false;
-        };
-  
-        $scope.save = function() {
-            $scope.title = $scope.editableTitle;
-            $scope.disableEditor();
-        };
-    }
-})
-
+});
