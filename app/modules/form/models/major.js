@@ -1,6 +1,6 @@
-var db = require('../../../../config/database.js');
+var mongoose = require('mongoose');
 
-var Course = db.model('Course',{
+var Course = mongoose.model('Course',{
 
 	major:{ type: String},
 	course:{type: String},

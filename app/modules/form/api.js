@@ -3,7 +3,11 @@ var router = require('express').Router();
 var bodyParser = require('body-parser');
 var Course = require('./models/major.js')
 var app = express();
+var mongoose = require('mongoose');
 var mongojs = require('mongojs');
+
+
+
 var db = mongojs('test', ['courses'] || 'ds041154.mongolab.com:41154/heroku_07vkcnb1', ['courses']);
 app.use(bodyParser.json());
 router.use(bodyParser.json())
