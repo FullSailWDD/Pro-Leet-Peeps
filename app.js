@@ -1,11 +1,12 @@
 var express = require('express'),
  app = express(),
  exphbs  = require('express-handlebars'),
- bodyParser = require('body-parser'),util = require('util'),mongoose = require('mongoose'), morgan = require('morgan'),mongojs = require('mongojs');
-;
-var http = require('https');
+ bodyParser = require('body-parser'),mongojs = require('mongojs');
 
-// var db = require('./config/database'); // get our db file
+var https = require('https');
+var http = require('http');
+
+var db = require('./config/database'); // get our db file
 
 app.use('/api', require('./app/modules/form/api.js'))
 
@@ -30,18 +31,11 @@ app.get('/', function (req, res) {
 })
 
 
+// app.listen(port);
 
-app.get('/api/post', function (req, res) {
-	console.log("LISTENING TO POST");
-	res.render('./form');
-	
-})
+// http.createServer(app).listen(port);
+https.createServer(app).listen(port);
 
-app.post('/api/post', function (req, res) {
-	console.log("Waiting for get Request");
-})
-
-app.listen(port);
 console.log("Server listening on port:", port);
 
 

@@ -1,6 +1,6 @@
 var db = require('../../../../config/database.js');
 
-module.exports = db.model('Course',{
+var Course = db.model('Course',{
 
 	major:{ type: String},
 	course:{type: String},
@@ -19,3 +19,4 @@ module.exports = db.model('Course',{
 
 
 
+module.exports = Course;
