@@ -6,7 +6,7 @@ router.use(bodyParser.json())
 var express = require('express');
 var app = express();
 var mongojs = require('mongojs');
-var db = mongojs('test', ['courses']);
+var db = mongojs('jeff:nissan12@ds041154.mongolab.com:41154/heroku_07vkcnb1/', ['courses']);
 app.use(bodyParser.json());
 
 // [AUDIT] getting major
