@@ -90,12 +90,11 @@ hr {
   height: 1px;
   background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.75), transparent); }
 
-div.dashboard-block {
-  border-top-style: none;
-  border-right-style: none;
-  border-bottom-style: solid 1px;
-  border-bottom-color: red;
-  border-left-style: none;
-  padding-bottom: 20px; }
+h4 {
+  font-size: 18px;
+  margin-top: -10px; }
+
+.eye {
+  fill: #94d31b; }
 
 /*# sourceMappingURL=override.css.map */

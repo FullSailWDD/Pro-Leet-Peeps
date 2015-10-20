@@ -142,3 +142,13 @@
   }
 
 }
+
+div.dashboard-block {
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: solid 1px;
+    border-bottom-color: $lightGrey;
+    border-left-style: none;
+    padding-bottom: 20px;
+}
+
