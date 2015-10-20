@@ -3,11 +3,12 @@ var express = require('express'),
  exphbs  = require('express-handlebars'),
  bodyParser = require('body-parser'),mongojs = require('mongojs');
 
-var http = require('https');
+var https = require('https');
+var http = require('http');
 
 var db = require('./config/database'); // get our db file
 
-app.use('/api', require('./app/modules/form/api.js' || '/modules/form/api.js'))
+app.use('/api', require('./app/modules/form/api.js'))
 
 
 //view engine
@@ -30,7 +31,11 @@ app.get('/', function (req, res) {
 })
 
 
-app.listen(port);
+// app.listen(port);
+
+// http.createServer(app).listen(port);
+https.createServer(app).listen(port);
+
 console.log("Server listening on port:", port);
 
 

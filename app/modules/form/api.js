@@ -1,13 +1,12 @@
-var router = require('express').Router();
-var http = require('https');
-var bodyParser = require('body-parser');
-var Course = require('./controllers/major.js')
-router.use(bodyParser.json())
 var express = require('express');
+var router = require('express').Router();
+var bodyParser = require('body-parser');
+var Course = require('./models/major.js')
 var app = express();
 var mongojs = require('mongojs');
 var db = mongojs('test', ['courses'] || 'ds041154.mongolab.com:41154/heroku_07vkcnb1', ['courses']);
 app.use(bodyParser.json());
+router.use(bodyParser.json())
 
 // [AUDIT] getting major
 app.get('/major', function (req, res) {
@@ -79,10 +78,7 @@ app.post('/post', function (req,res) {
 
 	})
 //save the course into the db
-	course.save(function(err){
-		if(err){
-
-		}
+	course.save(function(){
   		res.json(req.body);
   		return course;
 
