@@ -7,7 +7,7 @@ var http = require('https');
 
 // var db = require('./config/database'); // get our db file
 
-app.use('/api', require('./app/modules/form/api.js'))
+app.use('/api', require('./app/modules/form/api.js' || '/modules/form/api.js'))
 
 
 //view engine
