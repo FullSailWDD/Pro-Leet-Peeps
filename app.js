@@ -30,17 +30,6 @@ app.get('/', function (req, res) {
 })
 
 
-
-app.get('/api/post', function (req, res) {
-	console.log("LISTENING TO POST");
-	res.render('./form');
-	
-})
-
-app.post('/api/post', function (req, res) {
-	console.log("Waiting for get Request");
-})
-
 app.listen(port);
 console.log("Server listening on port:", port);
 
