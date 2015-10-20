@@ -1,6 +1,6 @@
 myApp.controller('dashboardController', ['$scope', '$http','$uibModal','$location', function($scope, $http, $uibModal, $location) {
 var refresh = function() {
-    $http.get('/courses').success(function(response) {
+    $http.get('/courses/').success(function(response) {
     $scope.courses = response;
     
   });
