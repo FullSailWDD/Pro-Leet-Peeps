@@ -1,16 +1,16 @@
 /*
 Error: Invalid CSS after "...sive.css.map *\/": expected "}", was ""
-        on line 138 of app/sass/responsive.scss
+        on line 137 of app/sass/responsive.scss
 
-133: 
-134: }
+132: 
+133: }
+134: 
 135: 
 136: 
-137: 
-138: /*# sourceMappingURL=responsive.css.map *\/
+137: /*# sourceMappingURL=responsive.css.map *\/
 
 Backtrace:
-app/sass/responsive.scss:138
+app/sass/responsive.scss:137
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:1161:in `expected'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:1097:in `expected'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:1092:in `tok!'
@@ -36,4 +36,4 @@ app/sass/responsive.scss:138
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"...sive.css.map */\": expected \"}\", was \"\"\A         on line 138 of app/sass/responsive.scss\A \A 133: \A 134: }\A 135: \A 136: \A 137: \A 138: /*# sourceMappingURL=responsive.css.map */"; }
+  content: "Error: Invalid CSS after \"...sive.css.map */\": expected \"}\", was \"\"\A         on line 137 of app/sass/responsive.scss\A \A 132: \A 133: }\A 134: \A 135: \A 136: \A 137: /*# sourceMappingURL=responsive.css.map */"; }
