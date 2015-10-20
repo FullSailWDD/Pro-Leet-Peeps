@@ -12,7 +12,7 @@ var db = mongojs('test', ['courses'] || 'ds041154.mongolab.com:41154/heroku_07vk
 app.use(bodyParser.json());
 router.use(bodyParser.json())
 
-// [AUDIT] getting major
+// [AUDIT] getting major schemaatics
 app.get('/major', function (req, res) {
   db.courses.find(function (err, db) {
     res.json(db);
