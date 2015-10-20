@@ -1,3 +1,7 @@
+/*main Color*/
+/*main Hover Color*/
+/*font Color*/
+/*Fonts*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++Mobile size*/
 @media (max-width: 768px) {
   .page-header {
@@ -93,7 +97,15 @@
     display: none; }
 
   .desktop-sidebar-search {
-    display: none; } }
+    display: none; }
+
+  .eyeBtn {
+    position: relative;
+    right: -280px;
+    margin-top: -25px; }
+
+  .section {
+    margin: 0 0 30px; } }
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++Tablet size*/
 @media (min-width: 992px) {
   .modal-lg {

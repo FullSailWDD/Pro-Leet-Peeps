@@ -83,5 +83,19 @@ strong {
 @media (min-width: 992px) {
   .modal-lg {
     width: 500px; } }
+hr {
+  display: block;
+  float: both;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.75), transparent); }
+
+div.dashboard-block {
+  border-top-style: none;
+  border-right-style: none;
+  border-bottom-style: solid 1px;
+  border-bottom-color: red;
+  border-left-style: none;
+  padding-bottom: 20px; }
 
 /*# sourceMappingURL=override.css.map */
