@@ -1,4 +1,5 @@
 var router = require('express').Router();
+var http = require('https');
 var bodyParser = require('body-parser');
 var Course = require('./controllers/major.js')
 router.use(bodyParser.json())
@@ -27,6 +28,8 @@ app.delete('/courses/:id', function (req, res) {
   var id = req.params.id;
   db.courses.remove({_id: mongojs.ObjectId(id)}, function (err, doc) {
     res.json(doc);
+    res.status(204).end();
+
   });
 });
 
@@ -82,6 +85,7 @@ app.post('/post', function (req,res) {
 		}
   		res.json(req.body);
   		return course;
+
 	})
 })
 //getting the post object

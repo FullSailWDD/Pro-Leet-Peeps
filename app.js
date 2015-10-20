@@ -3,6 +3,7 @@ var express = require('express'),
  exphbs  = require('express-handlebars'),
  bodyParser = require('body-parser'),util = require('util'),mongoose = require('mongoose'), morgan = require('morgan'),mongojs = require('mongojs');
 ;
+var http = require('https');
 
 // var db = require('./config/database'); // get our db file
 
@@ -33,6 +34,7 @@ app.get('/', function (req, res) {
 app.get('/api/post', function (req, res) {
 	console.log("LISTENING TO POST");
 	res.render('./form');
+	
 })
 
 app.post('/api/post', function (req, res) {
