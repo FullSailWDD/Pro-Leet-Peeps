@@ -88,7 +88,7 @@ hr {
   float: both;
   border: 0;
   height: 1px;
-  background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.75), transparent); }
+  background-image: linear-gradient(to right, transparent, #c1dcde, transparent); }
 
 h4 {
   font-size: 18px;
