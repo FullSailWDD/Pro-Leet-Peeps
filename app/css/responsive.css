@@ -1,3 +1,7 @@
+/*main Color*/
+/*main Hover Color*/
+/*font Color*/
+/*Fonts*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++Mobile size*/
 @media (max-width: 768px) {
   .page-header {
@@ -93,7 +97,15 @@
     display: none; }
 
   .desktop-sidebar-search {
-    display: none; } }
+    display: none; }
+
+  .eyeBtn {
+    position: relative;
+    right: -280px;
+    margin-top: -25px; }
+
+  .section {
+    margin: 0 0 30px; } }
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++Tablet size*/
 @media (min-width: 992px) {
   .modal-lg {
@@ -110,5 +122,12 @@
 
   .span_1_of_6 {
     width: 16%; } }
+div.dashboard-block {
+  border-top-style: none;
+  border-right-style: none;
+  border-bottom-style: solid 1px;
+  border-bottom-color: #c1dcde;
+  border-left-style: none;
+  padding-bottom: 20px; }
 
 /*# sourceMappingURL=responsive.css.map */

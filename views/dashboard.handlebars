@@ -3,25 +3,35 @@
         <div class="col-lg-12">
             <h1 class="page-header">Course Dashboard</h1>
 
-            <div class="section group" ng-repeat="data in courses">
+            <div class="section group dashboard-block" ng-repeat="data in courses">
                 <div class="col span_1_of_6">
-                <h4><strong class="strongFont">Major</strong></h4>
-                <h4 ng-click="view(data._id)"><strong><p>{[{data.major}]}</p></strong></h4>
+                    <h4>
+                        <strong class="strongFont">Major</strong>
+                        <div class="eyeBtn" >
+                            <a ng-click="view(data._id)"><img src="img/eye.svg"></a>
+                        </div>
+                    </h4>
+                </div>
+
+                <div class="col span_1_of_6">
+                    <h4 ng-click="view(data._id)">
+                        <strong><p>{[{data.major}]}</p></strong>
+                    </h4>
+                </div>
+
+                <div class="col span_1_of_6">
+                    <strong class="strongFont">Course</strong>
+                    <strong ng-click="view(data._id)"><p>{[{data.course}]}</p></strong>
                 </div>
                 <div class="col span_1_of_6">
-                <strong class="strongFont">Course</strong>
-                <strong ng-click="view(data._id)"><p>{[{data.course}]}</p></strong>
-                </div>
-                <div class="col span_1_of_6">
-                <strong>Rubric</strong>
-                <p ng-click="view(data._id)">{[{data.rubric.name}]}</p>
+                    <strong>Rubric</strong>
+                    <p ng-click="view(data._id)">{[{data.rubric.name}]}</p>
                 </div>
                 <div class="col span_3_of_6">
-                <button ng-click="audit(data._id)" class="btn btn-default float-left">Audit</button>
-                <button ng-click="edit(data._id)" class="btn btn-danger float-left">Update/Remove</button>
+                    <button ng-click="audit(data._id)" class="btn btn-default float-left">Audit</button>
+                    <button ng-click="edit(data._id)" class="btn btn-danger float-left">Update/Remove</button>
                 </div>
             </div>
-        
         </div>
     </div>
 </div>

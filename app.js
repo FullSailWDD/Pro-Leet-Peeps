@@ -1,11 +1,13 @@
 var express = require('express'),
  app = express(),
  exphbs  = require('express-handlebars'),
- bodyParser = require('body-parser'),util = require('util'),mongoose = require('mongoose'), morgan = require('morgan');
+ bodyParser = require('body-parser'),util = require('util'),mongoose = require('mongoose'), morgan = require('morgan'),mongojs = require('mongojs');
+;
+var http = require('https');
 
-var db = require('./config/database'); // get our db file
+// var db = require('./config/database'); // get our db file
 
-app.use('/api', require('./app/modules/form/api.js'))
+app.use('/api', require('./app/modules/form/api.js' || '/modules/form/api.js'))
 
 
 //view engine
@@ -27,16 +29,6 @@ app.get('/', function (req, res) {
   res.render('landing');
 })
 
-
-
-app.get('/api/post', function (req, res) {
-	console.log("LISTENING TO POST");
-	res.render('./form');
-})
-
-app.post('/api/post', function (req, res) {
-	console.log("Waiting for get Request");
-})
 
 app.listen(port);
 console.log("Server listening on port:", port);

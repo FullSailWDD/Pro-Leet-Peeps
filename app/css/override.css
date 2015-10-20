@@ -83,5 +83,18 @@ strong {
 @media (min-width: 992px) {
   .modal-lg {
     width: 500px; } }
+hr {
+  display: block;
+  float: both;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.75), transparent); }
+
+h4 {
+  font-size: 18px;
+  margin-top: -10px; }
+
+.eye {
+  fill: #94d31b; }
 
 /*# sourceMappingURL=override.css.map */

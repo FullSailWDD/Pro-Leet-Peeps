@@ -27,6 +27,7 @@ $scope.reloadRoute = function(){
 function ClickToEditCtrl($scope){    
     $scope.editorEnabled = false;
   
+
         $scope.enableEditor = function() {
             $scope.editorEnabled = true;
             $scope.editableTitle = $scope.title;
