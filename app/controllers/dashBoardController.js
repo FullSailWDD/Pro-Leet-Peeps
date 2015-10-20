@@ -29,6 +29,7 @@ $scope.view = function(id) {
       templateUrl: 'view.handlebars',
       controller: 'ModalInstanceCtrl',
       size: 'lg',
+      
       resolve: {
         data: function () {
           return $scope.data;

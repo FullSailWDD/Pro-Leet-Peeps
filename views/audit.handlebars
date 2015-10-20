@@ -7,9 +7,14 @@
             <h2>{[{ data.rubric.name }]}</h2>
             <div ng-repeat="section in sectionSplit">
                 {[{ section }]}
+                <div ng-repeat="section in sectionSplit">
+                    {[{section}]} p
+                
             <div ng-repeat="grade in gradeSplit">
                 
+                
             <button>{[{ grade }]}</button>
+                </div>
             </div>
         </div>  
         <div class="modal-footer">
