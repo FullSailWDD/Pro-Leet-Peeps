@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha"
   },
-  "author": "pro-leet-peepss",
+  "author": "proleetpeepss",
   "license": "ISC",
   "dependencies": {
     "angular-socket-io": "^0.7.0",
