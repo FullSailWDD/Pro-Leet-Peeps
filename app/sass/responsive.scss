@@ -43,6 +43,7 @@
   } 
 
   .btn-danger {
+    transition: background-color 0.5s ease;
     color: #fff;
     background-color: #747EA1;
     border-color: #747EA1;
@@ -88,6 +89,7 @@
   }
 
   .btn-danger {
+    transition: background-color 0.5s ease;
     color: #fff;
     background-color: #747EA1;
     border-color: #747EA1;
@@ -108,6 +110,7 @@
     display: none;
   }
   .eyeBtn {
+      transition: background-color 0.5s ease;
       position: relative;
       right: -88%;
       margin-top: -25px;
@@ -218,6 +221,13 @@
     border-top-color: #c1dcde;
     padding-bottom: 70px;
     border-style: none none solid;
+  }
+  #page-wrapper {
+      position: inherit;
+      margin: 0px 0px 0px 249px;
+      padding: 0 30px;
+      border-left: 1px solid #e7e7e7;
+      background-color: rgba(1,1,1,0);
   }
 
 }

@@ -2658,13 +2658,13 @@ select[multiple].form-group-lg .form-control, textarea.form-group-lg .form-contr
 
 .btn-primary {
   color: #fff;
-  background-color: #061f30;
-  border-color: #061f30; }
+  background-color: rgba(6, 31, 48, 0.9);
+  border-color: rgba(6, 31, 48, 0.9); }
 
 .btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open > .dropdown-toggle.btn-primary {
   color: #fff;
-  background-color: #061f30;
-  border-color: #061f30; }
+  background-color: rgba(6, 31, 48, 0.9);
+  border-color: rgba(6, 31, 48, 0.9); }
 
 .btn-primary.active, .btn-primary:active, .open > .dropdown-toggle.btn-primary {
   background-image: none; }
@@ -2678,6 +2678,7 @@ select[multiple].form-group-lg .form-control, textarea.form-group-lg .form-contr
   background-color: #fff; }
 
 .btn-success {
+  transition: background-color 0.5s ease;
   color: #fff;
   background-color: #e47d58;
   border-color: #e47d58; }
@@ -3684,7 +3685,7 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
   .navbar-right ~ .navbar-right {
     margin-right: 0; } }
 .navbar-default {
-  background-color: #061f30;
+  background-color: rgba(6, 31, 48, 0.9);
   border-color: #e7e7e7;
   position: fixed; }
 

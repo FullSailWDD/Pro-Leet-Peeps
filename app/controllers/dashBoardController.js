@@ -1,4 +1,12 @@
-myApp.controller('dashboardController', ['$scope', '$http','$uibModal','$location', function($scope, $http, $uibModal, $location) {
+myApp.controller('dashboardController', 
+                ['$scope', '$http','$uibModal','$location', 
+                function($scope, $http, $uibModal, $location) {
+
+//An easy way to make socket error events available across your app:
+$scope.$on('socket:error', function(ev, data){
+
+});
+
 var refresh = function() {
     $http.get('/courses/').success(function(response) {
     $scope.courses = response;
@@ -38,7 +46,8 @@ $scope.view = function(id) {
   })
   });
 };
-    $scope.audit = function(id) {
+
+$scope.audit = function(id) {
   $http.get('/courses/' + id).success(function(response) {
     console.log("EDITME", response)
     $scope.data = response;
@@ -93,13 +102,26 @@ $scope.edit = function(id) {
   });
 }; 
 
-
-  $scope.update = function() {
+$scope.update = function() {
     $http.put('/courses/' + $scope.courses._id, $scope.courses).success(function(response) {
       refresh();
     })
   };
-  $scope.deselect = function() {
+
+$scope.deselect = function() {
     $scope.contact = "";
   }
+
+$scope.socket.on('setNewEvent', function(data){
+    $scope.loading = true;
+    $scope.$apply();
+});
+
 }]);
+
+
+
+
+
+
+

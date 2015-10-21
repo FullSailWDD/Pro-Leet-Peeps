@@ -1,17 +1,13 @@
 var express = require('express'),
- app = express(),
- exphbs  = require('express-handlebars'),
- bodyParser = require('body-parser'),mongojs = require('mongojs');
-var router = require('express').Router();
-
-
-var https = require('https');
-var http = require('http');
-
-var db = require('./config/database'); // get our db file
-
-var Course = require('./models/major.js')
-
+    app = express(),
+    exphbs  = require('express-handlebars'),
+    bodyParser = require('body-parser'),
+    mongojs = require('mongojs'),
+    router = require('express').Router(),
+    https = require('https'),
+    http = require('http'),
+    db = require('./config/database'),
+    Course = require('./models/major.js');
 
 //view engine
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
