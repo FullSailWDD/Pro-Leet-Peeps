@@ -1,0 +1,121 @@
+@import 'styles';
+
+.addingDegreeCourse{
+  position: absolute;
+  left: 15px;
+  top: 0px;
+}
+
+.addingRubric{
+  position: absolute;
+  left: 315px;
+    top: -5px;
+}
+
+.addingStudent{
+  position: absolute;
+  left: 435px;
+  top: -5px;
+}
+
+.input-group-searchbox {
+    position: relative;
+    display: inline-table;
+    border-collapse: separate;
+    width: 94%;
+    margin: 10px;
+}
+
+.divider {
+  height: 1px;
+  margin: 1px 0;
+  overflow: hidden;
+  background-color: #353542 }
+
+.btn-danger {
+    color: #fff;
+    background-color: #747EA1;
+    border-color: #747EA1;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.select-form-control{
+    margin-bottom: 15px;
+}
+
+.desktop-sidebar{
+  margin-top: 0;
+  z-index: 1;
+  position: absolute;
+  width: 250px;
+  background-color: $mainNavy;
+  border-color: #e7e7e7;
+  position: fixed;
+  margin-top: 50px;
+  height: 100%;
+}
+.marginLogin {
+  margin-top: 130px; 
+} 
+
+.span_1_of_6 { 
+  width: 33.33%;
+  float: left;
+}
+
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0 0 50px;
+}
+.navbar-default .navbar-brand {
+  font-family: 'Pacifico', cursive;
+}
+
+p {
+  margin: 0 0 10px;
+  color: $darkGrey; }
+
+strong{
+  color: $mainSatLightNavyHover;
+}
+
+.strongFont{
+  font-weight:1000;
+}
+
+.float-left{
+    float: left;
+    margin: 0 1%;
+  }
+
+@media (min-width: 992px){
+  .modal-lg {
+      width: 500px;
+  }
+}
+
+hr{
+    display: block;
+    float: both;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), $lightGrey, rgba(0, 0, 0, 0));
+}
+
+h4 {
+    font-size: 18px;
+    margin-top: -10px;
+}
+
+.eye{
+  fill: #94d31b; 
+}
+
+
+
+
+
+
+
