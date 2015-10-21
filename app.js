@@ -33,8 +33,8 @@ app.get('/', function (req, res) {
   res.render('landing');
 })
 
-var db = mongojs('test', ['courses'] || 'jeff:nissan12@ds041154.mongolab.com:41154/heroku_07vkcnb1', ['courses'], {authMechanism: 'ScramSHA1'});
-app.use(bodyParser.json());
+var db = mongojs('jeff:nissan12@ds041154.mongolab.com:41154/heroku_07vkcnb1', ['courses'], {authMechanism: 'ScramSHA1'});
+app.use(bodyParser.json())
 router.use(bodyParser.json())
 
 // [AUDIT] getting major schemaatics
@@ -114,7 +114,7 @@ app.post('/post', function (req,res) {
 	})
 })
 //getting the post object
-module.exports = app
+module.exports = app;
 // app.listen(port);
 
 http.createServer(app).listen(port);
