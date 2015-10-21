@@ -8,7 +8,7 @@ $scope.$on('socket:error', function(ev, data){
 });
 
 var refresh = function() {
-    $http.get('/courses/').success(function(response) {
+    $http.get('api/courses').success(function(response) {
     $scope.courses = response;
     
   });
@@ -16,20 +16,20 @@ var refresh = function() {
 refresh();
 
 $scope.remove = function(id) {
-  $http.delete('/courses/' + id).success(function(response) {
+  $http.delete('api/courses/' + id).success(function(response) {
     refresh();
   });
 };
 
 $scope.search = function(id) {
-  $http.get('/courses/' + id).success(function(response) {
+  $http.get('api/courses/' + id).success(function(response) {
     
     refresh();
   });
 };
 
 $scope.view = function(id) {
-  $http.get('/courses/' + id).success(function(response) {
+  $http.get('api/courses/' + id).success(function(response) {
     console.log("View me", response)
     $scope.data = response;
   var modalInstance = $uibModal.open({
@@ -46,9 +46,14 @@ $scope.view = function(id) {
   })
   });
 };
+<<<<<<< HEAD
 
 $scope.audit = function(id) {
   $http.get('/courses/' + id).success(function(response) {
+=======
+    $scope.audit = function(id) {
+  $http.get('api/courses/' + id).success(function(response) {
+>>>>>>> 3f0a451412d109ae8a9d30efe2fa6f1c0ae3ffcd
     console.log("EDITME", response)
     $scope.data = response;
   var modalInstance = $uibModal.open({
@@ -67,7 +72,7 @@ $scope.audit = function(id) {
 
 
 $scope.audit = function(id) {
-  $http.get('/courses/' + id).success(function(response) {
+  $http.get('api/courses/' + id).success(function(response) {
     console.log("View me", response)
     $scope.data = response;
   var modalInstance = $uibModal.open({
@@ -85,7 +90,7 @@ $scope.audit = function(id) {
 };
 
 $scope.edit = function(id) {
-  $http.get('/courses/' + id).success(function(response) {
+  $http.get('api/courses/' + id).success(function(response) {
     console.log("EDITME", response)
     $scope.data = response;
   var modalInstance = $uibModal.open({
@@ -102,8 +107,14 @@ $scope.edit = function(id) {
   });
 }; 
 
+<<<<<<< HEAD
 $scope.update = function() {
     $http.put('/courses/' + $scope.courses._id, $scope.courses).success(function(response) {
+=======
+
+  $scope.update = function() {
+    $http.put('api/courses/' + $scope.courses._id, $scope.courses).success(function(response) {
+>>>>>>> 3f0a451412d109ae8a9d30efe2fa6f1c0ae3ffcd
       refresh();
     })
   };
