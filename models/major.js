@@ -1,30 +1,22 @@
 var mongoose = require('mongoose');
-var express = require('express');
 
-// var Schema = mongoose.Schema;
+var Course = mongoose.model('Course',{
 
-// mongoose.model('Schema', CourseSchema);
+	major:{ type: String},
+	course:{type: String},
+	description:{type: String},
+	rubric:{
+		name:{type: String},
+		title:{type: String},
+		grade:{type:String},
+		dueDate:{type:String},
+		rubricdescription:{type:String}
+	},
+	date:{ type: Date,  default: Date.now
+	}
 
-
-// var CourseSchema = new Schema({
-
-// 	major : String,
-// 	course : String,
-// 	description : String,
-// 	rubric : {
-// 		name : String,
-// 		title : String,
-// 		grade : String,
-// 		dueDate : String,
-// 		rubricdescription : String
-// 	},
-// 	date : { 
-// 		date : Date,  
-// 		default : Date
-// 	}
-
-// })
+})
 
 
 
-// module.exports = CourseSchema;
+module.exports = Course;
