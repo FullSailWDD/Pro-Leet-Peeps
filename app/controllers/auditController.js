@@ -29,7 +29,6 @@ refresh();
     
     console.log("Scope.data",$scope.data);
 $scope.update = function() {
-  console.log("======", $scope.data);    
   $http.put('/api/courses/' + $scope.data._id, $scope.data).success(function(response) {
   $modalInstance.close();
 })

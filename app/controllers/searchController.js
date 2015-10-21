@@ -9,7 +9,6 @@ refresh();
 
 $scope.search = function() {
   $http.get('api/courses/').success(function(response) {
-    console.log("View me", response)
     $scope.data = response;
   var modalInstance = $uibModal.open({
       animation: $scope.animationsEnabled,
@@ -20,7 +19,6 @@ $scope.search = function() {
       resolve: {
         data: function () {
           return $scope.data;
-	     console.log($scope.data);
 
       }
     }
