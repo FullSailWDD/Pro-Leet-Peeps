@@ -8,7 +8,7 @@ var Course = db.model('Course',{
 	rubric:{
 		name:{type: String},
 		title:{type: String},
-		grade:{type:Number, min:0,max:100},
+		grade:{type:String},
 		dueDate:{type:String},
 		rubricdescription:{type:String}
 	},
