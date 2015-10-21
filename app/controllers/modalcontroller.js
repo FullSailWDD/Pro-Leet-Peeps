@@ -17,6 +17,7 @@ myApp.controller('ModalInstanceCtrl', function ($scope, $modalInstance, data, $h
 	    
 	  });
 	};
+	refresh();
 
 
 	$scope.remove = function(id) {
@@ -24,7 +25,6 @@ myApp.controller('ModalInstanceCtrl', function ($scope, $modalInstance, data, $h
 	  $modalInstance.close();
 	  });
 	};
-	refresh();
 
 
 
