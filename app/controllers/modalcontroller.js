@@ -18,10 +18,11 @@ myApp.controller('ModalInstanceCtrl', function ($scope, $modalInstance, data, $h
 	  });
 	};
 
-
 	$scope.remove = function(id) {
 	  $http.delete('api/courses/' + id).success(function(response) {
-	  	
+	  $modalInstance.close();
+	  refresh();
+
 	  });
 	};
 
