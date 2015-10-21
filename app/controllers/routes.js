@@ -60,12 +60,12 @@ myApp.config(['$interpolateProvider', function($interpolateProvider){
 	});
 	myApp.controller('formController', function($scope) {
 		// create a message to display in our view
-		$scope.message = 'Everyone come and see how good I look!';
+		$scope.message = 'Hello come and see how good I look!';
 	});
 
 	myApp.controller('signupController', function($scope) {
 		// create a message to display in our view
-		$scope.message = 'Everyone come and see how good I look!';
+		$scope.message = 'Hello come and see how good I look!';
 	});
 
 	myApp.controller('aboutController', function($scope) {
