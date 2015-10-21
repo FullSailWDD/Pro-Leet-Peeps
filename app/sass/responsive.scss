@@ -43,6 +43,7 @@
   } 
 
   .btn-danger {
+    transition: background-color 0.5s ease;
     color: #fff;
     background-color: #747EA1;
     border-color: #747EA1;
@@ -88,6 +89,7 @@
   }
 
   .btn-danger {
+    transition: background-color 0.5s ease;
     color: #fff;
     background-color: #747EA1;
     border-color: #747EA1;
@@ -98,6 +100,7 @@
   .float-left{
     float: left;
     margin: 0 1%;
+    width: 47%;
   }
 
   .desktop-sidebar{
@@ -108,6 +111,7 @@
     display: none;
   }
   .eyeBtn {
+      transition: background-color 0.5s ease;
       position: relative;
       right: -88%;
       margin-top: -25px;
@@ -120,9 +124,9 @@
     border-top-style: none;
     border-right-style: none;
     border-bottom-style: solid 1px;
-    border-bottom-color: $lightGrey;
+    border-bottom-color: $mainLightNavy;
     border-left-style: none;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
 
   .desktop-block{
@@ -160,7 +164,7 @@
     border-top-style: none;
     border-right-style: none;
     border-bottom-style: solid 1px;
-    border-bottom-color: $lightGrey;
+    border-bottom-color: $mainLightNavy;
     border-left-style: none;
     padding-bottom: 230px;
   }
@@ -203,9 +207,9 @@
     border-top-style: none;
     border-right-style: none;
     border-bottom-style: solid 1px;
-    border-bottom-color: $lightGrey;
+    border-bottom-color: $mainLightNavy;
     border-left-style: none;
-    padding-bottom: 20px;
+    padding: 15px 0;
   }
   .desktop-block{
     display: block;
@@ -216,8 +220,16 @@
 
   div.dashboard-block {
     border-top-color: #c1dcde;
-    padding-bottom: 70px;
+    padding-bottom: 50px;
     border-style: none none solid;
+  }
+
+  #page-wrapper {
+      position: inherit;
+      margin: 0px 0px 0px 249px;
+      padding: 0 30px;
+      border-left: 1px solid #e7e7e7;
+      background-color: rgba(1,1,1,0);
   }
 
 }

@@ -15,6 +15,14 @@ app.get('/major', function (req, res) {
   });
 });
 
+
+app.get('/find', function (req, res) {
+  db.courses.find(function (err, db) {
+    res.json(db);
+  });
+});
+
+
 //get the database
 app.get('/courses', function (req, res) {
   db.courses.find(function (err, db) {

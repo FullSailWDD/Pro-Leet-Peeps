@@ -1,4 +1,4 @@
-myApp.controller('auditController', function ($scope, data , $http) {
+myApp.controller('auditController', function ($scope, data , $http, $modalInstance) {
 
 var refresh = function() {
     $http.get('api/courses').success(function(response) {

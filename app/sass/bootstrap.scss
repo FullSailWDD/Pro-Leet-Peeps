@@ -2633,6 +2633,7 @@ select[multiple].form-group-lg .form-control, textarea.form-group-lg .form-contr
   opacity: .65; }
 
 .btn-default {
+  transition: background-color 0.5s ease;
   color: #333;
   background-color: #fff;
   border-color: #ccc; }
@@ -2675,6 +2676,7 @@ select[multiple].form-group-lg .form-control, textarea.form-group-lg .form-contr
   background-color: #fff; }
 
 .btn-success {
+  transition: background-color 0.5s ease;
   color: #fff;
   background-color: $mainDarkOrange;
   border-color: $mainDarkOrange; }
