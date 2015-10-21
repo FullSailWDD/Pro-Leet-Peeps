@@ -1,23 +1,21 @@
-    <div class="modal-header">
-        <h1>{[{data.major}]}</h1>
-    </div>
+<div class="modal-header">
+    <h3 class="modal-title">{[{data.major}]}</h3>
+</div>
 
-    <div class="modal-body">
-                
-            <h2>{[{ data.rubric.name }]}</h2>
-            <div ng-repeat="section in sectionSplit">
-                {[{ section }]}<input name="{[{ section }]}" placeholder="Enter Section Weight" type="text">
-                <div ng-repeat="section in sectionSplit">
-                    {[{section}]} p
-                
+<div class="modal-body">
+    <div class="form-group">            
+    <h4><strong>Rubric</strong> : {[{ data.rubric.name }]}</h4>
+        <div ng-repeat="section in sectionSplit">
+            <label>Section</label>
+            <input class="form-control" name="{[{ section }]}" placeholder="Enter Section Weight" type="text">
+
             <div ng-repeat="grade in gradeSplit">
-                
-                
-            <button>{[{ grade }]}</button>
-                </div>
+                <button class="btn btn-default">{[{ grade }]}</button>
             </div>
+
         </div>  
         <div class="modal-footer">
             <button class="btn btn-primary" type="button" ng-click="update(contact._id); reloadRoute()">Update Grades</button>
         </div>
+    </div>
 </div>

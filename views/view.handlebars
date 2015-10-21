@@ -21,16 +21,9 @@
 
                 <li>
                     <p><strong class="strongFont">Sections</strong></p>
-                    <div ng-repeat="section in sectionSplit">
-                        <p>{[{ section }]}</p>
-                        <a ng-click="toggle = !toggle" ng-show="toggle">add a section category</a>
-                        <div ng-hide="toggle">
-                        <form>
-                            <input placeholder="name of category" name="sectionCat">
-                            <input placeholder="Description of category" type="textarea" name="sectionDesc">
-                            <button ng-click="add()">add category</button>
-                        </form>
-                        </div>                       
+                    <div>
+                        <p>{[{ data.rubric.title }]}</p>
+                        <a ng-click="toggle = !toggle" ng-show="toggle">add a section category</a>                      
                     </div>
                     
 
@@ -48,5 +41,5 @@
 
 
         <div class="modal-footer">
-            <button class="btn btn-warning" type="button" ng-click="cancel()">Exit</button>
+            <button class="btn btn-warning" type="button" ng-click="exit()">Exit</button>
         </div>
