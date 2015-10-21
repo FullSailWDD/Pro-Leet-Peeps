@@ -7,12 +7,14 @@
             <h2>{[{ data.rubric.name }]}</h2>
             <div ng-repeat="section in sectionSplit">
 
-                    {[{section}]} 
+                {[{ section }]}<input name="{[{ section }]}" placeholder="Enter Section Weight" type="text">
+                <div ng-repeat="section in sectionSplit">
+                    {[{section}]} p
                 
             <div ng-repeat="grade in gradeSplit">
                 
                 
-            <button ng-click="audit()"> {[{ grade }]}</button>
+            <button>{[{ grade }]}</button>
                 </div>
             </div>
         </div>  

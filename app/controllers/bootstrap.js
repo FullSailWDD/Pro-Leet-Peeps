@@ -133,13 +133,13 @@ var parent = $rootScope;
         var Data = { major: major, course: course ,description: courseDescript, rubric:{name:rubName,title:sectionSplit, grade:gradeSplit, dueDate: due,rubricdescription:rDescript}};
         
         //posting to /api/post then sending to the database
+
       $http.post('/post', Data).then(function (successCallback, errorCallback){
 
 
       });
 
       $http.get('/post', Data).then(function (req,res){
-
       	
       });
 
