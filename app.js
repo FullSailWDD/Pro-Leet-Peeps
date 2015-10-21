@@ -30,7 +30,13 @@ app.get('/', function (req, res) {
   res.render('landing');
 })
 
+app.get('/api/post', function (req, res) {
+  console.log("LISTENING TO POST");
+})
 
+app.post('/api/post', function (req, res) {
+  console.log("Waiting for get Request");
+})
 // app.listen(port);
 
 http.createServer(app).listen(port);
