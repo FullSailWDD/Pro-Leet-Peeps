@@ -1,12 +1,12 @@
 var express = require('express'),
  app = express(),
  exphbs  = require('express-handlebars'),
- bodyParser = require('body-parser'),util = require('util'),mongoose = require('mongoose'), morgan = require('morgan');
+ bodyParser = require('body-parser'),mongojs = require('mongojs');
+
+var https = require('https');
+var http = require('http');
 
 var db = require('./config/database'); // get our db file
-
-var jwt  = require('jsonwebtoken'); // used to create, sign, and verify tokens
-// var config = require('./config/config'); // get our config file
 
 app.use('/api', require('./app/modules/form/api.js'))
 
@@ -30,18 +30,18 @@ app.get('/', function (req, res) {
   res.render('landing');
 })
 
-
-
-app.get('/api/post', function (req, res) {
-	console.log("LISTENING TO POST");
-	res.render('./form');
+app.get('/post', function (req, res) {
+  console.log("LISTENING TO POST");
 })
 
-app.post('/api/post', function (req, res) {
-	console.log("Waiting for get Request");
+app.post('/post', function (req, res) {
+  console.log("Waiting for get Request");
 })
+// app.listen(port);
 
-app.listen(port);
+http.createServer(app).listen(port);
+// https.createServer(app).listen(port);
+
 console.log("Server listening on port:", port);
 
 

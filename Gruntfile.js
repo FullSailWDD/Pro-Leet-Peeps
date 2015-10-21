@@ -1,10 +1,10 @@
 module.exports = function(grunt){
 	grunt.initConfig({
 	  concat: {
-	    js: {
-	      src: ['app/js/master.js'],
-	      dest: 'build/master.js',
-	    },
+	    // js: {
+	    //   src: ['app/js/master.js'],
+	    //   dest: 'build/master.js',
+	    // },
 		css: {
 		      src: ['app/css/master.css'],
 		      dest: 'build/css/master.css'

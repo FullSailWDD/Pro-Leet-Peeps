@@ -1,5 +1,3 @@
-
-
 @import 'styles';
 /*!
  * Bootstrap v3.3.4 (http://getbootstrap.com)
@@ -1159,7 +1157,8 @@ hr {
   font-size: 12px; }
 
 p {
-  margin: 0 0 10px; }
+  margin: 0 0 10px;
+  color:$darkGrey; }
 
 .lead {
   margin-bottom: 20px;
@@ -1440,7 +1439,7 @@ pre code {
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
-  float: left; }
+  float: center; }
 
 .col-xs-12 {
   width: 100%; }
@@ -2739,9 +2738,12 @@ select[multiple].form-group-lg .form-control, textarea.form-group-lg .form-contr
   background-color: #fff; }
 
 .btn-danger {
-  color: #fff;
-  background-color: #747EA1;
-  border-color: #747EA1; }
+    color: #fff;
+    background-color: #747EA1;
+    border-color: #747EA1;
+    margin-top: 16px;
+    margin-left: 26%;
+}
 
 .btn-danger.active, .btn-danger.focus, .btn-danger:active, .btn-danger:focus, .btn-danger:hover, .open > .dropdown-toggle.btn-danger {
   color: #fff;
@@ -3133,11 +3135,10 @@ tbody.collapse.in {
   margin-bottom: 0; }
 
 .input-group-searchbox {
-    position: fixed;
     display: inline-table;
     border-collapse: separate;
-    width: 30%;
-    margin: 8px 0 8px 102px;
+    width: 40%;
+    margin: 8px 0 8px 2px;
 }
 
 .input-group-lg > .form-control, .input-group-lg > .input-group-addon, .input-group-lg > .input-group-btn > .btn {
@@ -3249,7 +3250,9 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
 .nav > li > a {
   position: relative;
   display: block;
-  padding: 13px 15px; }
+  padding: 13px 15px;
+  text-align:center;
+}
 
 .nav > li > a:focus, .nav > li > a:hover {
   text-decoration: none;
@@ -3693,7 +3696,7 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
   color: #fff; }
 
 .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
-  color: $mainNavyHover;
+  color: $lightGrey;
   background-color: transparent; }
 
 .navbar-default .navbar-text {

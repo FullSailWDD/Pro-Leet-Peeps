@@ -2,7 +2,7 @@
   "name": "form_gen",
   "version": "0.1.0",
   "authors": [
-    "Leonard"
+    "pro-leet-peeps"
   ],
   "moduleType": [
     "node"
@@ -17,5 +17,7 @@
   ],
   "dependencies": {
     "angular": "~1.4.7"
-  }
+    "angular": "~1.4.7",
+    "angular-socket-io": "~0.7.0"
+\  }
 }
