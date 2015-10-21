@@ -22,7 +22,6 @@ $scope.search = function(id) {
 
 $scope.view = function(id) {
   $http.get('api/courses/' + id).success(function(response) {
-    console.log("View me", response)
     $scope.data = response;
   var modalInstance = $uibModal.open({
       animation: $scope.animationsEnabled,
@@ -40,7 +39,6 @@ $scope.view = function(id) {
 };
     $scope.audit = function(id) {
   $http.get('api/courses/' + id).success(function(response) {
-    console.log("EDITME", response)
     $scope.data = response;
   var modalInstance = $uibModal.open({
       animation: $scope.animationsEnabled,
@@ -59,7 +57,6 @@ $scope.view = function(id) {
 
 $scope.audit = function(id) {
   $http.get('api/courses/' + id).success(function(response) {
-    console.log("View me", response)
     $scope.data = response;
   var modalInstance = $uibModal.open({
       animation: $scope.animationsEnabled,
@@ -77,7 +74,6 @@ $scope.audit = function(id) {
 
 $scope.edit = function(id) {
   $http.get('api/courses/' + id).success(function(response) {
-    console.log("EDITME", response)
     $scope.data = response;
   var modalInstance = $uibModal.open({
       animation: $scope.animationsEnabled,
