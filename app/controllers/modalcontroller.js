@@ -5,7 +5,7 @@ myApp.controller('ModalInstanceCtrl', function ($scope, $modalInstance, data, $h
   };
     console.log("Scopre.data modalInstance",$scope.data);
 	$scope.update = function() {
-	  console.log("======", $scope.data);
+	  console.log("===", $scope.data);
 	  $http.put('/api/courses/' + $scope.data._id, $scope.data).success(function(response) {
 	  $modalInstance.close();
 	})
@@ -21,7 +21,8 @@ myApp.controller('ModalInstanceCtrl', function ($scope, $modalInstance, data, $h
 
 	$scope.remove = function(id) {
 	  $http.delete('api/courses/' + id).success(function(response) {
-	  	
+	  		  $modalInstance.close();
+
 	  });
 	};
 
