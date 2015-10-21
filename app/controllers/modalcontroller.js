@@ -5,7 +5,6 @@ myApp.controller('ModalInstanceCtrl', function ($scope, $modalInstance, data, $h
   };
     console.log("Scopre.data modalInstance",$scope.data);
 	$scope.update = function() {
-	  console.log("======", $scope.data);
 	  $http.put('/api/courses/' + $scope.data._id, $scope.data).success(function(response) {
 	  $modalInstance.close();
 	})
