@@ -35,6 +35,14 @@ $scope.update = function() {
 })
 };
 
+$scope.audit = function() {
+  console.log("======", $scope.data.rubric.grade);    
+//   $http.put('/api/courses/' + $scope.data._id, $scope.data).success(function(response) {
+//   $modalInstance.close();
+// })
+};
+
+
     
 //AUDIT CALCULATOR
 $scope.calculateAudit = function() { 
@@ -83,7 +91,6 @@ $scope.calculateAudit = function() {
         }
     };
     
-    calculateGrade(arySections , itemScores);
-}
+    calculateGrade(arySections , itemScores)
     
 })

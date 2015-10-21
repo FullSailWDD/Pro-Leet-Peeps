@@ -80,6 +80,10 @@ app.post('/post', function (req,res) {
 //save the course into the db
 	course.save(function(){
   		res.json(req.body);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 039d2385ea6647611820f37d0c34c43bd4f84baf
   		return course;
 
 	})
