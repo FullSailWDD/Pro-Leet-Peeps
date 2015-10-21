@@ -32,7 +32,6 @@ app.get('/', function (req, res) {
 
 app.get('/post', function (req, res) {
   console.log("LISTENING TO POST");
-  res.render('./form');
 })
 
 app.post('/post', function (req, res) {
