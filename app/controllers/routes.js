@@ -1,5 +1,4 @@
-var myApp = angular.module('myApp', 
-	['ngRoute','ngAnimate','ui.bootstrap']);
+var myApp = angular.module('myApp', ['ngRoute','ngAnimate','ui.bootstrap']);
 
 myApp.config(['$interpolateProvider', function($interpolateProvider){
   // $interpolateProvider used to differentiate uses for angular from express
@@ -54,7 +53,6 @@ myApp.config(['$interpolateProvider', function($interpolateProvider){
 
 			});
 	});
-
 
 	// create the controller and inject Angular's $scope
 	myApp.controller('signinController', function($scope){

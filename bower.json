@@ -16,7 +16,11 @@
     "tests"
   ],
   "dependencies": {
+<<<<<<< HEAD
+    "angular": "~1.4.7"
+=======
     "angular": "~1.4.7",
     "angular-socket-io": "~0.7.0"
+>>>>>>> 3a3b0717a18cf8462c0db71003d25583633f499b
   }
 }
