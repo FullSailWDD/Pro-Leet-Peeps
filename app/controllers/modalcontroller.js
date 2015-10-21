@@ -14,7 +14,7 @@ myApp.controller('ModalInstanceCtrl', function ($scope, $modalInstance, data, $h
 	var refresh = function() {
 	    $http.get('api/courses').success(function(response) {
 	    $scope.courses = response;
-	    
+	    console.log("hello");
 	  });
 	};
 
