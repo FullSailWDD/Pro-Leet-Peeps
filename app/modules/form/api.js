@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 var Course = require('./models/major.js')
 var app = express();
 var mongojs = require('mongojs');
-var db = mongojs('jeff:nissan12@ds041154.mongolab.com:41154/heroku_07vkcnb1', ['courses'], {authMechanism: 'ScramSHA1'});
+var db = mongojs('jeff:nissan12@ds041934.mongolab.com:41934/heroku_q1kmjcbd', ['courses'], {authMechanism: 'ScramSHA1'});
 app.use(bodyParser.json());
 router.use(bodyParser.json())
 
