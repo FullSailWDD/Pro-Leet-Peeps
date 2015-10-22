@@ -39,12 +39,12 @@ http.createServer(app).listen(port);
 
 
 app.get('/api/post', function (req, res) {
-	console.log("LISTENING TO POST");
-	res.render('./form');
+    console.log("LISTENING TO POST");
+    res.render('./form');
 })
 
 app.post('/api/post', function (req, res) {
-	console.log("Waiting for get Request");
+    console.log("Waiting for get Request");
 })
 
 console.log("Server listening on port:", port);

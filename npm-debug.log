@@ -1,0 +1,91 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'bower.json' ]
+2 info using npm@2.11.3
+3 info using node@v0.12.7
+4 verbose install initial load of /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/package.json
+5 warn package.json pro-leet-peeps@4.1.2 No repository field.
+6 verbose installManyTop reading scoped package data from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/node_modules/angular-socket-io/package.json
+7 verbose installManyTop reading scoped package data from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/node_modules/assert/package.json
+8 verbose installManyTop reading scoped package data from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/node_modules/body-parser/package.json
+9 verbose installManyTop reading scoped package data from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/node_modules/bower/package.json
+10 verbose installManyTop reading scoped package data from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/node_modules/chalk/package.json
+11 verbose installManyTop reading scoped package data from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/node_modules/compression/package.json
+12 verbose installManyTop reading scoped package data from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/node_modules/config/package.json
+13 verbose installManyTop reading scoped package data from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/node_modules/connect-mongo/package.json
+14 verbose installManyTop reading scoped package data from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/node_modules/crypto/package.json
+15 verbose installManyTop reading scoped package data from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/node_modules/express/package.json
+16 verbose installManyTop reading scoped package data from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/node_modules/express-handlebars/package.json
+17 verbose installManyTop reading scoped package data from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/node_modules/fs/package.json
+18 verbose installManyTop reading scoped package data from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/node_modules/glob/package.json
+19 verbose installManyTop reading scoped package data from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/node_modules/grunt/package.json
+20 verbose installManyTop reading scoped package data from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/node_modules/grunt-contrib-concat/package.json
+21 verbose installManyTop reading scoped package data from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/node_modules/grunt-contrib-cssmin/package.json
+22 verbose installManyTop reading scoped package data from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/node_modules/grunt-contrib-sass/package.json
+23 verbose installManyTop reading scoped package data from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/node_modules/grunt-contrib-watch/package.json
+24 verbose installManyTop reading scoped package data from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/node_modules/gulp/package.json
+25 verbose installManyTop reading scoped package data from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/node_modules/gulp-sass/package.json
+26 verbose installManyTop reading scoped package data from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/node_modules/jsonwebtoken/package.json
+27 verbose installManyTop reading scoped package data from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/node_modules/lodash/package.json
+28 verbose installManyTop reading scoped package data from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/node_modules/logger/package.json
+29 verbose installManyTop reading scoped package data from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/node_modules/mocha/package.json
+30 verbose installManyTop reading scoped package data from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/node_modules/mongodb/package.json
+31 verbose installManyTop reading scoped package data from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/node_modules/mongojs/package.json
+32 verbose installManyTop reading scoped package data from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/node_modules/mongoose/package.json
+33 verbose installManyTop reading scoped package data from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/node_modules/morgan/package.json
+34 verbose installManyTop reading scoped package data from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/node_modules/nodemon/package.json
+35 verbose installManyTop reading scoped package data from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/node_modules/passport/package.json
+36 verbose installManyTop reading scoped package data from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/node_modules/passport-local/package.json
+37 verbose installManyTop reading scoped package data from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/node_modules/path/package.json
+38 verbose installManyTop reading scoped package data from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/node_modules/socket.io/package.json
+39 verbose installManyTop reading scoped package data from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/node_modules/util/package.json
+40 info package.json angular-socket-io@0.7.0 No repository field.
+41 info package.json assert@1.3.0 assert is also the name of a node core module.
+42 info package.json connect-mongo@0.8.2 No license field.
+43 info package.json crypto@0.0.3 crypto is also the name of a node core module.
+44 info package.json crypto@0.0.3 No license field.
+45 info package.json fs@0.0.2 fs is also the name of a node core module.
+46 info package.json fs@0.0.2 No description
+47 info package.json fs@0.0.2 No repository field.
+48 info package.json grunt@0.4.5 No license field.
+49 info package.json grunt-contrib-concat@0.5.1 No license field.
+50 info package.json grunt-contrib-sass@0.9.2 No license field.
+51 info package.json grunt-contrib-watch@0.6.1 No license field.
+52 info package.json logger@0.0.1 No repository field.
+53 info package.json logger@0.0.1 No license field.
+54 info package.json passport-local@1.0.0 No license field.
+55 info package.json path@0.12.7 path is also the name of a node core module.
+56 info package.json socket.io@1.3.7 No license field.
+57 info package.json util@0.10.3 util is also the name of a node core module.
+58 verbose readDependencies loading dependencies from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/package.json
+59 silly cache add args [ 'bower.json', null ]
+60 verbose cache add spec bower.json
+61 silly cache add parsed spec { raw: 'bower.json',
+61 silly cache add   scope: null,
+61 silly cache add   name: null,
+61 silly cache add   rawSpec: 'bower.json',
+61 silly cache add   spec: '/Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/bower.json',
+61 silly cache add   type: 'local' }
+62 silly addLocalTarball shasum (computed) 8236e6e048e61f570136017cc7c121a0def50bd9
+63 verbose addTmpTarball /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/bower.json not in flight; adding
+64 verbose addTmpTarball validating metadata from /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/bower.json
+65 verbose tar unpack /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/bower.json
+66 verbose tar unpacking to /var/folders/rf/02f6ss4j6c3bytm81z4r9trc0000gn/T/npm-18496-ea2ab27e/unpack-3110aba35a59
+67 silly gentlyRm /var/folders/rf/02f6ss4j6c3bytm81z4r9trc0000gn/T/npm-18496-ea2ab27e/unpack-3110aba35a59 is being purged
+68 verbose gentlyRm don't care about contents; nuking /var/folders/rf/02f6ss4j6c3bytm81z4r9trc0000gn/T/npm-18496-ea2ab27e/unpack-3110aba35a59
+69 silly gunzTarPerm modes [ '755', '644' ]
+70 error not a package /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/bower.json
+71 error addLocal Could not install /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3/bower.json
+72 verbose stack Error: ENOENT, open '/var/folders/rf/02f6ss4j6c3bytm81z4r9trc0000gn/T/npm-18496-ea2ab27e/unpack-3110aba35a59/package.json'
+72 verbose stack     at Error (native)
+73 verbose cwd /Users/jeffreymendez/Desktop/Pro-Leet-Peeps3
+74 error Darwin 14.5.0
+75 error argv "node" "/usr/local/bin/npm" "install" "bower.json"
+76 error node v0.12.7
+77 error npm  v2.11.3
+78 error path /var/folders/rf/02f6ss4j6c3bytm81z4r9trc0000gn/T/npm-18496-ea2ab27e/unpack-3110aba35a59/package.json
+79 error code ENOENT
+80 error errno -2
+81 error enoent ENOENT, open '/var/folders/rf/02f6ss4j6c3bytm81z4r9trc0000gn/T/npm-18496-ea2ab27e/unpack-3110aba35a59/package.json'
+81 error enoent This is most likely not a problem with npm itself
+81 error enoent and is related to npm not being able to find a file.
+82 verbose exit [ -2, true ]
