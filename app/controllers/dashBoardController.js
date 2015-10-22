@@ -22,13 +22,18 @@ $scope.search = function(id) {
 
 $scope.view = function(id) {
   $http.get('api/courses/' + id).success(function(response) {
+<<<<<<< HEAD
     console.log("View me", response)
+=======
+    console.log("EDITME", response)
+>>>>>>> b145e39649551cb95b327df6b747c72536956631
     $scope.data = response;
   var modalInstance = $uibModal.open({
       animation: $scope.animationsEnabled,
       templateUrl: 'view.handlebars',
       controller: 'ModalInstanceCtrl',
       size: 'lg',
+<<<<<<< HEAD
       
       resolve: {
         data: function () {
@@ -66,6 +71,8 @@ $scope.audit = function(id) {
       templateUrl: 'audit.handlebars',
       controller: 'auditController',
       size: 'lg',
+=======
+>>>>>>> b145e39649551cb95b327df6b747c72536956631
       resolve: {
         data: function () {
           return $scope.data;

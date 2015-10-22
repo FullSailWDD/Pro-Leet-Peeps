@@ -1,3 +1,7 @@
 node_modules
 .sass-cache
+<<<<<<< HEAD
+=======
+bower_components
+>>>>>>> b145e39649551cb95b327df6b747c72536956631
 .DS_Store
