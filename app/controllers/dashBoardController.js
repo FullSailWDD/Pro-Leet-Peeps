@@ -22,19 +22,14 @@ $scope.search = function(id) {
 
 $scope.view = function(id) {
   $http.get('api/courses/' + id).success(function(response) {
-<<<<<<< HEAD
-    console.log("View me", response)
-=======
+
     console.log("EDITME", response)
->>>>>>> b145e39649551cb95b327df6b747c72536956631
     $scope.data = response;
   var modalInstance = $uibModal.open({
       animation: $scope.animationsEnabled,
       templateUrl: 'view.handlebars',
       controller: 'ModalInstanceCtrl',
-      size: 'lg',
-<<<<<<< HEAD
-      
+      size: 'lg',      
       resolve: {
         data: function () {
           return $scope.data;
@@ -45,7 +40,6 @@ $scope.view = function(id) {
 };
     $scope.audit = function(id) {
   $http.get('api/courses/' + id).success(function(response) {
-    console.log("EDITME", response)
     $scope.data = response;
   var modalInstance = $uibModal.open({
       animation: $scope.animationsEnabled,
@@ -61,30 +55,9 @@ $scope.view = function(id) {
   });
 };
 
-
-$scope.audit = function(id) {
-  $http.get('api/courses/' + id).success(function(response) {
-    console.log("View me", response)
-    $scope.data = response;
-  var modalInstance = $uibModal.open({
-      animation: $scope.animationsEnabled,
-      templateUrl: 'audit.handlebars',
-      controller: 'auditController',
-      size: 'lg',
-=======
->>>>>>> b145e39649551cb95b327df6b747c72536956631
-      resolve: {
-        data: function () {
-          return $scope.data;
-      }
-    }
-  })
-  });
-};
 
 $scope.edit = function(id) {
   $http.get('api/courses/' + id).success(function(response) {
-    console.log("EDITME", response)
     $scope.data = response;
   var modalInstance = $uibModal.open({
       animation: $scope.animationsEnabled,
