@@ -7,6 +7,9 @@
   left: 15px;
   top: 0px; }
 
+tbody {
+  color: #fff; }
+
 .addingRubric {
   position: absolute;
   left: 315px;
