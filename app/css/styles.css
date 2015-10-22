@@ -1,39 +1,6 @@
-/*
-Error: Invalid CSS after "...(6, 31, 48, .9)": expected "{", was ";"
-        on line 3 of app/sass/styles.scss
+/*main Color*/
+/*main Hover Color*/
+/*font Color*/
+/*Fonts*/
 
-1: /*main Color*\/
-2: <<<<<<< HEAD
-3: $mainNavy : rgba(6, 31, 48, .9);
-4: $mainLightNavy : rgba(62, 69, 112, .5);
-5: =======
-6: $mainNavy : rgba(6, 31, 48, 1);
-7: $mainLightNavy : rgba(62, 69, 112, 1);
-8: >>>>>>> b145e39649551cb95b327df6b747c72536956631
-
-Backtrace:
-app/sass/styles.scss:3
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:1162:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:1098:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:1093:in `tok!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:638:in `block'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:632:in `ruleset'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:657:in `block_child'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:647:in `block_contents'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:117:in `stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:42:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/engine.rb:403:in `_to_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/engine.rb:378:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/engine.rb:295:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/exec/sass_scss.rb:410:in `run'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/exec/sass_scss.rb:63:in `process_result'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/exec/base.rb:52:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/exec/base.rb:19:in `parse!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/bin/sass:13:in `<top (required)>'
-/usr/bin/sass:23:in `load'
-/usr/bin/sass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...(6, 31, 48, .9)\": expected \"{\", was \";\"\A         on line 3 of app/sass/styles.scss\A \A 1: /*main Color*/\A 2: <<<<<<< HEAD\A 3: $mainNavy : rgba(6, 31, 48, .9);\A 4: $mainLightNavy : rgba(62, 69, 112, .5);\A 5: =======\A 6: $mainNavy : rgba(6, 31, 48, 1);\A 7: $mainLightNavy : rgba(62, 69, 112, 1);\A 8: >>>>>>> b145e39649551cb95b327df6b747c72536956631"; }
+/*# sourceMappingURL=styles.css.map */

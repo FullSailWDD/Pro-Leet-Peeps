@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 @import 'styles';
-=======
->>>>>>> b145e39649551cb95b327df6b747c72536956631
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++Mobile size*/
 @media (max-width: 768px) {
   .page-header {
@@ -46,10 +43,7 @@
   } 
 
   .btn-danger {
-<<<<<<< HEAD
     transition: background-color 0.5s ease;
-=======
->>>>>>> b145e39649551cb95b327df6b747c72536956631
     color: #fff;
     background-color: #747EA1;
     border-color: #747EA1;
@@ -95,10 +89,7 @@
   }
 
   .btn-danger {
-<<<<<<< HEAD
     transition: background-color 0.5s ease;
-=======
->>>>>>> b145e39649551cb95b327df6b747c72536956631
     color: #fff;
     background-color: #747EA1;
     border-color: #747EA1;
@@ -108,13 +99,8 @@
 
   .float-left{
     float: left;
-<<<<<<< HEAD
     margin: 0 1%;
     width: 47%;
-=======
-    width: 30%;
-    margin: 0 1%;
->>>>>>> b145e39649551cb95b327df6b747c72536956631
   }
 
   .desktop-sidebar{
@@ -124,7 +110,6 @@
   .desktop-sidebar-search{
     display: none;
   }
-<<<<<<< HEAD
   .eyeBtn {
       transition: background-color 0.5s ease;
       position: relative;
@@ -152,16 +137,6 @@
   }
 }
 
-=======
-
-
-}
-
-/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++Tablet size*/
-@media (max-width: 992px) {
-
-}
->>>>>>> b145e39649551cb95b327df6b747c72536956631
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++Desktop size*/
 @media screen and (min-width: 769px){
@@ -174,7 +149,6 @@
     right: 10px;
   }
   .span_1_of_6 { 
-<<<<<<< HEAD
     width: 100%;
   }
   .span_3_of_6 { 
@@ -205,16 +179,12 @@
   }
   .desktop-none{
     display: block;
-=======
-    width: 16%;
->>>>>>> b145e39649551cb95b327df6b747c72536956631
   }
 
 }
 
 
 
-<<<<<<< HEAD
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++Tablet size*/
 @media (min-width: 992px){
   .modal-lg {
@@ -267,6 +237,3 @@
 
 
 
-=======
-/*# sourceMappingURL=responsive.css.map */
->>>>>>> b145e39649551cb95b327df6b747c72536956631
