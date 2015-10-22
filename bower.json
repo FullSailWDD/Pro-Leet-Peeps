@@ -2,11 +2,7 @@
   "name": "form_gen",
   "version": "0.1.0",
   "authors": [
-<<<<<<< HEAD
     "proleetpeeps"
-=======
-    "Leonard"
->>>>>>> b145e39649551cb95b327df6b747c72536956631
   ],
   "moduleType": [
     "node"
@@ -20,11 +16,7 @@
     "tests"
   ],
   "dependencies": {
-<<<<<<< HEAD
     "angular": "~1.4.7",
     "angular-socket-io": "~0.7.0"
-=======
-    "angular": "~1.4.7"
->>>>>>> b145e39649551cb95b327df6b747c72536956631
   }
 }

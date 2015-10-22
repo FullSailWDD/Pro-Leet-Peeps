@@ -1,6 +1,6 @@
 #Pro-Leet-Peeps
 ##Dynamic form that with node 
-###App Runing here ( [http://letschillax.com/ ] )
+#App Runing here ( [http://letschillax.com/ ] )
 
 -------
 ### Installation 
@@ -18,4 +18,4 @@ nodemon
 ```
 mongod
 ```
-### Development Process
+### Currently in Development Process we release soon =D
