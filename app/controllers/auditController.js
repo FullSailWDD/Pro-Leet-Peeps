@@ -1,23 +1,26 @@
 myApp.controller('auditController', function ($scope, data , $http, $modalInstance) {
-
-var refresh = function() {
-    $http.get('api/courses').success(function(response) {
-    $scope.courses = response;
-    
-  });
-};
-refresh();
-
+//selected data passed through scope
   $scope.data = data;
-  $scope.selected = {
-    data: $scope.data
-  };
-
   console.log($scope.data);
+  
   var grades = $scope.data.rubric.grade;
+
   console.log(grades);
 
+  console.log($scope.data.rubric.title);
 
+
+  var gradeSplit = grades.split(",");
+
+
+
+  console.log(gradeSplit[0])
+
+
+
+
+
+  // console.log(data);
 
 })
     // //grabbing the grades and sections

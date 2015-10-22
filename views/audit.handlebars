@@ -4,8 +4,20 @@
 
 <div class="modal-body">
     <div class="form-group">            
-    <h4><strong>Rubric</strong> : {[{ data.rubric.name }]}</h4>
-        <div ng-repeat="section in sectionSplit">
+    <h4><strong>Rubric</strong>
+     : {[{ data.rubric.name }]}
+    </h4>
+
+    <div ng-model="data.rubric.title">
+        {[{ data.rubric.title }]}
+    </div>
+    <ul>
+        <li ng-repeat="grade in data.rubric">
+        {[{ data.rubric.grade }]}
+        </li>
+    </ul>
+
+        <!-- <div ng-repeat="section in sectionSplit">
             <label>Section</label>
             <input class="form-control" name="{[{ section }]}" placeholder="Enter Section Weight" type="text">
 
@@ -13,7 +25,7 @@
                 <button class="btn btn-default">{[{ grade }]}</button>
             </div>
 
-        </div>  
+        </div>   -->
         <div class="modal-footer">
             <button class="btn btn-primary" type="button" ng-click="calculateAudit(contact._id); reloadRoute()">Update Grades</button>
         </div>
