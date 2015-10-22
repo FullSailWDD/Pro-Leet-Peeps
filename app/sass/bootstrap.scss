@@ -148,7 +148,9 @@ optgroup {
 
 table {
   border-spacing: 0;
-  border-collapse: collapse; }
+  border-collapse: collapse;
+  color:#fff;
+   }
 
 td, th {
   padding: 0; }
@@ -1117,7 +1119,7 @@ hr {
   font-family: inherit;
   font-weight: 500;
   line-height: 1.1;
-  color: $mainGreen; }
+  color: #fff; }
 
 .h1 .small, .h1 small, .h2 .small, .h2 small, .h3 .small, .h3 small, .h4 .small, .h4 small, .h5 .small, .h5 small, .h6 .small, .h6 small, h1 .small, h1 small, h2 .small, h2 small, h3 .small, h3 small, h4 .small, h4 small, h5 .small, h5 small, h6 .small, h6 small {
   font-weight: 400;

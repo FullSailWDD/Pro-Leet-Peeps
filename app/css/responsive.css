@@ -13,7 +13,8 @@
 
   .page-header {
     margin-top: 120px;
-    text-align: center; }
+    text-align: center;
+    color: #fff; }
 
   .input-group-searchbox {
     position: relative;
