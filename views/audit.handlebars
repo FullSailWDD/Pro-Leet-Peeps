@@ -4,30 +4,15 @@
 
 <div class="modal-body">
     <div class="form-group">            
-    <h4><strong>Rubric</strong>
-     : {[{ data.rubric.name }]}
-    </h4>
+        <h4><strong>Rubric</strong>
+         : {[{ data.rubric.name }]}
+        </h4>
 
-    <div ng-model="data.rubric.title">
-        {[{ data.rubric.title }]}
+    <div ng-repeat="title in data.rubric.title">
+        {[{ title }]} 
+        <button ng-submit="">{[{ data.rubric.grade[$index] }]}</button>
     </div>
-    <ul>
-        <li ng-repeat="grade in data.rubric">
-        {[{ data.rubric.grade }]}
-        </li>
-    </ul>
-
-        <!-- <div ng-repeat="section in sectionSplit">
-            <label>Section</label>
-            <input class="form-control" name="{[{ section }]}" placeholder="Enter Section Weight" type="text">
-
-            <div ng-repeat="grade in gradeSplit">
-                <button class="btn btn-default">{[{ grade }]}</button>
-            </div>
-
-        </div>   -->
-        <div class="modal-footer">
-            <button class="btn btn-primary" type="button" ng-click="calculateAudit(contact._id); reloadRoute()">Update Grades</button>
-        </div>
+<!--     <button>{[{ data.rubric.grade[3] }]}</button>
+ -->   
     </div>
 </div>

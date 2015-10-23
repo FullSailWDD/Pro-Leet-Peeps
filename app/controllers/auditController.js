@@ -1,20 +1,19 @@
 myApp.controller('auditController', function ($scope, data , $http, $modalInstance) {
-//selected data passed through scope
-  $scope.data = data;
-  console.log($scope.data);
-  
-  var grades = $scope.data.rubric.grade;
+//selected data passed through scope======================
+    $scope.data = data;
+    console.log($scope.data);
 
-  console.log(grades);
+    var grades = $scope.data.rubric.grade;
+    var i = 0;
+//grade of inserted in the section =====================
+    console.log(grades);
+    console.log();
+    $scope.data.rubric.title = $scope.data.rubric.title.split(',')
+    $scope.data.rubric.grade = $scope.data.rubric.grade.split(',')
+    console.log('grade',$scope.data.rubric.grade)
 
-  console.log($scope.data.rubric.title);
-
-
-  var gradeSplit = grades.split(",");
-
-
-
-  console.log(gradeSplit[0])
+//selected split the data from the arrays ======================
+    
 
 
 
