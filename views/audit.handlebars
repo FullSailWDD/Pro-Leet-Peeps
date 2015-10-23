@@ -4,18 +4,17 @@
 
 <div class="modal-body">
     <div class="form-group">            
-    <h4><strong>Rubric</strong>
-     : {[{ data.rubric.name }]}
-    </h4>
+        <h4><strong>Rubric</strong>
+         : {[{ data.rubric.name }]}
+        </h4>
 
-    <div ng-model="data.rubric.title">
+    <div ng-model="data.rubric">
         {[{ data.rubric.title }]}
     </div>
-    <ul>
-        <li ng-repeat="grade in data.rubric">
-        {[{ data.rubric.grade }]}
-        </li>
-    </ul>
+    
+    <div>
+        <button >{[{ data.rubric.grade }]}</button>
+    </div>
 
         <!-- <div ng-repeat="section in sectionSplit">
             <label>Section</label>
