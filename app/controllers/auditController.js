@@ -1,4 +1,4 @@
-myApp.controller('auditController', function ($scope, data , $http, $modalInstance) {
+myApp.controller('auditController', function ($scope, data , $http, $modalInstance,$uibModal) {
 //selected data passed through scope======================
     $scope.data = data;
     console.log($scope.data);
@@ -15,8 +15,23 @@ myApp.controller('auditController', function ($scope, data , $http, $modalInstan
 //selected split the data from the arrays ======================
     
 
-
-
+ $scope.audit = function() {
+  $http.get('api/courses/').success(function(response) {
+    $scope.data = response;
+  var modalInstance = $uibModal.open({
+      animation: $scope.animationsEnabled,
+      templateUrl: 'progress.handlebars',
+      controller: 'dashboardController',
+      size: 'lg',
+      
+      resolve: {
+        data: function () {
+          return $scope.data;
+      }
+    }
+  })
+  });
+};
 
 
   // console.log(data);

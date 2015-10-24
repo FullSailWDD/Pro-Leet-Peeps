@@ -10,7 +10,7 @@
 
     <div ng-repeat="title in data.rubric.title">
         {[{ title }]} 
-        <button ng-submit="">{[{ data.rubric.grade[$index] }]}</button>
+        <button ng-click="audit()">{[{ data.rubric.grade[$index] }]}</button>
     </div>
 <!--     <button>{[{ data.rubric.grade[3] }]}</button>
  -->   

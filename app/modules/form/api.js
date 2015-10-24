@@ -48,6 +48,8 @@ app.get('/courses/:id', function (req, res) {
   });
 });
 
+//get data from database by ID
+
 //update the database
 app.put('/courses/:id', function (req, res) {
   var id = req.params.id;
