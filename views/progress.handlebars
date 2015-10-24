@@ -25,14 +25,16 @@
                         <p ng-click="view(data._id)">{[{data.rubric.name}]}</p>
                     </div>
 
+
                     <div class="col span_1_of_6">
                         <strong class="desktop-none">Grades</strong>
                         <button ng-click="view(data._id)">{[{data.rubric.grade[$index]}]}</button>
 
-                        <div id="progressBar">
-                            Progress..
-                        </div>
+
+                    <div class="value">Grade: <input type="number" ng-model="counter" class="ng-valid ng-valid-number ng-dirty"></div>
+                        <a href="#demo" ng-click="setWidth(counter, $event)">Audit Grade</a>
                     </div>
+
 
                 </div>
             </div>
