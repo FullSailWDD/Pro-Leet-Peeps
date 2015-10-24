@@ -1,4 +1,4 @@
-myApp.controller('auditController', function ($scope, data , $http, $modalInstance,$uibModal,ngProgressFactory) {
+myApp.controller('auditController', function ($scope, data , $http, $modalInstance,$uibModal,ngProgressFactory,$timeout) {
 //selected data passed through scope======================
     $scope.data = data;
     console.log($scope.data);
@@ -15,7 +15,13 @@ myApp.controller('auditController', function ($scope, data , $http, $modalInstan
     
   $scope.progressbar = ngProgressFactory.createInstance();
   $scope.progressbar.start();
+
             
+$scope.setWidth = function(){
+    $timeout($scope.progressbar.set(), 1000);
+
+}
+
  $scope.audit = function() {
   $http.get('api/courses/').success(function(response) {
     $scope.data = response;

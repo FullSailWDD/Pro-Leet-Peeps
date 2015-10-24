@@ -11,7 +11,8 @@
     <div ng-repeat="title in data.rubric.title">
         {[{ title }]} 
         <button ng-click="audit()">{[{ data.rubric.grade[$index] }]}</button>
-        <div class="value">Grade: <input type="number" ng-model="counter" class="ng-valid ng-valid-number ng-dirty"></div>
+        <div class="value">New Grade: <input type="number" ng-model="counter" class="ng-valid ng-valid-number ng-dirty">
+
                         <a href="#demo" ng-click="setWidth(counter, $event)">Audit Grade</a>
         </div>
     </div>
