@@ -1,8 +1,7 @@
-myApp.controller('auditController', function ($scope, data , $http, $modalInstance,$uibModal) {
+myApp.controller('auditController', function ($scope, data , $http, $modalInstance,$uibModal,ngProgressFactory) {
 //selected data passed through scope======================
     $scope.data = data;
     console.log($scope.data);
-
     var grades = $scope.data.rubric.grade;
     var i = 0;
 //grade of inserted in the section =====================
@@ -14,7 +13,9 @@ myApp.controller('auditController', function ($scope, data , $http, $modalInstan
 
 //selected split the data from the arrays ======================
     
-
+  $scope.progressbar = ngProgressFactory.createInstance();
+  $scope.progressbar.start();
+            
  $scope.audit = function() {
   $http.get('api/courses/').success(function(response) {
     $scope.data = response;
@@ -30,6 +31,8 @@ myApp.controller('auditController', function ($scope, data , $http, $modalInstan
       }
     }
   })
+    $scope.progressbar = ngProgressFactory.createInstance();
+    $scope.progressbar.start();
   });
 };
 

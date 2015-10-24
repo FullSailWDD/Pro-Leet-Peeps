@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['ngRoute','ngAnimate','ui.bootstrap']);
+var myApp = angular.module('myApp', ['ngRoute','ngAnimate','ui.bootstrap','ngProgress']);
 
 myApp.config(['$interpolateProvider', function($interpolateProvider){
   // $interpolateProvider used to differentiate uses for angular from express
