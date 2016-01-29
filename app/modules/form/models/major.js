@@ -1,7 +1,6 @@
 var db = require('../../../../config/database.js');
 
 var Course = db.model('Course',{
-
 	major:{ type: String},
 	course:{type: String},
 	description:{type: String},
