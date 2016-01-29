@@ -4,18 +4,19 @@
 
 <div class="modal-body">
     <div class="form-group">            
-    <h4><strong>Rubric</strong> : {[{ data.rubric.name }]}</h4>
-        <div ng-repeat="section in sectionSplit">
-            <label>Section</label>
-            <input class="form-control" name="{[{ section }]}" placeholder="Enter Section Weight" type="text">
+        <h4><strong>Rubric</strong>
+         : {[{ data.rubric.name }]}
+        </h4>
 
-            <div ng-repeat="grade in gradeSplit">
-                <button class="btn btn-default">{[{ grade }]}</button>
-            </div>
+    <div ng-repeat="title in data.rubric.title">
+        {[{ title }]} 
+        <button ng-click="audit()">{[{ data.rubric.grade[$index] }]}</button>
+        <div class="value">New Grade: <input type="number" ng-model="counter" class="ng-valid ng-valid-number ng-dirty">
 
-        </div>  
-        <div class="modal-footer">
-            <button class="btn btn-primary" type="button" ng-click="calculateAudit(contact._id); reloadRoute()">Update Grades</button>
+                        <a href="#demo" ng-click="setWidth(counter, $event)">Audit Grade</a>
         </div>
+    </div>
+<!--     <button>{[{ data.rubric.grade[3] }]}</button>
+ -->   
     </div>
 </div>

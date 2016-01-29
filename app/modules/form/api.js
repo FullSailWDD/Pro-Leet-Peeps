@@ -48,6 +48,8 @@ app.get('/courses/:id', function (req, res) {
   });
 });
 
+//get data from database by ID
+
 //update the database
 app.put('/courses/:id', function (req, res) {
   var id = req.params.id;
@@ -55,13 +57,13 @@ app.put('/courses/:id', function (req, res) {
     query: {_id: mongojs.ObjectId(id)},
     update: {$set: {
             major: req.body.major,
-      course: req.body.course,
-      description: req.body.description,
-      rubric: req.body.rubric,
-      title: req.body.title,
-      grade: req.body.grade,
-      dueDate: req.body.dueDate,
-      rubricdescription: req.body.rubricdescription
+			course: req.body.course,
+			description: req.body.description,
+			rubric: req.body.rubric,
+			title: req.body.title,
+			grade: req.body.grade,
+			dueDate: req.body.dueDate,
+			rubricdescription: req.body.rubricdescription
                     }
             },
     new: true}, function (err, doc) {
@@ -74,23 +76,23 @@ app.put('/courses/:id', function (req, res) {
 //save to database
 app.post('/post', function (req,res) {
 
-  var course = new Course({
-      major: req.body.major,
-      course: req.body.course,
-      description: req.body.description,
-      rubric: req.body.rubric,
-      title: req.body.title,
-      grade: req.body.grade,
-      dueDate: req.body.dueDate,
-      rubricdescription: req.body.rubricdescription
+	var course = new Course({
+			major: req.body.major,
+			course: req.body.course,
+			description: req.body.description,
+			rubric: req.body.rubric,
+			title: req.body.title,
+			grade: req.body.grade,
+			dueDate: req.body.dueDate,
+			rubricdescription: req.body.rubricdescription
 
-  })
+	})
 //save the course into the db
-  course.save(function(){
-      res.json(req.body);
-      return course;
+	course.save(function(){
+  		res.json(req.body);
+  		return course;
 
-  })
+	})
 })
 //getting the post object
-module.exports = app
+module.exports = app;

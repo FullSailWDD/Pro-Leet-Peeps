@@ -7,6 +7,9 @@
   left: 15px;
   top: 0px; }
 
+tbody {
+  color: #fff; }
+
 .addingRubric {
   position: absolute;
   left: 315px;
@@ -81,9 +84,6 @@ strong {
   float: left;
   margin: 0 1%; }
 
-@media (min-width: 992px) {
-  .modal-lg {
-    width: 500px; } }
 hr {
   display: block;
   float: both;
